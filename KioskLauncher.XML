@@ -1,0 +1,1102 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KioskLauncher</name>
+    </assembly>
+    <members>
+        <member name="T:KioskLauncher.Biz.RegistryKMSBiz">
+            <summary>
+            處裡與KMS註冊相關的邏輯
+            1.取得KMS註冊模式
+            2.驗證註冊資訊
+            3.傳送註冊資料
+            </summary>
+        </member>
+        <member name="M:KioskLauncher.Biz.RegistryKMSBiz.#ctor(log4net.ILog)">
+            <summary>
+            建構式
+            </summary>
+            <param name="log"></param>
+        </member>
+        <member name="P:KioskLauncher.Biz.RegistryKMSBiz.IsRegistry">
+            <summary>
+            是否註冊
+            </summary>
+        </member>
+        <member name="M:KioskLauncher.Biz.RegistryKMSBiz.InitKMSResigistryVerifyType">
+            <summary>
+            取得遠端的註冊驗證模式
+            </summary>
+        </member>
+        <member name="M:KioskLauncher.Biz.RegistryKMSBiz.RegistryClient">
+            <summary>
+            註冊用戶端到KMS上
+            </summary>
+        </member>
+        <member name="T:KioskLauncher.Biz.ConfigSettingModel">
+            <summary>
+            終端系統參數的存取與處理
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.KioskWPD">
+            <summary>
+            Kiosk 密碼
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.SilentAlert">
+            <summary>
+            1.8.關閉/開啟寧靜導覽
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.DisableChangePWD">
+            <summary>
+            2.移除Ctrl+Alt+Del密碼變更:
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.DisableWindowsUpdate">
+            <summary>
+            3.移除 Windows Update:
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.DisableScreenProtectPWD">
+            <summary>
+            5.取消 Windows 喚醒時密碼保護:
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.DisableScreenProtect">
+            <summary>
+            6.關閉休眠與相關設定
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.DisableHotKey">
+            <summary>
+            熱鍵處理架構
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.TimeSyncUrl">
+            <summary>
+            7.時間校準主機網址
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.ExpaireRetrun">
+            <summary>
+            逾時回首頁
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.ExpaireSecend">
+            <summary>
+            20.逾時時間 (秒)
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.EnableDeviceAutoRun">
+            <summary>
+            27.設定媒體自動播放
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.EnableFileWall">
+            <summary>
+            4.設定windows防火牆
+            </summary>
+            <param name="isDisable"></param>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.DisableFastSwitchUser">
+            <summary>
+            2.設定快速變 患使用者
+            HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.DisableTaskMgr">
+            <summary>
+            2.移除工作管理員
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.EnableBootRunLauncher">
+            <summary>
+            30.開機啟動
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.EnableFullScrenn">
+            <summary>
+            啟動全螢幕
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.ScreenWidth">
+            <summary>
+            螢幕寬度
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.ScreenHeight">
+            <summary>
+            螢幕高度
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.ScreenTop">
+            <summary>
+            X軸座標
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.ScreenLeft">
+            <summary>
+            Y軸座標
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.DisableLockWorkstation">
+            <summary>
+            禁止鎖定
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.EnableScreenSaveActive">
+            <summary>
+            啟動螢幕保護程式
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.EnablePrtScnOnLog">
+            <summary>
+            Log是否擷取畫面
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.IsTestMode">
+            <summary>
+            基盤模式切換機制
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.DisableMulitiBrowser">
+            <summary>
+            14.不允許開啟多個IE瀏覽器
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.EnableReturnOnIdle">
+            <summary>
+            15.畫面閒置時回首頁:
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.EnableClearCacheOnIndex">
+            <summary>
+            16.回首頁時清除Cookie與瀏覽資料
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.DisableFileDownload">
+            <summary>
+            12.禁用檔案下載
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.IsBlack">
+            <summary>
+            Filter 管理是否為黑名單模式
+            </summary>      
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.DomainNameList">
+            <summary>
+            17.IP清單
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.ProtocolList">
+            <summary>
+            18.協定清單
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.KeyBoardList">
+            <summary>
+            13.19.鍵盤熱鍵清單
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.DisableScrollBar">
+            <summary>
+            34.停用Scrollbar
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.DisableZoomInOut">
+            <summary>
+            23.停用IE縮放
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.DisableExplorer">
+            <summary>
+            31.關閉桌面
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.DisableWaterWave">
+            <summary>
+            10.停用水波紋
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.DisableMutlieTouch">
+            <summary>
+            28.停用多點觸控
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.DisableGesture">
+            <summary>
+            29.停用觸控手勢
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.DisableSystemTaskBar">
+            <summary>
+            33.停用系統工具列
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.AutoLoginEnable">
+            <summary>
+            26.啟用自動登入
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.EanbleKillAllApp">
+            <summary>
+            11.允許輸入密碼後關閉全部程式
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.FTPDomainName">
+            <summary>
+            FTP 位置
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.FTPAccount">
+            <summary>
+            24.FTP帳號
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.FTPPWD">
+            <summary>
+            24.FTP密碼
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.FTPProtocol">
+            <summary>
+            24.協定
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.FTPPort">
+            <summary>
+            24.Port
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.DisablePageContextMenu">
+            <summary>
+            9.停用快顯示窗
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.LocalIPSettings">
+            <summary>
+            21.本機IP設定
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.ProxyIP">
+            <summary>
+            Proxy的IP
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.ProxyPort">
+            <summary>
+            ProxyProt
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.DisableProxyInIntranet">
+            <summary>
+            停用近端網路的proxy
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.DisableProxyOnDoaminName">
+            <summary>
+            下列位址不使用 Proxy 伺服器(使用;做分隔符號)
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.ProxyEnable">
+            <summary>
+            啟用Proxy
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.BindingIEVersion">
+            <summary>
+            35.指定IE版本
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.AutoLoginAccount">
+            <summary>
+            自動登入用的帳號(自動登入為True時才要顯示，必填)
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.AutoLoginPassword">
+            <summary>
+            自動登入用密碼(自動登入為True時才要顯示，必填)
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.Biz.ConfigSettingModel.MachineName">
+            <summary>
+            電腦名稱
+            </summary>
+        </member>
+        <member name="T:KioskLauncher.Biz.ConfigSettingBiz">
+            <summary>
+            處理系統參數設定
+            </summary>
+        </member>
+        <member name="F:KioskLauncher.Biz.ConfigSettingBiz.PATH_STRING">
+            <summary>
+            WMI 物件路徑
+            </summary>
+        </member>
+        <member name="F:KioskLauncher.Biz.ConfigSettingBiz.SCOPE_STRING">
+            <summary>
+            WMI 物件的範圍
+            </summary>
+        </member>
+        <member name="M:KioskLauncher.Biz.ConfigSettingBiz.GetAdapterInfo">
+            <summary>
+            取得啟用的網路介面卡資訊
+            </summary>
+            <returns>網路介面卡資訊結構集合</returns>
+            <remarks>使用WMI查詢</remarks>
+        </member>
+        <member name="M:KioskLauncher.Biz.ConfigSettingBiz.VaildPWD(System.String,KioskLauncher.Biz.ConfigSettingModel)">
+            <summary>
+            驗證密碼
+            </summary>
+            <param name="pwd"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KioskLauncher.Biz.ConfigSettingBiz.UpdatePWD(System.String,System.String,KioskLauncher.Biz.ConfigSettingModel)">
+            <summary>
+            變更密碼
+            </summary>
+            <param name="pwd"></param>
+            <param name="oldPWD"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KioskLauncher.Biz.ConfigSettingBiz.#ctor(log4net.ILog)">
+            <summary>
+            建構式
+            </summary>
+            <param name="logger"></param>
+        </member>
+        <member name="M:KioskLauncher.Biz.ConfigSettingBiz.UpdateModel(KioskLauncher.Biz.ConfigSettingModel)">
+            <summary>
+            更新設定擋
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:KioskLauncher.Biz.ConfigSettingBiz.SyncRemoteTime(System.String)">
+            <summary>
+            同步遠端主機時間
+            </summary>
+            <param name="remoteAddr"></param>
+        </member>
+        <member name="M:KioskLauncher.Biz.ConfigSettingBiz.GetModel">
+            <summary>
+            取得設定擋的資料模型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KioskLauncher.Biz.ConfigSettingBiz.ParserConfigValue(System.String,System.String,System.String)">
+            <summary>
+            取得區段內的參數
+            </summary>
+            <param name="configString">解析字串內容</param>
+            <param name="section">參數所在區段</param>
+            <param name="Key">參數名稱</param>
+            <returns>參數值</returns>
+        </member>
+        <member name="T:KioskLauncher.Biz.NativeMethods.COMPUTER_NAME_FORMAT">
+            <summary>
+            電腦名稱類型
+            </summary>
+        </member>
+        <member name="F:KioskLauncher.Biz.NativeMethods.COMPUTER_NAME_FORMAT.ComputerNameNetBIOS">
+            <summary>
+            The NetBIOS name of the local computer or the cluster associated with the local computer. This name is limited to MAX_COMPUTERNAME_LENGTH + 1 characters and may be a truncated version of the DNS host name. For example, if the DNS host name is "corporate-mail-server", the NetBIOS name would be "corporate-mail-".
+            </summary>
+        </member>
+        <member name="F:KioskLauncher.Biz.NativeMethods.COMPUTER_NAME_FORMAT.ComputerNameDnsHostname">
+            <summary>
+            The DNS name of the local computer or the cluster associated with the local computer.
+            </summary>
+        </member>
+        <member name="F:KioskLauncher.Biz.NativeMethods.COMPUTER_NAME_FORMAT.ComputerNameDnsDomain">
+            <summary>
+            The name of the DNS domain assigned to the local computer or the cluster associated with the local computer.
+            </summary>
+        </member>
+        <member name="F:KioskLauncher.Biz.NativeMethods.COMPUTER_NAME_FORMAT.ComputerNameDnsFullyQualified">
+            <summary>
+            The fully qualified DNS name that uniquely identifies the local computer or the cluster associated with the local computer.
+            This name is a combination of the DNS host name and the DNS domain name, using the form HostName.DomainName. For example, if the DNS host name is "corporate-mail-server" and the DNS domain name is "microsoft.com", the fully qualified DNS name is "corporate-mail-server.microsoft.com".
+            </summary>
+        </member>
+        <member name="F:KioskLauncher.Biz.NativeMethods.COMPUTER_NAME_FORMAT.ComputerNamePhysicalNetBIOS">
+            <summary>
+            The NetBIOS name of the local computer. On a cluster, this is the NetBIOS name of the local node on the cluster.
+            </summary>
+        </member>
+        <member name="F:KioskLauncher.Biz.NativeMethods.COMPUTER_NAME_FORMAT.ComputerNamePhysicalDnsHostname">
+            <summary>
+            The DNS host name of the local computer. On a cluster, this is the DNS host name of the local node on the cluster.
+            </summary>
+        </member>
+        <member name="F:KioskLauncher.Biz.NativeMethods.COMPUTER_NAME_FORMAT.ComputerNamePhysicalDnsDomain">
+            <summary>
+            The name of the DNS domain assigned to the local computer. On a cluster, this is the DNS domain of the local node on the cluster.
+            </summary>
+        </member>
+        <member name="F:KioskLauncher.Biz.NativeMethods.COMPUTER_NAME_FORMAT.ComputerNamePhysicalDnsFullyQualified">
+            <summary>
+            The fully qualified DNS name that uniquely identifies the computer. On a cluster, this is the fully qualified DNS name of the local node on the cluster. 
+            The fully qualified DNS name is a combination of the DNS host name and the DNS domain name, using the form HostName.DomainName.
+            </summary>
+        </member>
+        <member name="F:KioskLauncher.Biz.NativeMethods.COMPUTER_NAME_FORMAT.ComputerNameMax">
+            <summary>
+            Not used.
+            </summary>
+        </member>
+        <member name="M:KioskLauncher.Biz.NativeMethods.SetComputerName(System.String)">
+            <summary>
+            設定電腦識別名稱
+            </summary>
+            <param name="lpComputerName">電腦識別名稱</param>
+            <returns></returns>
+        </member>
+        <member name="M:KioskLauncher.Biz.NativeMethods.SetComputerNameEx(KioskLauncher.Biz.NativeMethods.COMPUTER_NAME_FORMAT,System.String)">
+            <summary>
+            設定電腦識別名稱
+            </summary>
+            <param name="iType">電腦名稱類型</param>
+            <param name="lpComputerName">電腦識別名稱</param>
+            <returns></returns>
+        </member>
+        <member name="M:KioskLauncher.Biz.NativeMethods.GetRemoteTime(System.String)">
+            <summary>
+            取得遠端時間
+            </summary>
+            <param name="Url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KioskLauncher.Biz.KioskLauncherModule.InitVersion">
+            <summary>
+            初始化版本(第一次啟動會連線Middleware取得最新版本)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KioskLauncher.Biz.KioskLauncherModule.InitPackage(DataLib.DataModel.UpgradeInfoDataModel)">
+            <summary>
+            更新資訊初始化
+            </summary>
+            <param name="job">更新工作資料</param>
+            <returns></returns>
+        </member>
+        <member name="M:KioskLauncher.Biz.KioskLauncherModule.GetWaitSecend(DataLib.DataModel.UpgradeInfoDataModel)">
+            <summary>
+            取得等待的時間
+            </summary>
+            <param name="job">更新工作資料</param>
+            <returns></returns>
+        </member>
+        <member name="M:KioskLauncher.Biz.KioskLauncherModule.GetNextJob">
+            <summary>
+            取得下一個工作
+            </summary>
+            <returns>下一個更新工作資料</returns>
+        </member>
+        <member name="M:KioskLauncher.Biz.KioskLauncherModule.IsInQueue(System.String)">
+            <summary>
+            檢查工作是否在柱列中
+            </summary>
+            <param name="jobId"></param>
+            <returns>Ture 表示在已存在目前的工作柱列中</returns>
+        </member>
+        <member name="M:KioskLauncher.Biz.KioskLauncherModule.ProcessJobFail(DataLib.DataModel.UpgradeInfoDataModel)">
+            <summary>
+            處理工作失敗時的動作
+            </summary>
+            <param name="package">更新工作資料</param>
+        </member>
+        <member name="M:KioskLauncher.Biz.KioskLauncherModule.ProcessJobDone(DataLib.DataModel.UpgradeInfoDataModel)">
+            <summary>
+            處裡工作成功時的動作
+            </summary>
+            <param name="package">更新工作資料</param>
+        </member>
+        <member name="M:KioskLauncher.Biz.KioskLauncherModule.ExecuteUpgrade(DataLib.DataModel.UpgradeInfoDataModel)">
+            <summary>
+            執行更新
+            </summary>
+            <param name="job">更新工作資料</param>
+        </member>
+        <member name="M:KioskLauncher.Biz.KioskLauncherModule.ComplateUpdate(DataLib.DataModel.UpgradeInfoDataModel)">
+            <summary>
+            工作完成時更新狀態
+            </summary>
+            <param name="package">更新工作資料</param>
+        </member>
+        <member name="M:KioskLauncher.Biz.KioskLauncherModule.CheckWatchMain">
+            <summary>
+            監控主程式
+            </summary>
+            <returns>True表示主程式正常運行</returns>
+        </member>
+        <member name="P:KioskLauncher.Biz.Upgrade.UpdateInfo">
+            <summary>
+            更新工作資訊
+            </summary>
+        </member>
+        <member name="M:KioskLauncher.Biz.Upgrade.DownloadPackageAsync">
+            <summary>
+            下載更新包
+            </summary>        
+        </member>
+        <member name="M:KioskLauncher.Biz.Upgrade.ExecuteUpgrade">
+            <summary>
+            執行更新
+            </summary>
+        </member>
+        <member name="T:KioskLauncher.AdapterInfo">
+            <summary>
+            封裝網路介面卡相關資訊的結構
+            </summary>
+        </member>
+        <member name="M:KioskLauncher.AdapterInfo.#ctor(System.String,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            初始化結構
+            </summary>
+            <param name="caption">標題</param>
+            <param name="macAddress">實體位址</param>
+            <param name="serviceName">服務名稱</param>
+            <param name="index">索引</param>
+            <param name="description">描述</param>
+            <param name="ipEnabled">是可連線使用</param>
+        </member>
+        <member name="F:KioskLauncher.AdapterInfo.strGUID">
+            <summary>
+            介面卡GUID
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.AdapterInfo.GUID">
+            <summary>
+            介面卡GUID
+            </summary>
+        </member>
+        <member name="F:KioskLauncher.AdapterInfo.strName">
+            <summary>
+            取得網路介面卡的名稱
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.AdapterInfo.Name">
+            <summary>
+            取得網路介面卡的名稱
+            </summary>
+        </member>
+        <member name="F:KioskLauncher.AdapterInfo.strDisplayName">
+            <summary>
+            顯示名稱
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.AdapterInfo.DisplayName">
+            <summary>
+            顯示名稱
+            </summary>
+        </member>
+        <member name="F:KioskLauncher.AdapterInfo.strCaption">
+            <summary>
+            標題
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.AdapterInfo.Caption">
+            <summary>
+            標題
+            </summary>
+        </member>
+        <member name="F:KioskLauncher.AdapterInfo.strMACAddress">
+            <summary>
+            實體位址
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.AdapterInfo.MACAddress">
+            <summary>
+            實體位址
+            </summary>
+        </member>
+        <member name="F:KioskLauncher.AdapterInfo.strServiceName">
+            <summary>
+            服務名稱
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.AdapterInfo.ServiceName">
+            <summary>
+            服務名稱
+            </summary>
+        </member>
+        <member name="F:KioskLauncher.AdapterInfo.strIndex">
+            <summary>
+            索引
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.AdapterInfo.Index">
+            <summary>
+            索引
+            </summary>
+        </member>
+        <member name="F:KioskLauncher.AdapterInfo.strDescription">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.AdapterInfo.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="F:KioskLauncher.AdapterInfo.bolIPEnabled">
+            <summary>
+            是否介面卡可連線使用
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.AdapterInfo.IPEnabled">
+            <summary>
+            是否介面卡可連線使用
+            </summary>
+        </member>
+        <member name="F:KioskLauncher.AdapterInfo.bolIsDHCPEnable">
+            <summary>
+            取得此介面是否已設定為使用動態主機設定通訊協定 (DHCP) 伺服器取得 IP 位址
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.AdapterInfo.IsDHCPEnable">
+            <summary>
+            取得或設定此介面是否已設定為使用動態主機設定通訊協定 (DHCP) 伺服器取得 IP 位址
+            </summary>
+        </member>
+        <member name="F:KioskLauncher.AdapterInfo.strIPv4Address">
+            <summary>
+            取得網際網路通訊協定 (IP) 位址
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.AdapterInfo.IPv4Address">
+            <summary>
+            取得或設定網際網路通訊協定 (IP) 位址
+            </summary>
+        </member>
+        <member name="F:KioskLauncher.AdapterInfo.strIPv4Mask">
+            <summary>
+            取得 IPv4 遮罩
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.AdapterInfo.IPv4Mask">
+            <summary>
+            取得或設定 IPv4 遮罩
+            </summary>
+        </member>
+        <member name="F:KioskLauncher.AdapterInfo.strGateway">
+            <summary>
+            取得 IPv4 網路閘道位址
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.AdapterInfo.Gateway">
+            <summary>
+            取得或設定 IPv4 網路閘道位址
+            </summary>
+        </member>
+        <member name="F:KioskLauncher.AdapterInfo.bolIsObtainDnsAutomatically">
+            <summary>
+            取得這個介面是否自動取得 DNS 伺服器位址
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.AdapterInfo.IsObtainDnsAutomatically">
+            <summary>
+            取得或設定這個介面是否自動取得 DNS 伺服器位址
+            </summary>
+        </member>
+        <member name="F:KioskLauncher.AdapterInfo.strPrimaryDnsAddress">
+            <summary>
+            取得這個介面慣用的網域名稱系統 (DNS) 伺服器位址
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.AdapterInfo.PrimaryDnsAddress">
+            <summary>
+            取得或設定這個介面慣用的網域名稱系統 (DNS) 伺服器位址
+            </summary>
+        </member>
+        <member name="F:KioskLauncher.AdapterInfo.strSecondDnsAddress">
+            <summary>
+            取得這個介面其他的網域名稱系統 (DNS) 伺服器位址
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.AdapterInfo.SecondDnsAddress">
+            <summary>
+            取得或設定這個介面其他的網域名稱系統 (DNS) 伺服器位址
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.BrowserSettings.DisableFileDownload">
+            <summary>
+            禁用檔案下載
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.BrowserSettings.DisableScrollBar">
+            <summary>
+            隱藏頁面卷軸
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.BrowserSettings.SilentAlert">
+            <summary>
+            禁止WindowsError視窗
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.BrowserSettings.EnableClearCacheOnIndex">
+            <summary>
+            回首頁清除Cookie與所有瀏覽資訊
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.BrowserSettings.DisableZoomInOut">
+            <summary>
+            停用IE縮放
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.BrowserSettings.DisableMulitiBrowser">
+            <summary>
+            不允許開啟多個IE瀏覽器
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.FtpSetting.FTPDomainName">
+            <summary>
+            FTP 位置
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.FtpSetting.FTPAccount">
+            <summary>
+            24.FTP帳號
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.FtpSetting.FTPPWD">
+            <summary>
+            24.FTP密碼
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.FtpSetting.FTPProtocol">
+            <summary>
+            24.協定
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.FtpSetting.FTPPort">
+            <summary>
+            24.Port
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.GeneralSetting.DisableExplorer">
+            <summary>
+            設定無桌面
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.GeneralSetting.DisableWaterWave">
+            <summary>
+            關閉水波紋
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.GeneralSetting.SilentAlert">
+            <summary>
+            開啟寧靜導覽
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.GeneralSetting.DisableMutlieTouch">
+            <summary>
+            開啟多點觸控
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.GeneralSetting.DisableGesture">
+            <summary>
+            停用觸控手勢
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.GeneralSetting.DisableMulitiBrowser">
+            <summary>
+            設定無快顯視窗
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.GeneralSetting.DisableSystemTaskBar">
+            <summary>
+            隱藏系統工具列
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.GeneralSetting.EanbleKillAllApp">
+            <summary>
+            密碼開啟工作管理員
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.GeneralSetting.EnableReturnOnIdle">
+            <summary>
+            畫面閒置時回指定頁面
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.GeneralSetting.TimeSyncUrl">
+            <summary>
+            時間校準
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.GeneralSetting.ExpaireSecend">
+            <summary>
+            逾時時間設定
+            </summary>
+        </member>
+        <member name="F:KioskLauncher.ViewModel.InternetSetting.bolIsDHCPEnable">
+            <summary>
+            取得此介面是否已設定為使用動態主機設定通訊協定 (DHCP) 伺服器取得 IP 位址
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.InternetSetting.IsDHCPEnable">
+            <summary>
+            取得或設定此介面是否已設定為使用動態主機設定通訊協定 (DHCP) 伺服器取得 IP 位址
+            </summary>
+        </member>
+        <member name="F:KioskLauncher.ViewModel.InternetSetting.strIPv4Address">
+            <summary>
+            取得網際網路通訊協定 (IP) 位址
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.InternetSetting.IPv4Address">
+            <summary>
+            取得或設定網際網路通訊協定 (IP) 位址
+            </summary>
+        </member>
+        <member name="F:KioskLauncher.ViewModel.InternetSetting.strIPv4Mask">
+            <summary>
+            取得 IPv4 遮罩
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.InternetSetting.IPv4Mask">
+            <summary>
+            取得或設定 IPv4 遮罩
+            </summary>
+        </member>
+        <member name="F:KioskLauncher.ViewModel.InternetSetting.strGateway">
+            <summary>
+            取得 IPv4 網路閘道位址
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.InternetSetting.Gateway">
+            <summary>
+            取得或設定 IPv4 網路閘道位址
+            </summary>
+        </member>
+        <member name="F:KioskLauncher.ViewModel.InternetSetting.bolIsObtainDnsAutomatically">
+            <summary>
+            取得這個介面是否自動取得 DNS 伺服器位址
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.InternetSetting.IsObtainDnsAutomatically">
+            <summary>
+            取得或設定這個介面是否自動取得 DNS 伺服器位址
+            </summary>
+        </member>
+        <member name="F:KioskLauncher.ViewModel.InternetSetting.strPrimaryDnsAddress">
+            <summary>
+            取得這個介面慣用的網域名稱系統 (DNS) 伺服器位址
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.InternetSetting.PrimaryDnsAddress">
+            <summary>
+            取得或設定這個介面慣用的網域名稱系統 (DNS) 伺服器位址
+            </summary>
+        </member>
+        <member name="F:KioskLauncher.ViewModel.InternetSetting.strSecondDnsAddress">
+            <summary>
+            取得這個介面其他的網域名稱系統 (DNS) 伺服器位址
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.InternetSetting.SecondDnsAddress">
+            <summary>
+            取得或設定這個介面其他的網域名稱系統 (DNS) 伺服器位址
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.OSSetting.AutoLoginEnable">
+            <summary>
+            啟用自動登入
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.OSSetting.DisableChangePWD">
+            <summary>
+            移除變更密碼/移除Ctrl+Alt+Del密碼變更
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.OSSetting.EnableDeviceAutoRun">
+            <summary>
+            停用自動撥放
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.OSSetting.DisableFastSwitchUser">
+            <summary>
+            移除登出
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.OSSetting.DisableWindowsUpdate">
+            <summary>
+            關閉WindowsUpdate
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.OSSetting.DisableLockWorkstation">
+            <summary>
+            移除鎖定等項目
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.OSSetting.DisableScreenProtectPWD">
+            <summary>
+            取消喚醒時密碼保護
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.OSSetting.DisableScreenProtect">
+            <summary>
+            修眠與關閉相關設定
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.OSSetting.EnableBootRunLauncher">
+            <summary>
+            指定開機啟動程式
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.PasswordSetting.OldPassword">
+            <summary>
+            原密碼
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.PasswordSetting.NewPassword">
+            <summary>
+            新密碼
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.PasswordSetting.ReEnter">
+            <summary>
+            再次輸入
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.ProxySetting.ProxyIP">
+            <summary>
+            Proxy的IP
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.ProxySetting.ProxyPort">
+            <summary>
+            ProxyProt
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.ProxySetting.DisableProxyInIntranet">
+            <summary>
+            停用近端網路的proxy
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.ProxySetting.DisableProxyOnDoaminName">
+            <summary>
+            下列位址不使用 Proxy 伺服器(使用;做分隔符號)
+            </summary>
+        </member>
+        <member name="P:KioskLauncher.ViewModel.ProxySetting.ProxyEnable">
+            <summary>
+            啟用Proxy
+            </summary>
+        </member>
+        <member name="T:KioskLauncher.App">
+            <summary>
+            App.xaml 的互動邏輯
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:KioskLauncher.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:KioskLauncher.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:KioskLauncher.LauncherWindow">
+            <summary>
+            MainWindow.xaml 的互動邏輯
+            </summary>
+            <summary>
+            LauncherWindow
+            </summary>
+        </member>
+        <member name="M:KioskLauncher.LauncherWindow.WatchMainApp">
+            <summary>
+            監控終端是否被啟動
+            </summary>
+        </member>
+        <member name="M:KioskLauncher.LauncherWindow.HookTest(System.Int32,System.IntPtr,System.IntPtr)">
+            <summary>
+            鍵盤鎖定
+            </summary>
+            <param name="nCode"></param>
+            <param name="wParam"></param>
+            <param name="lParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KioskLauncher.LauncherWindow.#ctor">
+            <summary>
+            進入點
+            </summary>
+        </member>
+        <member name="M:KioskLauncher.LauncherWindow.StartFlow">
+            <summary>
+            決定顯示登入還是註冊
+            1.檢查是否有KioskID(這個註冊後才有)
+            2.有=>Login,沒有=>Registry
+            </summary>
+        </member>
+        <member name="F:KioskLauncher.LauncherWindow.LauncherRule">
+            <summary>
+            啟動規則
+            </summary>
+        </member>
+        <member name="M:KioskLauncher.LauncherWindow.LauncherClient(System.Boolean)">
+            <summary>
+            啟動用戶端
+            saveParamater?true =>Update Paramater:false=>nothing
+            </summary>
+            <param name="saveParamater"></param>
+        </member>
+        <member name="M:KioskLauncher.LauncherWindow.RebootMain">
+            <summary>
+            重啟主程式
+            </summary>
+        </member>
+        <member name="M:KioskLauncher.LauncherWindow.DisplayLogin">
+            <summary>
+            1.顯示登入註冊主Grid
+            2.顯示登入Tab與內容
+            2.關閉參數設定主Grid
+            3.關閉註冊Tab與內容
+            </summary>
+        </member>
+        <member name="M:KioskLauncher.LauncherWindow.DisplayRegistry">
+            <summary>
+            1.顯示登入註冊主Grid
+            2.關閉登入Tab與內容
+            2.關閉參數設定主Grid
+            3.顯示註冊Tab與內容
+            </summary>
+        </member>
+        <member name="M:KioskLauncher.LauncherWindow.DisplayParamaterGrid">
+            <summary>
+            1.關閉登入註冊主Grid
+            2.關閉登入Tab與內容
+            2.顯示參數設定主Grid
+            3.關閉註冊Tab與內容
+            </summary>
+        </member>
+        <member name="M:KioskLauncher.LauncherWindow.HideLoading">
+            <summary>
+            隱藏 loading
+            </summary>
+        </member>
+        <member name="M:KioskLauncher.LauncherWindow.DisplayLoading">
+            <summary>
+            顯示Loading
+            </summary>
+        </member>
+        <member name="M:KioskLauncher.LauncherWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,330 @@
+2023-03-25 08:16:28,470 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:17:03,519 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:17:38,554 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:18:47,025 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:19:22,069 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:19:57,093 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:21:56,235 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:22:31,299 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:23:06,330 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:23:41,377 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:24:16,408 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:24:51,443 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:25:26,479 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:26:01,512 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:26:36,545 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:27:11,587 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:27:46,626 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:28:21,675 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:28:56,721 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:29:31,753 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:30:06,784 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:30:41,839 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:31:16,870 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:31:51,898 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:32:26,927 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:33:01,963 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:33:37,003 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:34:12,039 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:34:47,061 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:35:22,092 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:35:57,134 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:36:32,176 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:37:07,214 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:37:42,257 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:38:17,300 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:38:52,327 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:39:27,373 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:40:02,416 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:40:37,446 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:41:12,468 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:41:47,500 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:42:22,532 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:42:57,563 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:43:32,594 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:44:07,641 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:44:42,666 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:45:17,697 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:45:52,743 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:46:27,771 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:47:02,802 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:47:37,839 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:48:12,871 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:48:47,903 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:49:22,942 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 
+2023-03-25 08:49:57,974 [7] ERROR [SignalRLib.SignalRClient][MoveNext] 
+SignalR ?? Exception : System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at SignalRLib.SignalRClient.ClientSingOn() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 335
+   at SignalRLib.SignalRClient.<Start>d__63.MoveNext() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\SignalRLib\SignalRClient.cs:line 241 

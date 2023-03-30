@@ -1,0 +1,20 @@
+12:13:55.135 ================================================================
+12:13:55.136 #Airlink# ecr api version=[20160531-001]
+12:13:55.136 ----------------------------------------------------------------
+12:13:55.136 SET Serial Port   :[COM34]
+12:13:55.137 SET Timeout       :[65]
+12:13:55.137 SET Rate          :[115200]
+12:13:55.137 SET Mode          :[8,None,One]
+12:13:55.137 SET Input File    :[in.dat]
+12:13:55.137 SET Output Fiel   :[out.dat]
+12:13:55.137 SET Retry         :[3]
+12:13:55.138 SET Data Length   :[600]
+12:13:55.138 SET RespCode Idx  :[79]
+12:13:55.138 ----------------------------------------------------------------
+12:13:55.139 ReadInFile(600)=[0103                           00000000120000                                                                          Bonjays Hotel                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ]
+12:13:55.165 SaveResponseData code=[ERR_RUNTIME]
+12:13:55.188 SaveResponseData(600)=[xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0001xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx]
+12:13:55.188 Exception：MessageSendRecv(Open SerialPort Fail)
+12:13:55.188 ================================================================
+12:13:55.188 Program done!
+12:13:55.188 ================================================================

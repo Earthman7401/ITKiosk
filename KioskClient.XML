@@ -1,0 +1,4325 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KioskClient</name>
+    </assembly>
+    <members>
+        <member name="T:KioskClient.Framework.Application.MessageCommandType">
+            <summary>
+            應用程式視窗訊息命令類型的列舉常數
+            </summary>
+            <remarks>命名規則以: [目標視窗]_[命令類型] 的方式進行命名</remarks>
+        </member>
+        <member name="F:KioskClient.Framework.Application.MessageCommandType.Unknow">
+            <summary>
+            未知命令類型
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Application.MessageCommandType.BrowserWindow_ShowSource">
+            <summary>
+            命令瀏覽視窗顯示網頁原始檔
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Application.MessageCommandType.Window_RegisterBrowserHwnd">
+            <summary>
+            向主控視窗進行瀏覽視窗控制代碼的註冊與更新
+            </summary>
+        </member>
+        <member name="T:KioskClient.Framework.Application.SpecialFolder">
+            <summary>
+            指定用來擷取應用程式特殊資料夾目錄路徑的列舉常數。
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Application.SpecialFolder.BaseDirectory">
+            <summary>
+            應用程式的基底目錄。
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Application.SpecialFolder.ToolDirectory">
+            <summary>
+            應用程式的工具目錄。
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Application.SpecialFolder.TempDirectory">
+            <summary>
+            應用程式的暫存目錄。
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Application.SpecialFolder.ExternalDirectory">
+            <summary>
+            應用程式的擴充元件目錄。
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Application.SpecialFolder.ConfigDirectory">
+            <summary>
+            應用程式的設定檔目錄。
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Application.SpecialFolder.UploadDirectory">
+            <summary>
+            應用程式的待上傳目錄。
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Application.SpecialFolder.ReportDirectory">
+            <summary>
+            應用程式的待回報目錄。
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Application.SpecialFolder.TaskDirectory">
+            <summary>
+            應用程式的待執行任務目錄。
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Application.SpecialFolder.LogDirectory">
+            <summary>
+            應用程式的Log檔目錄。
+            </summary>
+        </member>
+        <member name="T:KioskClient.Framework.Application.ArgsName">
+            <summary>
+            應用程式命令引數的列舉常數
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Application.ArgsName.StartupUri">
+            <summary>
+            指定瀏覽視窗載入起始頁的命令參數=> /StartupUri:[起始頁URL]
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Application.ArgsName.RestartBrowser">
+            <summary>
+            是否為瀏覽視窗重啟的命令參數=> /RestartBrowser:[發動端處理序ID]
+            </summary>
+        </member>
+        <member name="T:KioskClient.Framework.Application.WindowType">
+            <summary>
+            應用程式視窗類型的列舉常數
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Application.WindowType.Unknow">
+            <summary>
+            未知類型視窗
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Application.WindowType.KioskMain">
+            <summary>
+            主控視窗
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Application.WindowType.KioskUI">
+            <summary>
+            瀏覽視窗
+            </summary>
+        </member>
+        <member name="T:KioskClient.Framework.Application.PathAttribute">
+            <summary>
+            擴充指定型別對應路徑的特性
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Application.PathAttribute.strPath">
+            <summary>
+            對應路徑的相對位置
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Application.PathAttribute.Path">
+            <summary>
+            取得對應路徑的相對位置
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Application.PathAttribute.FullPath">
+            <summary>
+            取得對應路徑的完整路徑名稱
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Application.PathAttribute.#ctor(System.String)">
+            <summary>
+            建構子
+            </summary>
+            <param name="path">相對路徑</param>
+        </member>
+        <member name="M:KioskClient.Framework.Application.PathAttribute.ToString">
+            <summary>
+            傳回表示目前物件的字串。
+            </summary>
+            <returns>表示目前物件的字串。</returns>
+        </member>
+        <member name="T:KioskClient.Framework.Application.Arguments">
+            <summary>
+            提供應用程式命令參數解析處理的類別
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Application.Arguments.Parameters">
+            <summary>
+            用來存放參數的字典集合
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Application.Arguments.Keys">
+            <summary>
+            取得參數集合。
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Application.Arguments.Values">
+            <summary>
+            取得參數值集合。
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Application.Arguments.Count">
+            <summary>
+            取得參數/值組配對的數目
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Application.Arguments.#ctor(System.String[])">
+            <summary>
+            建構子
+            </summary>
+            <param name="args">字串陣列, 應用程式命令引數</param>
+        </member>
+        <member name="M:KioskClient.Framework.Application.Arguments.#ctor(System.String)">
+            <summary>
+            建構子
+            </summary>
+            <param name="commandLine">字串, 應用程式命令列引數</param>
+        </member>
+        <member name="P:KioskClient.Framework.Application.Arguments.Item(System.String)">
+            <summary>
+            取得指定參數關聯的值
+            </summary>
+            <param name="param">參數名稱</param>
+            <returns>與指定參數關聯的值, 如果找不到指定的參數, 則會回傳null</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Application.Arguments.ContainsKey(System.String)">
+            <summary>
+            是否含有特定的參數
+            </summary>
+            <param name="param">參數名稱</param>
+            <returns>具有指定參數, 則為true, 否則為false</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Application.Arguments.ContainsValue(System.String)">
+            <summary>
+            是否含有特定的參數值
+            </summary>
+            <param name="value">參數名稱</param>
+            <returns>具有指定參數值, 則為true, 否則為false</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Application.Arguments.GetEnumerator">
+            <summary>
+            傳回可對參數字典內容逐一查看的列舉程式
+            </summary>
+            <returns>可逐一查看參數字典內容的 System.Collections.IEnumerator</returns>
+        </member>
+        <member name="T:KioskClient.Framework.Application.Config">
+            <summary>
+            封裝應用程式設定的類別
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Application.Config.DEFAULT_APP_DATA_NAME">
+            <summary>
+            定義預設應用程式設定檔的檔案名稱
+            </summary>
+        </member>
+        <member name="T:KioskClient.Framework.Application.Config.ServerInfo">
+            <summary>
+            定義伺服器相關資訊的結構
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Application.Config.ServerInfo.#ctor(System.String)">
+            <summary>
+            建構子
+            </summary>
+            <param name="serverString">帶有伺服器資訊的字串</param>
+            <remarks>ftp://username:password@server.com/public_html/test/</remarks>
+        </member>
+        <member name="P:KioskClient.Framework.Application.Config.ServerInfo.IsNull">
+            <summary>
+            伺服器是否為預設未設定
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Application.Config.ServerInfo.Host">
+            <summary>
+            取得這個伺服器的主機位置
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Application.Config.ServerInfo.Port">
+            <summary>
+            取得這個伺服器的連接埠編號。
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Application.Config.ServerInfo.uriServer">
+            <summary>
+            伺服器Uri資訊物件
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Application.Config.ServerInfo.ServerUri">
+            <summary>
+            取得伺服器Uri資訊物件
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Application.Config.ServerInfo.strUserName">
+            <summary>
+            使用者帳戶
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Application.Config.ServerInfo.UserName">
+            <summary>
+            取得使用者帳戶
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Application.Config.ServerInfo.strPassword">
+            <summary>
+            使用者密碼
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Application.Config.ServerInfo.Password">
+            <summary>
+            取得使用者密碼
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Application.Config.ServerInfo.ServerCredential">
+            <summary>
+            取得密碼架構的認證物件
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Application.Config.FTPServer">
+            <summary>
+            取得主程式對應FTP伺服器的相關設定值
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Application.Config.IsDebugMode">
+            <summary>
+            取得主程式是否為開發者模式的設定值
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Application.Config.RestartDirect">
+            <summary>
+            取得主程式重啟瀏覽視窗是否直接嵌入設定值(不透過主控程式)
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Application.Config.BrowserTarget">
+            <summary>
+            取得主程式回起始頁面顯示方式的設定值
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Application.Config.IdleTimeout">
+            <summary>
+            取得主程式閒置逾時秒數設定值
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Application.Config.NavigatingTimeout">
+            <summary>
+            取得主程式導頁逾時秒數設定值
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Application.Config.UploadBlockSize">
+            <summary>
+            取得FTP上傳時的數據區塊大小設定值(單位:kb)
+            </summary>
+            <remarks>預設為4kb</remarks>
+        </member>
+        <member name="P:KioskClient.Framework.Application.Config.UploadRetryWaitSec">
+            <summary>
+            取得封裝檔案上傳失敗時的重試等待秒數(單位:秒)
+            </summary>
+            <remarks>預設為5秒</remarks>
+        </member>
+        <member name="P:KioskClient.Framework.Application.Config.JobRetryWaitSec">
+            <summary>
+            取得工作執行失敗時的重試等待秒數(單位:秒)
+            </summary>
+            <remarks>預設為5秒</remarks>
+        </member>
+        <member name="P:KioskClient.Framework.Application.Config.SecondMonitorPageURL">
+            <summary>
+            取得主程式起始頁面設定值
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Application.Config.StartPageURL">
+            <summary>
+            取得主程式起始頁面設定值
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Application.Config.ScriptErrorURL">
+            <summary>
+            取得主程式指令碼錯誤導向頁面設定值
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Application.Config.NavigatingTimeoutURL">
+            <summary>
+            取得主程式導頁逾時導向頁面設定值
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Application.Config.NoPageContextMenu">
+            <summary>
+            取得主程式禁止頁面快顯視窗設定值
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Application.Config.ClearIECacheFromStartPage">
+            <summary>
+            取得主程式回起始頁清除IE Cache設定值
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Application.Config.HideSystemTaskBar">
+            <summary>
+            取得主程式隱藏系統工具列設定值
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Application.Config.HideScrollBar">
+            <summary>
+            取得主程式隱藏網頁捲軸設定值
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Application.Config.objConfig">
+            <summary>
+            目前應用程式的組態檔物件。
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Application.Config.strConfigFilePath">
+            <summary>
+            應用程式設定檔之實體路徑。
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Application.Config.ConfigFilePath">
+            <summary>
+            取得應用程式設定檔之實體路徑。
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Application.Config.strConfigName">
+            <summary>
+            設定檔識別名稱
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Application.Config.ConfigName">
+            <summary>
+            取得設定檔識別名稱
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Application.Config.dicConfig">
+            <summary>
+            應用程式設定檔物件集合
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Application.Config.#ctor(System.String)">
+            <summary>
+            建構子
+            </summary>
+            <param name="name">設定檔識別名稱</param>
+        </member>
+        <member name="M:KioskClient.Framework.Application.Config.SetData(System.String,System.String)">
+            <summary>
+            設定應用程式設定
+            </summary>
+            <param name="key">設定索引名稱</param>
+            <param name="value">設定值</param>
+        </member>
+        <member name="M:KioskClient.Framework.Application.Config.GetData(System.String)">
+            <summary>
+            取得應用程式設定
+            </summary>
+            <param name="key">設定索引名稱</param>
+            <returns>與指定應用程式設定關聯的值, 如果找不到指定的設定, 則會回傳null</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Application.Config.RemoveData(System.String)">
+            <summary>
+            移除應用程式設定
+            </summary>
+            <param name="key">設定索引名稱</param>
+        </member>
+        <member name="P:KioskClient.Framework.Application.Config.Item(System.String)">
+            <summary>
+            取得指定應用程式設定關聯的值
+            </summary>
+            <param name="key">設定索引名稱</param>
+            <returns>與指定應用程式設定關聯的值, 如果找不到指定的設定, 則會回傳null</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Application.Config.GetConfig(System.String)">
+            <summary>
+            取得指定應用程式設定檔關聯的物件
+            </summary>
+            <param name="name">設定檔識別名稱</param>
+            <returns>與指定應用程式設定檔關聯的物件, 如果找不到指定的應用程式設定檔, 則會建立</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Application.Config.DelConfig(System.String)">
+            <summary>
+            刪除指定應用程式設定檔
+            </summary>
+            <param name="name">設定檔識別名稱</param>
+            <returns>刪除結果</returns>
+        </member>
+        <member name="T:KioskClient.Framework.BrowserHandler.ConfigHandler">
+            <summary>
+            封裝應用程式設定相關處理的中介的類別
+            </summary>
+            <remarks>
+            ComVisible不支援型別中的多載
+            實際呼叫函數名稱會依順序被冠上數字Ex: SetConfig => SetConfig_2
+            因此冠上"_Default"用以區別
+            </remarks>
+        </member>
+        <member name="F:KioskClient.Framework.BrowserHandler.ConfigHandler.DEFAULT_NAME">
+            <summary>
+            預設應用程式設定檔名稱
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.BrowserHandler.ConfigHandler.FTPServerInfo">
+            <summary>
+            取得應用程式設定的FTP伺服器資訊物件
+            </summary>
+            <returns>資訊物件序列化後的JSON字串</returns>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.ConfigHandler.SetConfig_Default(System.String,System.String)">
+            <summary>
+            寫入設定
+            </summary>
+            <param name="key">設定索引名稱</param>
+            <param name="value">設定值</param>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.ConfigHandler.GetConfig_Default(System.String)">
+            <summary>
+            讀取設定
+            </summary>
+            <param name="key">設定索引名稱</param>
+            <returns>設定值</returns>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.ConfigHandler.RemoveConfig_Default(System.String)">
+            <summary>
+            移除設定
+            </summary>
+            <param name="key">設定索引名稱</param>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.ConfigHandler.DeleteConfig_Default">
+            <summary>
+            刪除設定檔
+            </summary>
+            <returns>刪除結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.ConfigHandler.SetConfig(System.String,System.String,System.String)">
+            <summary>
+            寫入設定
+            </summary>
+            <param name="key">設定索引名稱</param>
+            <param name="value">設定值</param>
+            <param name="name">設定檔識別名稱</param>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.ConfigHandler.GetConfig(System.String,System.String)">
+            <summary>
+            讀取設定
+            </summary>
+            <param name="key">設定索引名稱</param>
+            <param name="name">設定檔識別名稱</param>
+            <returns>設定值</returns>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.ConfigHandler.RemoveConfig(System.String,System.String)">
+            <summary>
+            移除設定
+            </summary>
+            <param name="key">設定索引名稱</param>
+            <param name="name">設定檔識別名稱</param>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.ConfigHandler.DeleteConfig(System.String)">
+            <summary>
+            刪除設定檔
+            </summary>
+            <param name="name">設定檔識別名稱</param>
+            <returns>刪除結果</returns>
+        </member>
+        <member name="T:KioskClient.Framework.BrowserHandler.DeviceHandler">
+            <summary>
+            1.負責與Wantchdog 模組溝通
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.DeviceHandler.#ctor">
+            <summary>
+            建構式
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.DeviceHandler.postToDeviceWithCallback(System.String,System.Object)">
+            <summary>
+            驅動裝置執行命令與回呼
+            </summary>
+            <param name="cmd"></param>
+            <param name="callback">執行命令後會將成果傳入callback函式</param>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.DeviceHandler.postToDeviceWithoutCallback(System.String)">
+            <summary>
+            驅動裝置執行命令
+            </summary>
+            <param name="cmd"></param>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.DeviceHandler.sendToDevice(System.String)">
+            <summary>
+            驅動裝置執行命令
+            </summary>
+            <param name="cmd"></param>
+            <returns></returns>
+            <remarks>
+            等候執行結果
+            </remarks>
+        </member>
+        <member name="T:KioskClient.Framework.BrowserHandler.IdleHelper">
+            <summary>
+            處理暫離
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.IdleHelper.StartIdleTimmer">
+            <summary>
+            開始閒置計時
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.IdleHelper.#ctor(KioskClient.KioskUI)">
+            <summary>
+            閒置小幫手
+            </summary>
+            <param name="ui"></param>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.IdleHelper.GetIdleSeconds">
+            <summary>
+            取得閒置的等待時間
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.IdleHelper.ResetTimmer">
+            <summary>
+            重新設定計時器
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.IdleHelper.SetOnIdle(System.Object)">
+            <summary>
+            設定當閒置時要處裡的動作
+            </summary>
+            <param name="callback"></param>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.IdleHelper.EnableIdle(System.Boolean)">
+            <summary>
+            設定啟用閒置機制
+            </summary>
+            <param name="enableFlag"></param>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.IdleHelper.Sleep(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="milliseconds"></param>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.IdleHelper.GoHome">
+            <summary>
+            閒置後回首頁
+            </summary>
+        </member>
+        <member name="T:KioskClient.Framework.BrowserHandler.LogHandler">
+            <summary>
+            提供記錄行為的類別
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.LogHandler.#ctor">
+            <summary>
+            建構式
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.BrowserHandler.LogHandler.Logger">
+            <summary>
+            ILog實體
+            
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.LogHandler.logInfo(System.String)">
+            <summary>
+            紀錄一般訊息內容
+            </summary>
+            <param name="info"></param>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.LogHandler.logError(System.String)">
+            <summary>
+            記錄錯誤的訊息內容
+            </summary>
+            <param name="err"></param>
+            <remarks>
+            除了記錄本機的log外，也會將訊息傳給命令模組並傳回遠端
+            </remarks>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.LogHandler.logWarn(System.String)">
+            <summary>
+            紀錄警告訊息
+            </summary>
+            <param name="warn"></param>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.LogHandler.logUserBehavior(System.String)">
+            <summary>
+            記錄使用者行為
+            </summary>
+            <param name="behaviorData"></param>
+            <remarks>
+            將行為資料傳回Middelware
+            </remarks>
+        </member>
+        <member name="T:KioskClient.Framework.BrowserHandler.MdeiaPlayerHandler">
+            <summary>
+            提供UI透過WindowsMediaPlayer 撥放媒體檔
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.MdeiaPlayerHandler.Play(System.String)">
+            <summary>
+            撥放媒體檔案
+            </summary>
+            <param name="file"></param>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.MdeiaPlayerHandler.Pause">
+            <summary>
+            暫停撥放
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.MdeiaPlayerHandler.Stop">
+            <summary>
+            停止撥放
+            </summary>
+        </member>
+        <member name="T:KioskClient.Framework.BrowserHandler.RemoteEventHandler">
+            <summary>
+            提供Javascript 註冊事件，讓KMS可以觸發
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.RemoteEventHandler.#ctor">
+            <summary>
+            建構式
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.BrowserHandler.RemoteEventHandler.ClentEvent">
+            <summary>
+            終端Javascript 事件
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.RemoteEventHandler.RegisterEvent(System.Object)">
+            <summary>
+            註冊事件
+            </summary>
+            <param name="callback"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.RemoteEventHandler.ClearEvent">
+            <summary>
+            清除事件
+            </summary>
+        </member>
+        <member name="T:KioskClient.Framework.BrowserHandler.TaskHandler">
+            <summary>
+            封裝應用程式任務處理的中介的類別
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.TaskHandler.GetDefaultTaskInfo">
+            <summary>
+            取得預設任務資訊物件
+            </summary>
+            <returns>資訊物件序列化後的JSON字串</returns>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.TaskHandler.AddTask(System.String)">
+            <summary>
+            新增一個自訂任務
+            </summary>
+            <param name="info">JSON字串, 代表任務執行相關資訊物件</param>
+            <returns>執行結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.TaskHandler.AddOnceTask(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            新增一個一次性執行的擴充元件任務
+            </summary>
+            <param name="fullName">擴充元件型別完整名稱</param>
+            <param name="method">執行任務的函數</param>
+            <param name="param">JSON字串, 代表任務執行參數字串陣列</param>
+            <param name="info">JSON字串, 代表上重試工作資訊物件</param>
+            <param name="timeout">任務執行逾時時間(單位:豪秒), -1為無限等候, 0為不等候</param>
+            <param name="delay">任務執行延遲時間(單位:豪秒)</param>
+            <param name="level">任務執行層級</param>
+            <returns>執行結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.TaskHandler.AddOnceApplication(System.String,System.String,System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            新增一個一次性執行的外部程式任務
+            </summary>
+            <param name="path">外部程式啟動路徑</param>
+            <param name="param">JSON字串, 代表任務執行參數字串陣列</param>
+            <param name="info">JSON字串, 代表上重試工作資訊物件</param>
+            <param name="timeout">任務執行逾時時間(單位:豪秒), -1為無限等候, 0為不等候</param>
+            <param name="delay">任務執行延遲時間(單位:豪秒)</param>
+            <param name="level">任務執行層級</param>
+            <returns>執行結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.TaskHandler.AddIntervalTask(System.String,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            新增一個定時執行的擴充元件任務
+            </summary>
+            <param name="fullName">擴充元件型別完整名稱</param>
+            <param name="method">執行任務的函數</param>
+            <param name="param">JSON字串, 代表任務執行參數字串陣列</param>
+            <param name="days">JSON字串, 代表任務執行日期DayOfWeek陣列</param>
+            <param name="times">JSON字串, 代表任務執行時間字串陣列</param>
+            <param name="timeout">任務執行逾時時間(單位:豪秒), -1為無限等候, 0為不等候</param>
+            <returns>執行結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.TaskHandler.AddIntervalApplication(System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            新增一個定時執行的外部程式任務
+            </summary>
+            <param name="path">外部程式啟動路徑</param>
+            <param name="param">JSON字串, 代表任務執行參數字串陣列</param>
+            <param name="days">JSON字串, 代表任務執行日期字串陣列</param>
+            <param name="times">JSON字串, 代表任務執行時間字串陣列</param>
+            <param name="timeout">任務執行逾時時間(單位:豪秒), -1為無限等候, 0為不等候</param>
+            <returns>執行結果</returns>
+        </member>
+        <member name="T:KioskClient.Framework.BrowserHandler.ZipHandler">
+            <summary>
+            封裝壓縮與解壓縮相關處理的中介的類別
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.ZipHandler.GetZipCommentString(System.String)">
+            <summary>
+            取得封裝壓縮檔的註解資訊字串
+            </summary>
+            <param name="file">封裝檔實體路徑</param>
+            <returns>封裝檔註解資訊字串</returns>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.ZipHandler.GetZipComment(System.String)">
+            <summary>
+            取得封裝壓縮檔的註解資訊字典集合
+            </summary>
+            <param name="file">封裝檔實體路徑</param>
+            <returns>封裝檔註解資訊字典集合</returns>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.ZipHandler.SetZipCommentString(System.String,System.String)">
+            <summary>
+            寫入封裝壓縮檔的註解資訊字串
+            </summary>
+            <param name="file">封裝檔實體路徑</param>
+            <param name="comment">要設定的封裝檔註解資訊字串</param>
+            <returns>執行結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.ZipHandler.SetZipComment(System.String,System.String,System.Boolean)">
+            <summary>
+            寫入封裝壓縮檔的註解資訊字典集合
+            </summary>
+            <param name="file">封裝檔實體路徑</param>
+            <param name="comment">JSON字串, 代表要設定的封裝檔註解資訊</param>
+            <param name="overwrite">是否覆寫原有註解, 若不覆寫則以更新的方式進行註解寫入</param>
+            <returns>執行結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.ZipHandler.ZipDir(System.String,System.String)">
+            <summary>
+            壓縮封裝目錄
+            </summary>
+            <param name="directory">封裝目錄實體路徑</param>
+            <param name="target">封裝檔案儲存路徑</param>
+            <returns>執行結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.ZipHandler.ZipFiles(System.String,System.String)">
+            <summary>
+            壓縮封裝檔案
+            </summary>
+            <param name="files">JSON字串, 代表待壓縮檔案清單</param>
+            <param name="target">封裝檔案儲存路徑</param>
+            <returns>執行結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.ZipHandler.UnZipFile(System.String,System.String)">
+            <summary>
+            解壓縮封裝檔案
+            </summary>
+            <param name="file">封裝檔實體路徑</param>
+            <param name="target">解壓縮後儲存的目錄路徑</param>
+            <returns>執行結果</returns>
+        </member>
+        <member name="T:KioskClient.Framework.BrowserHandler.SystemHandler">
+            <summary>
+            封裝系統相關處理的中介的類別
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.SystemHandler.ShudDown">
+            <summary>
+            執行系統關機
+            </summary>
+            <returns>執行結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.SystemHandler.Reboot">
+            <summary>
+            執行系統重開機
+            </summary>
+            <returns>執行結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.SystemHandler.CheckAccountPassword(System.String,System.String)">
+            <summary>
+            檢查本機使用者帳號密碼
+            </summary>
+            <param name="username">使用者帳號</param>
+            <param name="password">使用者密碼</param>
+            <returns>檢核結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.SystemHandler.CheckAccountPasswordByType(System.String,System.String,System.Int32)">
+            <summary>
+            檢查指定帳號類型使用者帳號密碼
+            </summary>
+            <param name="username">使用者帳號</param>
+            <param name="password">使用者密碼</param>
+            <param name="type">帳號類型(帳號主體存放區)</param>
+            <returns>檢核結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.SystemHandler.CheckPassword(System.String)">
+            <summary>
+            檢查本機使用者密碼
+            </summary>
+            <param name="password">使用者密碼</param>
+            <returns>檢核結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.SystemHandler.GetKioskId">
+            <summary>
+            取得KioskID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.SystemHandler.ShotDownApp">
+            <summary>
+            關閉基板所有模組
+            </summary>
+        </member>
+        <member name="T:KioskClient.Framework.BrowserHandler.NetHandler">
+            <summary>
+            封裝網路相關處理的中介的類別
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.NetHandler.GetAdapterLsit">
+            <summary>
+            取得啟用的網路介面卡顯示名稱陣列
+            </summary>
+            <returns>JSON字串, 代表網路介面卡顯示名稱陣列</returns>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.NetHandler.SetIPAddress(System.String,System.String)">
+            <summary>
+            設定網際網路通訊協定 (IP) 位址
+            </summary>
+            <param name="name">網路介面卡的顯示名稱</param>
+            <param name="ip">網際網路通訊協定 (IP) 位址</param>
+            <returns>執行結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.NetHandler.SetNetworkConfiguration(System.String)">
+            <summary>
+            設定網路組態
+            </summary>
+            <param name="info">JSON字串, 代表封裝網路介面卡資訊的結構物件</param>
+            <returns>執行結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.NetHandler.Ping(System.String)">
+            <summary>
+            判斷是否能透過網路存取遠端電腦。
+            </summary>
+            <param name="hostNameOrAddress">識別 ICMP 回應訊息的目標電腦。指定給這個參數的值可以是主機名稱或 IP 位址的字串表示。</param>
+            <returns>判斷結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.NetHandler.ClearIECache">
+            <summary>
+            執行IE Cache的清除
+            </summary>
+            <returns>執行結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.NetHandler.GetSystemWebProxy">
+            <summary>
+            取得目前使用者 Internet Explorer 的 Proxy 設定資訊物件。
+            </summary>
+            <returns>Proxy物件序列化後的JSON字串</returns>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.NetHandler.MakeDirectory(System.String,System.String,System.Int32)">
+            <summary>
+            在FTP上建立指定目錄
+            </summary>
+            <param name="info">JSON字串, 代表FTP伺服器資訊物件</param>
+            <param name="name">建立的目錄名稱</param>
+            <param name="timeout">上傳逾時的毫秒數, -1為無逾時</param>
+            <returns>執行結果</returns>
+            <remarks>前端呼叫傳遞路徑, 斜線符號"\"會有溢位字元的問題,需要使用"\\"代替</remarks>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.NetHandler.MakeDirectoryByProxy(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            在FTP上建立指定目錄
+            </summary>
+            <param name="info">JSON字串, 代表FTP伺服器資訊物件</param>
+            <param name="name">建立的目錄名稱</param>
+            <param name="timeout">上傳逾時的毫秒數, -1為無逾時</param>
+            <param name="proxy">JSON字串, 代表指定的Proxy物件</param>
+            <returns>執行結果</returns>
+            <remarks>前端呼叫傳遞路徑, 斜線符號"\"會有溢位字元的問題,需要使用"\\"代替</remarks>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.NetHandler.GetDirList(System.String,System.Int32)">
+            <summary>
+            取得FTP指定目錄下的檔案清單明細
+            </summary>
+            <param name="info">JSON字串, 代表FTP伺服器資訊物件</param>
+            <param name="timeout">操作逾時的毫秒數, -1為無逾時</param>
+            <returns>檔案資訊結構陣列序列化後的JSON字串</returns>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.NetHandler.DownloadFile(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            從FTP下載一個指定檔案
+            </summary>
+            <param name="info">JSON字串, 代表FTP伺服器資訊物件</param>
+            <param name="name">下載的檔案名稱</param>
+            <param name="file">檔案下載後的儲存目錄</param>
+            <param name="timeout">下載逾時的毫秒數, -1為無逾時</param>
+            <returns>下載結果</returns>
+            <remarks>前端呼叫傳遞路徑, 斜線符號"\"會有溢位字元的問題,需要使用"\\"代替</remarks>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.NetHandler.DownloadFileByProxy(System.String,System.String,System.String,System.Int32,System.String)">
+            <summary>
+            透過Proxy從FTP下載一個指定檔案
+            </summary>
+            <param name="info">JSON字串, 代表FTP伺服器資訊物件</param>
+            <param name="name">下載的檔案名稱</param>
+            <param name="file">檔案下載後的儲存目錄</param>
+            <param name="timeout">下載逾時的毫秒數, -1為無逾時</param>
+            <param name="proxy">JSON字串, 代表指定的Proxy物件</param>
+            <returns>下載結果</returns>
+            <remarks>前端呼叫傳遞路徑, 斜線符號"\"會有溢位字元的問題,需要使用"\\"代替</remarks>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.NetHandler.UploadSingleFile(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            上傳一個指定檔案到FTP
+            </summary>
+            <param name="info">JSON字串, 代表FTP伺服器資訊物件</param>
+            <param name="name">上傳的檔案名稱</param>
+            <param name="file">上傳檔案實體路徑</param>
+            <param name="timeout">上傳逾時的毫秒數, -1為無逾時</param>
+            <returns>上傳結果</returns>
+            <remarks>前端呼叫傳遞路徑, 斜線符號"\"會有溢位字元的問題,需要使用"\\"代替</remarks>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.NetHandler.UploadSingleFileByProxy(System.String,System.String,System.String,System.Int32,System.String)">
+            <summary>
+            透過Proxy上傳一個指定檔案到FTP
+            </summary>
+            <param name="info">JSON字串, 代表FTP伺服器資訊物件</param>
+            <param name="name">上傳的檔案名稱</param>
+            <param name="file">上傳檔案實體路徑</param>
+            <param name="timeout">上傳逾時的毫秒數, -1為無逾時</param>
+            <param name="proxy">JSON字串, 代表指定的Proxy物件</param>
+            <returns>上傳結果</returns>
+            <remarks>前端呼叫傳遞路徑, 斜線符號"\"會有溢位字元的問題,需要使用"\\"代替</remarks>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.NetHandler.UploadFiles(System.String,System.String)">
+            <summary>
+            封裝檔案並上傳
+            </summary>
+            <param name="files">JSON字串, 代表待上傳檔案清單</param>
+            <param name="info">JSON字串, 代表上傳用資訊物件</param>
+            <returns>執行結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.NetHandler.UploadFilesForComment(System.String,System.String,System.String)">
+            <summary>
+            封裝檔案並上傳
+            </summary>
+            <param name="files">JSON字串, 代表待上傳檔案清單</param>
+            <param name="info">JSON字串, 代表上傳用資訊物件</param>
+            <param name="comment">JSON字串, 額外封裝註解資訊</param>
+            <returns>執行結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.NetHandler.GetDefaultUploadInfo">
+            <summary>
+            取得以預設FTP伺服器建立的上傳用資訊物件
+            </summary>
+            <returns>資訊物件序列化後的JSON字串</returns>
+        </member>
+        <member name="T:KioskClient.Framework.BrowserHandler.WebScriptHandler">
+            <summary>
+            接收來自前端呼叫的處理類別, 不可為巢狀類別, 必須宣告為COM可見(所有使用到的物件型別)
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.BrowserHandler.WebScriptHandler.source">
+            <summary>
+            處理來源的瀏覽視窗物件
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.BrowserHandler.WebScriptHandler.MachineName">
+            <summary>
+            取得這個本機電腦的名稱, 用來代表閘道識別ID
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.BrowserHandler.WebScriptHandler.RemoteEvent">
+            <summary>
+            提供UI註冊事件供KMS呼叫
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.BrowserHandler.WebScriptHandler.Device">
+            <summary>
+            提供UI層操作硬體的介面
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.BrowserHandler.WebScriptHandler.MediaPlayer">
+            <summary>
+            提供UI透過基盤呼叫WMP撥放媒體黨
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.BrowserHandler.WebScriptHandler.objZipHandler">
+            <summary>
+            封裝壓縮與解壓縮相關處理的中介物件
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.BrowserHandler.WebScriptHandler.Zip">
+            <summary>
+            封裝壓縮與解壓縮相關處理的中介物件
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.BrowserHandler.WebScriptHandler.objSystemHandler">
+            <summary>
+            封裝系統相關處理的中介物件
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.BrowserHandler.WebScriptHandler.System">
+            <summary>
+            封裝系統相關處理的中介物件
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.BrowserHandler.WebScriptHandler.objNetHandler">
+            <summary>
+            封裝網路相關處理的中介物件
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.BrowserHandler.WebScriptHandler.Net">
+            <summary>
+            封裝網路相關處理的中介物件
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.BrowserHandler.WebScriptHandler.objConfigHandler">
+            <summary>
+            封裝應用程式設定相關處理的中介物件
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.BrowserHandler.WebScriptHandler.Config">
+            <summary>
+            封裝應用程式設定相關處理的中介物件
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.BrowserHandler.WebScriptHandler.objTaskHandler">
+            <summary>
+            封裝應用程式任務相關處理的中介物件
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.BrowserHandler.WebScriptHandler.Task">
+            <summary>
+            封裝應用程式任務相關處理的中介物件
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.WebScriptHandler.#ctor(KioskClient.KioskUI)">
+            <summary>
+            建構子, 傳入處理來源的瀏覽視窗物件
+            </summary>
+            <param name="obj">處理來源的瀏覽視窗物件</param>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.WebScriptHandler.SetData(System.String,System.Object)">
+            <summary>
+            設定流程變數
+            </summary>
+            <param name="key">變數名稱</param>
+            <param name="value">值</param>
+            <remarks>對javascript來說可以是值或物件(函數會有跨頁被釋放無法執行的問題)</remarks>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.WebScriptHandler.GetData(System.String)">
+            <summary>
+            取得流程變數
+            </summary>
+            <param name="key">變數名稱</param>
+            <returns>值</returns>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.WebScriptHandler.RemoveData(System.String)">
+            <summary>
+            移除流程變數
+            </summary>
+            <param name="key">變數名稱</param>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.WebScriptHandler.onError(System.Object,System.Object,System.Object)">
+            <summary>
+            提供網頁發生指令碼錯誤時呼叫(將Error帶回Webbrowser)
+            </summary>
+            <param name="errorMsg">錯誤訊息</param>
+            <param name="url">發生錯誤的URL</param>
+            <param name="lineNumber">發生錯誤的行號</param>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.WebScriptHandler.GetExternal(System.String)">
+            <summary>
+            依據傳入的完整命名空間字串取得擴充元件執行個體
+            </summary>
+            <param name="fullNamespace">完整命名空間字串</param>
+            <returns>擴充元件執行個體</returns>
+        </member>
+        <member name="M:KioskClient.Framework.BrowserHandler.WebScriptHandler.GoStartPage">
+            <summary>
+            返回起始頁面
+            </summary>
+        </member>
+        <member name="T:KioskClient.Framework.Common.Net.Http">
+            <summary>
+            封裝Http相關存取操作的類別
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:KioskClient.Framework.Common.Net.Http.HttpPostedFile">
+            <summary>
+            定義Http Post上傳所需檔案資訊的結構
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Http.HttpPostedFile.strParamName">
+            <summary>
+            上傳檔案對應的網頁參數名稱
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Common.Net.Http.HttpPostedFile.ParamName">
+            <summary>
+            取得或設定上傳檔案對應的網頁參數名稱, 可為null
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Http.HttpPostedFile.strContentType">
+            <summary>
+            上傳檔案的 MIME 內容類型
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Common.Net.Http.HttpPostedFile.ContentType">
+            <summary>
+            取得或設定上傳檔案的 MIME 內容類型, 可為null
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Http.HttpPostedFile.strFullFileName">
+            <summary>
+            上傳檔案的實體路徑位置
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Common.Net.Http.HttpPostedFile.FullFileName">
+            <summary>
+            取得或設定上傳檔案的實體路徑位置
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Net.Http.HttpPostedFile.#ctor(System.String,System.String,System.String)">
+            <summary>
+            建構子
+            </summary>
+            <param name="file">上傳檔案的實體路徑位置</param>
+            <param name="paramName">上傳檔案對應的網頁參數名稱, 選擇性項目</param>
+            <param name="contentType">上傳檔案的 MIME 內容類型, 選擇性項目</param>
+        </member>
+        <member name="T:KioskClient.Framework.Common.Net.Http.RequestMethod">
+            <summary>
+            Http通訊要求的方法
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Http.RequestMethod.POST">
+            <summary>
+            POST 方式通過在頁面內容中填寫參數的方法來完成資料的提交
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Http.RequestMethod.GET">
+            <summary>
+            GET 方式通過在網路位址附加參數來完成資料的提交
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Net.Http.UploadFileByHttpWebRequest(System.String,KioskClient.Framework.Common.Net.Http.HttpPostedFile[],System.Collections.Generic.Dictionary{System.String,System.String},System.Text.Encoding)">
+            <summary>
+            透過Http的方式將檔案上傳至 Web 伺服器
+            </summary>
+            <param name="url">目標上傳網址</param>
+            <param name="files">待上傳檔案資訊清單</param>
+            <param name="parameter">其他POST傳遞參數, 若無參數傳遞則為null</param>
+            <param name="encoding">指定網址的編碼方式, 預設為UTF-8, 選擇性項目</param>
+            <returns>Web 伺服器回應訊息</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Net.Http.SendRequest(System.Uri,KioskClient.Framework.Common.Net.Http.RequestMethod,System.Collections.Generic.Dictionary{System.String,System.String},System.Text.Encoding)">
+            <summary>
+            向Web 伺服器發出請求, 並接收回應訊息
+            </summary>
+            <param name="serverUri">包含與 Web 伺服器要求資源的 URI。</param>
+            <param name="method">用來連繫網際網路資源的要求方法列舉常數。</param>
+            <param name="parameter">傳遞的參數字典集合, 若無參數傳遞則為null</param>
+            <param name="encoding">資料傳遞編碼方式, 預設為UTF-8, 選擇性項目</param>
+            <returns>Web 伺服器回應訊息</returns>
+            <remarks>
+             request.CookieContainer = new CookieContainer();
+             string userAgent = @"Mozilla/4.0 (compatible; MSIE 6.0; Windows XP)";
+             request.UserAgent = userAgent;
+             request.UserAgent = @"Mozilla/4.0 (compatible; MSIE 7.0;
+                                                Windows NT 5.1; GTB5; .NET CLR 2.0.50727; .NET CLR 3.0.04506.590; .NET CLR
+                                                1.1.4322; .NET CLR 3.5.20706; .NET CLR 3.0.04506.648; .NET CLR 3.5.21022;
+                                                .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729)";
+            </remarks>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Net.Http.ConvertToQueryString(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            將參數集合的字串字典內容轉換成Http URL的查詢字串
+            </summary>
+            <param name="parameter">參數字典集合</param>
+            <returns>URL的查詢字串, 開頭帶有?號</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Net.Http.ConvertToDictionary(System.String)">
+            <summary>
+            將Http URL的查詢字串轉換成字串字典內容
+            </summary>
+            <param name="queryString">Http URL的查詢字串</param>
+            <returns>字串字典內容</returns>
+        </member>
+        <member name="T:KioskClient.Framework.Common.Net.Ftp">
+            <summary>
+            封裝Ftp相關存取操作的類別
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Ftp.FILE_DEFINE">
+            <summary>
+            定義取得Ftp檔案詳細資料的識別字串
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Ftp.DIRECTORY_DEFINE">
+            <summary>
+            定義取得Ftp目錄詳細資料的識別字串
+            </summary>
+        </member>
+        <member name="T:KioskClient.Framework.Common.Net.Ftp.FileType">
+            <summary>
+            檔案類型的列舉常數
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Ftp.FileType.Unknow">
+            <summary>
+            未知類型
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Ftp.FileType.File">
+            <summary>
+            檔案
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Ftp.FileType.Directory">
+            <summary>
+            目錄
+            </summary>
+        </member>
+        <member name="T:KioskClient.Framework.Common.Net.Ftp.FtpFileStruct">
+            <summary>
+            定義檔案資訊的結構
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Common.Net.Ftp.FtpFileStruct.Name">
+            <summary>
+            檔案名稱
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Common.Net.Ftp.FtpFileStruct.FullName">
+            <summary>
+            檔案路徑
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Common.Net.Ftp.FtpFileStruct.LastWriteTime">
+            <summary>
+            檔案修改時間
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Common.Net.Ftp.FtpFileStruct.Length">
+            <summary>
+            檔案大小
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Common.Net.Ftp.FtpFileStruct.Extension">
+            <summary>
+            檔案副檔名
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Common.Net.Ftp.FtpFileStruct.Type">
+            <summary>
+            檔案類型
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Net.Ftp.FtpFileStruct.ToString">
+            <summary>
+            複寫基礎物件的ToString()方法, 改回傳檔案路徑
+            </summary>
+            <returns>檔案路徑</returns>
+        </member>
+        <member name="T:KioskClient.Framework.Common.Net.Ftp.FtpState">
+            <summary>
+            FTP非同步上傳時的資訊傳遞物件結構
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Ftp.FtpState.wait">
+            <summary>
+            用來通知執行緒FTP作業是否完成的通知事件物件
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Common.Net.Ftp.FtpState.OperationComplete">
+            <summary>
+            用來通知執行緒FTP作業是否完成的通知事件物件
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Ftp.FtpState.operationRequest">
+            <summary>
+            用來進行FTP上傳作業的FtpWebRequest物件
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Common.Net.Ftp.FtpState.Request">
+            <summary>
+            用來進行FTP上傳作業的FtpWebRequest物件
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Ftp.FtpState.strFileName">
+            <summary>
+            上傳的檔案路徑
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Common.Net.Ftp.FtpState.FileName">
+            <summary>
+            上傳的檔案路徑
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Ftp.FtpState.operationException">
+            <summary>
+            FTP上傳作業因異常結束時的例外訊息物件(如果有)
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Common.Net.Ftp.FtpState.OperationException">
+            <summary>
+            FTP上傳作業因異常結束時的例外訊息物件(如果有)
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Ftp.FtpState.operationStatus">
+            <summary>
+            FTP上傳結束時的狀態描述
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Common.Net.Ftp.FtpState.StatusDescription">
+            <summary>
+            FTP上傳結束時的狀態描述
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Net.Ftp.FtpState.#ctor(System.Net.FtpWebRequest,System.String)">
+            <summary>
+            建構子
+            </summary>
+            <param name="request">用來進行FTP上傳作業的FtpWebRequest物件</param>
+            <param name="fileName">上傳的檔案路徑</param>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Ftp.FtpState.disposed">
+            <summary>
+            是否已處置過執行個體資源的旗標
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Net.Ftp.FtpState.Dispose">
+            <summary>
+            將目前的執行個體所使用的資源全部釋出。
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Net.Ftp.FtpState.Dispose(System.Boolean)">
+            <summary>
+            釋放執行個體所使用的 Unmanaged 資源，並選擇性地釋放Managed 資源。
+            </summary>
+            <param name="disposing">true 表示釋放 Managed 和 Unmanaged 資源，false 則表示只釋放 Unmanaged 資源。</param>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Net.Ftp.FtpState.Finalize">
+            <summary>
+            解構子
+            </summary>
+        </member>
+        <member name="T:KioskClient.Framework.Common.Net.Ftp.AsyncFtpUploader">
+            <summary>
+            封裝非同步FTP上傳的操作邏輯類別
+            </summary>
+            <remarks>支援逾時取消作業</remarks>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Ftp.AsyncFtpUploader.timerUploadBlockTimeout">
+            <summary>
+            FTP上傳逾時計時器
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Ftp.AsyncFtpUploader.TimeoutFlag">
+            <summary>
+            是否上傳逾時的旗標
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Ftp.AsyncFtpUploader.operationStatus">
+            <summary>
+            FTP非同步上傳時的資訊傳遞物件
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Common.Net.Ftp.AsyncFtpUploader.Status">
+            <summary>
+            FTP非同步上傳時的資訊傳遞物件
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Net.Ftp.AsyncFtpUploader.#ctor(System.Net.FtpWebRequest,System.String)">
+            <summary>
+            建構子
+            </summary>
+            <param name="request">用來進行FTP上傳作業的FtpWebRequest物件</param>
+            <param name="fileName">上傳的檔案路徑</param>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Net.Ftp.AsyncFtpUploader.timerUploadBlockTimeout_Tick(System.Object,System.EventArgs)">
+            <summary>
+            當FTP上傳逾時時觸發的事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Net.Ftp.AsyncFtpUploader.AllowAbortUpload">
+            <summary>
+            執行允許逾時取消的非同步FTP上傳作業
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Net.Ftp.AsyncFtpUploader.AbortRequest">
+            <summary>
+            取消目前上傳作業
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Net.Ftp.AsyncFtpUploader.EndGetStreamCallback(System.IAsyncResult)">
+            <summary>
+            當BeginGetRequestStream方法執行完成時回呼的方法
+            </summary>
+            <param name="ar"></param>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Net.Ftp.AsyncFtpUploader.EndGetResponseCallback(System.IAsyncResult)">
+            <summary>
+            當BeginGetResponse方法執行完成時回呼的方法
+            </summary>
+            <param name="ar"></param>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Ftp.AsyncFtpUploader.disposed">
+            <summary>
+            是否已處置過執行個體資源的旗標
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Net.Ftp.AsyncFtpUploader.Dispose">
+            <summary>
+            將目前的執行個體所使用的資源全部釋出。
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Net.Ftp.AsyncFtpUploader.Dispose(System.Boolean)">
+            <summary>
+            釋放執行個體所使用的 Unmanaged 資源，並選擇性地釋放Managed 資源。
+            </summary>
+            <param name="disposing">true 表示釋放 Managed 和 Unmanaged 資源，false 則表示只釋放 Unmanaged 資源。</param>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Net.Ftp.AsyncFtpUploader.Finalize">
+            <summary>
+            解構子
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Net.Ftp.GetDafaultCredential">
+            <summary>
+            取得FTP伺服器預設匿名登入的認證物件
+            </summary>
+            <returns>用來與 FTP 伺服器通訊的匿名認證</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Net.Ftp.GetSystemWebProxy">
+            <summary>
+            取得 Proxy，其組態為目前模擬使用者的 Internet Explorer 設定。
+            </summary>
+            <returns>傳回 System.Net.WebRequest 類別。</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Net.Ftp.GetDirList(System.Uri,System.Int32,System.Net.ICredentials,System.Net.IWebProxy)">
+            <summary>
+            取得FTP指定目錄下的檔案清單
+            </summary>
+            <param name="serverUri">包含與 FTP 伺服器要求資源的 URI。</param>
+            <param name="timeout">操作逾時的毫秒數, 選擇性項目。</param>
+            <param name="credentials">用來與 FTP 伺服器通訊的認證, 選擇性項目。</param>
+            <param name="proxy">用來與FTP伺服器通訊的 Proxy</param>
+            <returns>下載結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Net.Ftp.DownloadFile(System.Uri,System.String,System.String,System.Int32,System.Net.ICredentials,System.Net.IWebProxy)">
+            <summary>
+            從FTP下載一個指定檔案
+            </summary>
+            <param name="serverUri">包含與 FTP 伺服器要求資源的 URI。</param>
+            <param name="fileName">下載的檔案名稱</param>
+            <param name="targetDirectory">檔案下載後的儲存目錄</param>
+            <param name="timeout">下載逾時的毫秒數, 選擇性項目。</param>
+            <param name="credentials">用來與 FTP 伺服器通訊的認證, 選擇性項目。</param>
+            <param name="proxy">用來與FTP伺服器通訊的 Proxy</param>
+            <returns>下載結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Net.Ftp.UploadFile(System.Uri,System.String,System.String,System.Int32,System.Net.ICredentials,System.Net.IWebProxy)">
+            <summary>
+            上傳一個指定檔案到FTP
+            </summary>
+            <param name="serverUri">包含與 FTP 伺服器要求資源的 URI。</param>
+            <param name="fileName">上傳的檔案名稱</param>
+            <param name="file">上傳的檔案</param>
+            <param name="timeout">上傳逾時的毫秒數, 選擇性項目。</param>
+            <param name="credentials">用來與 FTP 伺服器通訊的認證, 選擇性項目。</param>
+            <param name="proxy">用來與FTP伺服器通訊的 Proxy, 選擇性項目。</param>
+            <returns>上傳結果</returns>
+            <remarks>WebRequest.GetSystemWebProxy()函數傳回 Proxy，其組態為目前模擬使用者的 Internet Explorer 設定。</remarks>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Net.Ftp.MakeDirectory(System.Uri,System.String,System.Int32,System.Net.ICredentials,System.Net.IWebProxy)">
+            <summary>
+            在FTP上建立指定目錄
+            </summary>
+            <param name="serverUri">包含與 FTP 伺服器要求資源的 URI。</param>
+            <param name="folderName">建立的目錄名稱</param>
+            <param name="timeout">上傳逾時的毫秒數, 選擇性項目。</param>
+            <param name="credentials">用來與 FTP 伺服器通訊的認證, 選擇性項目。</param>
+            <param name="proxy">用來與FTP伺服器通訊的 Proxy, 選擇性項目。</param>
+            <returns>執行結果</returns>
+            <remarks>WebRequest.GetSystemWebProxy()函數傳回 Proxy，其組態為目前模擬使用者的 Internet Explorer 設定。</remarks>
+        </member>
+        <member name="T:KioskClient.Framework.Common.Net.Net">
+            <summary>
+            封裝網路相關操作邏輯的靜態類別
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Net.PATH_STRING">
+            <summary>
+            WMI 物件路徑
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Net.SCOPE_STRING">
+            <summary>
+            WMI 物件的範圍
+            </summary>
+        </member>
+        <member name="T:KioskClient.Framework.Common.Net.Net.AdapterInfo">
+            <summary>
+            封裝網路介面卡相關資訊的結構
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Net.Net.AdapterInfo.#ctor(System.String,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            初始化結構
+            </summary>
+            <param name="caption">標題</param>
+            <param name="macAddress">實體位址</param>
+            <param name="serviceName">服務名稱</param>
+            <param name="index">索引</param>
+            <param name="description">描述</param>
+            <param name="ipEnabled">是可連線使用</param>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Net.AdapterInfo.strGUID">
+            <summary>
+            介面卡GUID
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Common.Net.Net.AdapterInfo.GUID">
+            <summary>
+            介面卡GUID
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Net.AdapterInfo.strName">
+            <summary>
+            取得網路介面卡的名稱
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Common.Net.Net.AdapterInfo.Name">
+            <summary>
+            取得網路介面卡的名稱
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Net.AdapterInfo.strDisplayName">
+            <summary>
+            顯示名稱
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Common.Net.Net.AdapterInfo.DisplayName">
+            <summary>
+            顯示名稱
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Net.AdapterInfo.strCaption">
+            <summary>
+            標題
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Common.Net.Net.AdapterInfo.Caption">
+            <summary>
+            標題
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Net.AdapterInfo.strMACAddress">
+            <summary>
+            實體位址
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Common.Net.Net.AdapterInfo.MACAddress">
+            <summary>
+            實體位址
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Net.AdapterInfo.strServiceName">
+            <summary>
+            服務名稱
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Common.Net.Net.AdapterInfo.ServiceName">
+            <summary>
+            服務名稱
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Net.AdapterInfo.strIndex">
+            <summary>
+            索引
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Common.Net.Net.AdapterInfo.Index">
+            <summary>
+            索引
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Net.AdapterInfo.strDescription">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Common.Net.Net.AdapterInfo.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Net.AdapterInfo.bolIPEnabled">
+            <summary>
+            是否介面卡可連線使用
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Common.Net.Net.AdapterInfo.IPEnabled">
+            <summary>
+            是否介面卡可連線使用
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Net.AdapterInfo.bolIsDHCPEnable">
+            <summary>
+            取得此介面是否已設定為使用動態主機設定通訊協定 (DHCP) 伺服器取得 IP 位址
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Common.Net.Net.AdapterInfo.IsDHCPEnable">
+            <summary>
+            取得或設定此介面是否已設定為使用動態主機設定通訊協定 (DHCP) 伺服器取得 IP 位址
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Net.AdapterInfo.strIPv4Address">
+            <summary>
+            取得網際網路通訊協定 (IP) 位址
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Common.Net.Net.AdapterInfo.IPv4Address">
+            <summary>
+            取得或設定網際網路通訊協定 (IP) 位址
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Net.AdapterInfo.strIPv4Mask">
+            <summary>
+            取得 IPv4 遮罩
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Common.Net.Net.AdapterInfo.IPv4Mask">
+            <summary>
+            取得或設定 IPv4 遮罩
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Net.AdapterInfo.strGateway">
+            <summary>
+            取得 IPv4 網路閘道位址
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Common.Net.Net.AdapterInfo.Gateway">
+            <summary>
+            取得或設定 IPv4 網路閘道位址
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Net.AdapterInfo.bolIsObtainDnsAutomatically">
+            <summary>
+            取得這個介面是否自動取得 DNS 伺服器位址
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Common.Net.Net.AdapterInfo.IsObtainDnsAutomatically">
+            <summary>
+            取得或設定這個介面是否自動取得 DNS 伺服器位址
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Net.AdapterInfo.strPrimaryDnsAddress">
+            <summary>
+            取得這個介面慣用的網域名稱系統 (DNS) 伺服器位址
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Common.Net.Net.AdapterInfo.PrimaryDnsAddress">
+            <summary>
+            取得或設定這個介面慣用的網域名稱系統 (DNS) 伺服器位址
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Net.Net.AdapterInfo.strSecondDnsAddress">
+            <summary>
+            取得這個介面其他的網域名稱系統 (DNS) 伺服器位址
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Common.Net.Net.AdapterInfo.SecondDnsAddress">
+            <summary>
+            取得或設定這個介面其他的網域名稱系統 (DNS) 伺服器位址
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Net.Net.GetAdapterInfo">
+            <summary>
+            取得啟用的網路介面卡資訊
+            </summary>
+            <returns>網路介面卡資訊結構集合</returns>
+            <remarks>使用WMI查詢</remarks>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Net.Net.SetIPAddress(System.String,System.String)">
+            <summary>
+            設定網際網路通訊協定 (IP) 位址
+            </summary>
+            <param name="name">網路介面卡的顯示名稱</param>
+            <param name="ip">網際網路通訊協定 (IP) 位址</param>
+            <returns>執行結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Net.Net.SetNetworkConfiguration(KioskClient.Framework.Common.Net.Net.AdapterInfo)">
+            <summary>
+            設定網路組態
+            </summary>
+            <param name="infoObj">封裝網路介面卡資訊的結構物件</param>
+            <returns>執行結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Net.Net.SetDHCP(KioskClient.Framework.Common.Net.Net.AdapterInfo)">
+            <summary>
+            設定自動取得IP位址 (DHCP)
+            </summary>
+            <param name="infoObj">封裝網路介面卡資訊的結構物件</param>
+            <returns>執行結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Net.Net.SetDnsAutomatically(KioskClient.Framework.Common.Net.Net.AdapterInfo)">
+            <summary>
+            設定自動取得DNS伺服器位址
+            </summary>
+            <param name="infoObj">封裝網路介面卡資訊的結構物件</param>
+            <returns>執行結果</returns>
+            <remarks>DHCP</remarks>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Net.Net.ClearIECache">
+            <summary>
+            清除IE Cache
+            </summary>
+            <returns>執行結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Net.Net.Ping(System.String)">
+            <summary>
+            判斷是否能透過網路存取遠端電腦。
+            </summary>
+            <param name="hostNameOrAddress">識別 ICMP 回應訊息的目標電腦。指定給這個參數的值可以是主機名稱或 IP 位址的字串表示。</param>
+            <returns>判斷結果</returns>
+        </member>
+        <member name="T:KioskClient.Framework.Common.Collections.Generic.Queue`1">
+            <summary>
+            表示物件的先進先出 (FIFO) 集合。繼承自Queue類別 , 擴充增加元素新增取出前後的事件
+            </summary>
+            <typeparam name="T">指定Queue中元素的類型</typeparam>
+        </member>
+        <member name="E:KioskClient.Framework.Common.Collections.Generic.Queue`1.OnBeforeEnqueue">
+            <summary>
+            觸發佇列加入元素前的事件
+            </summary>
+        </member>
+        <member name="E:KioskClient.Framework.Common.Collections.Generic.Queue`1.OnAfterEnqueue">
+            <summary>
+            觸發佇列加入元素後的事件
+            </summary>
+        </member>
+        <member name="E:KioskClient.Framework.Common.Collections.Generic.Queue`1.OnBeforeDequeue">
+            <summary>
+            觸發佇列取出元素前的事件
+            </summary>
+        </member>
+        <member name="E:KioskClient.Framework.Common.Collections.Generic.Queue`1.OnAfterDequeue">
+            <summary>
+            觸發佇列取出元素後的事件
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Collections.Generic.Queue`1.EnqueueOnEvent(`0)">
+            <summary>
+            將物件加入至 System.Collections.Generic.Queue&lt;T&gt; 的結尾。(會觸發事件)
+            </summary>
+            <param name="item">要加入至 System.Collections.Generic.Queue&lt;T&gt; 的物件。參考型別的值可以是 null。</param>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Collections.Generic.Queue`1.DequeueOnEvent">
+            <summary>
+            移除並傳回在 System.Collections.Generic.Queue&lt;T&gt; 前端的物件。(會觸發事件)
+            </summary>
+            <returns>從 System.Collections.Generic.Queue&lt;T&gt; 前端移除的物件。</returns>
+        </member>
+        <member name="T:KioskClient.Framework.Common.Cryptography">
+            <summary>
+            封裝加解密相關操作邏輯的類別
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Cryptography.EXTERNAL_SENDER_KEY">
+            <summary>
+            定義External的發送端金鑰
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Cryptography.EXTERNAL_RECEIVER_KEY">
+            <summary>
+            定義External的接收端金鑰
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Cryptography.objRSA">
+            <summary>
+            用來提供RSA加解密的服務物件
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Common.Cryptography.PublicKey">
+            <summary>
+            加密器公開金鑰
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Cryptography.#ctor(System.String)">
+            <summary>
+            建構子, 依據指定私鑰建立RSA加密物件
+            </summary>
+            <param name="privateKey">私鑰資訊</param>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Cryptography.HashAndSignData(System.Byte[])">
+            <summary>
+            使用指定演算法產生訊息摘要(雜湊值)，然後產生數位簽章並回傳。
+            </summary>
+            <param name="dataToSign">待簽章的資料</param>
+            <returns>數位簽章</returns>
+            <remarks>使用發送端的私密金鑰加密摘要產生數位簽章, 只允許用發送端的公開金鑰驗證簽章資料</remarks>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Cryptography.VerifySignedData(System.Byte[],System.Byte[],System.String)">
+            <summary>
+            驗證數位簽章
+            </summary>
+            <param name="dataToVerify">已簽章的資料</param>
+            <param name="signature">要驗證的簽章資料</param>
+            <param name="publicKey">用來驗證的公開金鑰</param>
+            <returns>驗證結果</returns>
+            <remarks>使用發送端的公開金鑰驗證資料, 驗證發送端的簽章資料</remarks>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Cryptography.EncryptData(System.Byte[],System.String)">
+            <summary>
+            加密資料
+            </summary>
+            <param name="dataToEncrypt">待加密的資料</param>
+            <param name="publicKey">用來加密的公開金鑰</param>
+            <returns>加密後的資料</returns>
+            <remarks>使用接收端的公開金鑰加密資料, 只允許接收端用私鑰解密</remarks>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Cryptography.DecryptData(System.Byte[])">
+            <summary>
+            解密資料
+            </summary>
+            <param name="dataToDecrypt">待解密的資料</param>
+            <returns>解密後的資料</returns>
+            <remarks>使用接收端私鑰解密發送端送的加密資料</remarks>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Cryptography.EncryptString(System.String,System.String,System.String)">
+            <summary>
+            加密字串
+            </summary>
+            <param name="original">原始字串</param>
+            <param name="key">對稱金鑰</param>
+            <param name="iv">對稱演算法的初始化向量</param>
+            <returns>加密後Hex字串</returns>
+            <remarks>Aes 加密</remarks>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Cryptography.DecryptString(System.String,System.String,System.String)">
+            <summary>
+            解密字串
+            </summary>
+            <param name="hexString">加密後Hex字串</param>
+            <param name="key">對稱金鑰</param>
+            <param name="iv">對稱演算法的初始化向量</param>
+            <returns>解密後字串</returns>
+            <remarks>Aes 解密</remarks>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Cryptography.EncryptKey(System.String)">
+            <summary>
+            加密金鑰
+            </summary>
+            <param name="key">金鑰</param>
+            <returns>加密後的金鑰</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Cryptography.DecryptKey(System.String)">
+            <summary>
+            解密金鑰
+            </summary>
+            <param name="key">金鑰</param>
+            <returns>加密後的金鑰</returns>
+        </member>
+        <member name="F:KioskClient.Framework.Common.Cryptography.disposed">
+            <summary>
+            是否已處置過執行個體資源的旗標
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Cryptography.Dispose">
+            <summary>
+            將目前的執行個體所使用的資源全部釋出。
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Cryptography.Dispose(System.Boolean)">
+            <summary>
+            釋放執行個體所使用的 Unmanaged 資源，並選擇性地釋放Managed 資源。
+            </summary>
+            <param name="disposing">true 表示釋放 Managed 和 Unmanaged 資源，false 則表示只釋放 Unmanaged 資源。</param>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Cryptography.Finalize">
+            <summary>
+            解構子
+            </summary>
+        </member>
+        <member name="T:KioskClient.Framework.Common.SystemUtility">
+            <summary>
+            封裝系統相關操作邏輯的靜態類別
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Common.SystemUtility.ShowSystemTaskBar">
+            <summary>
+            顯示系統工具列與開始按鈕
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Common.SystemUtility.HideSystemTaskBar">
+            <summary>
+            隱藏系統工具列與開始按鈕
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Common.SystemUtility.ShudDown">
+            <summary>
+            執行系統關機
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Common.SystemUtility.Reboot">
+            <summary>
+            執行系統重開機
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Common.SystemUtility.CheckPassword(System.String)">
+            <summary>
+            檢查本機使用者密碼
+            </summary>
+            <param name="password">使用者密碼</param>
+            <returns>檢核結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Common.SystemUtility.CheckAccountPassword(System.String,System.String)">
+            <summary>
+            檢查本機使用者帳號密碼
+            </summary>
+            <param name="username">使用者帳號</param>
+            <param name="password">使用者密碼</param>
+            <returns>檢核結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Common.SystemUtility.CheckAccountPassword(System.String,System.String,System.DirectoryServices.AccountManagement.ContextType)">
+            <summary>
+            檢查指定帳號類型使用者帳號密碼
+            </summary>
+            <param name="username">使用者帳號</param>
+            <param name="password">使用者密碼</param>
+            <param name="type">帳號類型(帳號主體存放區)</param>
+            <returns>檢核結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Common.SystemUtility.AddEnvironmentPaths(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            系統環境變數
+            </summary>
+            <param name="paths"></param>
+        </member>
+        <member name="T:KioskClient.Framework.Common.Registry">
+            <summary>
+            封裝機碼相關存取操作邏輯的靜態類別
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Registry.SetRegValue(System.String,System.Object,System.String,Microsoft.Win32.RegistryKey)">
+            <summary>
+            設定機碼參數的值
+            </summary>
+            <param name="Name">參數名稱</param>
+            <param name="value">值</param>
+            <param name="path">機碼路徑</param>
+            <param name="type">機碼類型</param>
+            <returns>執行結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Registry.GetRegValue(System.String,System.String,Microsoft.Win32.RegistryKey)">
+            <summary>
+            取得機碼參數的值
+            </summary>
+            <param name="Name">參數名稱</param>
+            <param name="path">機碼路徑</param>
+            <param name="type">機碼類型</param>
+            <returns>值,若沒有此機碼則回傳空字串</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Registry.CreateReg(System.String,System.Object,System.String,Microsoft.Win32.RegistryKey)">
+            <summary>
+            建立機碼
+            </summary>
+            <param name="Name">參數名稱</param>
+            <param name="value">值</param>
+            <param name="path">機碼路徑</param>
+            <param name="type">機碼類型</param>
+            <returns>執行結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Registry.DelReg(System.String,System.String,Microsoft.Win32.RegistryKey)">
+            <summary>
+            刪除機碼
+            </summary>
+            <param name="Name">機碼名稱</param>
+            <param name="path">機碼路徑</param>
+            <param name="type">機碼類型</param>
+            <returns>執行結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Registry.DelRegValue(System.String,System.String,Microsoft.Win32.RegistryKey)">
+            <summary>
+            刪除機碼值
+            </summary>
+            <param name="Name">參數名稱</param>
+            <param name="path">機碼路徑</param>
+            <param name="type">機碼類型</param>
+            <returns>執行結果</returns>
+        </member>
+        <member name="T:KioskClient.Framework.Common.Zip">
+            <summary>
+            封裝檔案壓縮與解壓縮相關操作邏輯的靜態類別
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Zip.GetZipCommentString(System.String)">
+            <summary>
+            取得封裝壓縮檔的註解資訊字串
+            </summary>
+            <param name="file">壓縮檔實體路徑</param>
+            <returns>回傳註解資訊的字串</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Zip.GetZipComment(System.String)">
+            <summary>
+            取得封裝壓縮檔的註解資訊字典集合
+            </summary>
+            <param name="file">壓縮檔實體路徑</param>
+            <returns>回傳註解資訊的字典集合</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Zip.SetZipCommentString(System.String,System.String)">
+            <summary>
+            寫入封裝壓縮檔的註解資訊
+            </summary>
+            <param name="file">壓縮檔案實體路徑</param>
+            <param name="comment">註解資訊字串</param>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Zip.SetZipComment(System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.Boolean)">
+            <summary>
+            寫入封裝壓縮檔的註解資訊
+            </summary>
+            <param name="file">壓縮檔案實體路徑</param>
+            <param name="comment">註解資訊的字典集合</param>
+            <param name="overwrite">是否覆寫原有註解, 預設為覆寫, 若不覆寫則嘗試以更新的方式進行註解寫入</param>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Zip.ZipDir(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            壓縮整個資料夾
+            </summary>
+            <param name="sourceDir">原始目錄路徑</param>
+            <param name="targetFile">目標檔案路徑</param>
+            <param name="password">密碼</param>
+            <param name="backupOldFile">是否備份舊檔</param>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Zip.ZipDir(System.String,System.String,System.String)">
+            <summary>
+            壓縮整個資料夾
+            </summary>
+            <param name="sourceDir">原始目錄路徑</param>
+            <param name="targetFile">目標目錄路徑</param>
+            <param name="password">密碼</param>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Zip.ZipDir(System.String,System.String)">
+            <summary>
+            壓縮整個資料夾
+            </summary>
+            <param name="sourceDir">原始目錄路徑</param>
+            <param name="targetFile">目標目錄路徑</param>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Zip.ZipFiles(System.String[],System.String,System.String,System.Boolean)">
+            <summary>
+            壓縮多個檔案
+            </summary>
+            <param name="sourceFiles">原始檔案路徑(多個)</param>
+            <param name="targetFile">目標檔案路徑</param>
+            <param name="password">密碼</param>
+            <param name="backupOldFile">是否備份舊檔</param>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Zip.ZipFiles(System.String[],System.String,System.String)">
+            <summary>
+            壓縮多個檔案
+            </summary>
+            <param name="sourceFiles">原始檔案路徑(多個)</param>
+            <param name="targetFile">目標檔案路徑</param>
+            <param name="password">密碼</param>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Zip.ZipFiles(System.String[],System.String)">
+            <summary>
+            壓縮檔案
+            </summary>
+            <param name="sourceFiles">原始檔案路徑(多個)</param>
+            <param name="targetFile">目標檔案路徑</param>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Zip.ZipFile(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            壓縮單一檔案
+            </summary>
+            <param name="sourceFile">原始檔案路徑</param>
+            <param name="targetFile">目標檔案路徑</param>
+            <param name="password">密碼</param>
+            <param name="backupOldFile">是否備份舊檔</param>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Zip.ZipFile(System.String,System.String,System.String)">
+            <summary>
+            壓縮單一檔案
+            </summary>
+            <param name="sourceFile">原始檔案路徑</param>
+            <param name="targetFile">目標檔案路徑</param>
+            <param name="password">密碼</param>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Zip.ZipFile(System.String,System.String)">
+            <summary>
+            壓縮單一檔案
+            </summary>
+            <param name="sourceFile">原始檔案路徑</param>
+            <param name="targetFile">目標檔案路徑</param>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Zip.UnZipFile(System.String,System.String,System.String)">
+            <summary>
+            解壓縮封裝檔案
+            </summary>
+            <param name="sourceFile">原始檔案路徑</param>
+            <param name="targetDir">目標目錄路徑</param>
+            <param name="password">密碼</param>
+        </member>
+        <member name="M:KioskClient.Framework.Common.Zip.UnZipFile(System.String,System.String)">
+            <summary>
+            解壓縮封裝檔案
+            </summary>
+            <param name="sourceFile">原始檔案路徑</param>
+            <param name="targetDir">目標目錄路徑</param>
+        </member>
+        <member name="M:KioskClient.Framework.Control.SystemConfig.SetCTRLALTDELETEByConfig">
+            <summary>
+            依系統參數設定啟動/禁用 Ctrl+ Alt+ Delete
+            </summary>
+        </member>
+        <member name="T:KioskClient.Framework.Control.Viewer.TextViewerWindow">
+            <summary>
+            文字瀏覽檢視控制項 的互動邏輯
+            </summary>
+            <summary>
+            TextViewerWindow
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Control.Viewer.TextViewerWindow.#ctor">
+            <summary>
+            建構子
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Control.Viewer.TextViewerWindow.ShowText(System.String)">
+            <summary>
+            建立新的視窗顯示指定文字
+            </summary>
+            <param name="text">顯示文字</param>
+        </member>
+        <member name="M:KioskClient.Framework.Control.Viewer.TextViewerWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:KioskClient.Framework.Extension.TaskExtension">
+            <summary>
+            提供對本機和遠端處理序 (Process) 的存取物件定義擴充方法。
+            </summary>
+        </member>
+        <member name="T:KioskClient.Framework.Extension.TaskExtension.TaskWrapper">
+            <summary>
+            封裝非同步作業與執行時間的類別
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Extension.TaskExtension.TaskWrapper.dateApplyDate">
+            <summary>
+            指定非同步作業執行的日期
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Extension.TaskExtension.TaskWrapper.ApplyDate">
+            <summary>
+            取得指定非同步作業執行的日期
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Extension.TaskExtension.TaskWrapper.objTask">
+            <summary>
+            等待執行的非同步作業
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Extension.TaskExtension.TaskWrapper.Task">
+            <summary>
+            取得等待執行的非同步作業
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Extension.TaskExtension.TaskWrapper.#ctor(System.DateTime,System.Threading.Tasks.Task)">
+            <summary>
+            建構子
+            </summary>
+            <param name="date">指定非同步作業執行的日期</param>
+            <param name="task">等待執行的非同步作業</param>
+        </member>
+        <member name="F:KioskClient.Framework.Extension.TaskExtension.objLock">
+            <summary>
+            用來鎖定的物件，保證有執行緒在鎖定關鍵區段時，絕對不會有任何其他執行緒同時也進入鎖定的關鍵區段執行。
+            </summary>
+            <remarks>如果其他執行緒嘗試進入已鎖定的區段，它將會等候、封鎖，直到該物件被釋出。</remarks>
+        </member>
+        <member name="F:KioskClient.Framework.Extension.TaskExtension.lstTask">
+            <summary>
+            待執行非同步作業的集合
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Extension.TaskExtension.objTask">
+            <summary>
+            用來執行指定執行日計算的計時器作業
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Extension.TaskExtension.StartNew(System.Threading.Tasks.TaskFactory,System.DateTime,System.Action,System.Threading.CancellationToken)">
+            <summary>
+            擴充Task的StartNew方法，加入指定執行日期，建立並啟動 System.Threading.Tasks.Task。
+            </summary>
+            <param name="factory">提供對 Factory 方法的存取。</param>
+            <param name="date">指定非同步作業執行的日期</param>
+            <param name="action">待執行的作業</param>
+            <param name="cancelToken">要指派給新工作的 System.Threading.Tasks.TaskFactory.CancellationToken</param>
+            <returns>啟動的 System.Threading.Tasks.Task。</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Extension.TaskExtension.StartNew(System.Threading.Tasks.TaskFactory,System.DayOfWeek[],System.String[],System.Action,System.Threading.CancellationToken)">
+            <summary>
+            擴充Task的StartNew方法，依據傳入的定時設定來計算下一次執行日期，建立並啟動 System.Threading.Tasks.Task。
+            </summary>
+            <param name="factory">提供對 Factory 方法的存取。</param>
+            <param name="days">指定非同步作業定時執行的日期</param>
+            <param name="times">指定非同步作業定時執行的時間</param>
+            <param name="action">待執行的作業</param>
+            <param name="cancelToken">要指派給新工作的 System.Threading.Tasks.TaskFactory.CancellationToken</param>
+            <returns>啟動的 System.Threading.Tasks.Task。</returns>
+        </member>
+        <member name="T:KioskClient.Framework.Extension.ProcessExtension">
+            <summary>
+            提供對本機和遠端處理序 (Process) 的存取物件定義擴充方法。
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Extension.ProcessExtension.GetCommandLine(System.Diagnostics.Process)">
+            <summary>
+            取得從命令提示字元或桌面傳遞至處理序的命令列引數
+            </summary>
+            <param name="process">處理序執行個體</param>
+            <returns>字串陣列，包含從命令提示字元或桌面傳遞至處理序的命令列引數。</returns>
+            <remarks>如果沒有傳遞任何命令列引數，則只傳回含處理序啟動執行路徑的字串陣列。</remarks>
+        </member>
+        <member name="T:KioskClient.Framework.Job.Executor">
+            <summary>
+            封裝任務執行操作的類別
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Job.Executor.AddOnceTask(System.String,System.String,System.String[],KioskClient.Framework.Job.JobInfo,System.Int32,System.Int32,KioskClient.Framework.Job.JobLevel)">
+            <summary>
+            新增一個一次性執行的擴充元件任務
+            </summary>
+            <param name="fullName">擴充元件型別完整名稱</param>
+            <param name="method">執行任務的函數</param>
+            <param name="param">任務執行參數</param>
+            <param name="retryInfo">任務重試相關資訊, 預設為不重試, 選擇項</param>
+            <param name="timeout">任務執行逾時時間(單位:豪秒), 預設為無限等候, 0為不等候, 選擇項</param>
+            <param name="delay">任務執行延遲時間(單位:豪秒), 預設為不延遲, 選擇項</param>
+            <param name="level">任務執行層級, 預設為應用程式, 選擇項</param>
+            <returns>執行結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Job.Executor.AddOnceTask(System.String,System.String[],KioskClient.Framework.Job.JobInfo,System.Int32,System.Int32,KioskClient.Framework.Job.JobLevel)">
+            <summary>
+            新增一個一次性執行的外部程式任務
+            </summary>
+            <param name="path">外部程式啟動路徑</param>
+            <param name="param">任務執行參數</param>
+            <param name="retryInfo">任務重試相關資訊, 預設為不重試, 選擇項</param>
+            <param name="timeout">任務執行逾時時間(單位:豪秒), 預設為無限等候, 0為不等候, 選擇項</param>
+            <param name="delay">任務執行延遲時間(單位:豪秒), 預設為不延遲, 選擇項</param>
+            <param name="level">任務執行層級, 預設為應用程式, 選擇項</param>
+            <returns>執行結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Job.Executor.AddIntervalTask(System.String,System.String,System.String[],System.DayOfWeek[],System.String[],System.Int32)">
+            <summary>
+            新增一個定時執行的擴充元件任務
+            </summary>
+            <param name="fullName">擴充元件型別完整名稱</param>
+            <param name="method">執行任務的函數</param>
+            <param name="param">任務執行參數</param>
+            <param name="days">任務執行日期</param>
+            <param name="times">任務執行時間</param>
+            <param name="timeout">任務執行逾時時間(單位:豪秒), 預設為無限等候, 0為不等候, 選擇項</param>
+            <returns>執行結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Job.Executor.AddIntervalTask(System.String,System.String[],System.DayOfWeek[],System.String[],System.Int32)">
+            <summary>
+            新增一個定時執行的外部程式任務
+            </summary>
+            <param name="path">外部程式啟動路徑</param>
+            <param name="param">任務執行參數</param>
+            <param name="days">任務執行日期</param>
+            <param name="times">任務執行時間</param>
+            <param name="timeout">任務執行逾時時間(單位:豪秒), 預設為無限等候, 0為不等候, 選擇項</param>
+            <returns>執行結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Job.Executor.AddTask(KioskClient.Framework.Job.TaskInfo)">
+            <summary>
+            新增一個自訂任務
+            </summary>
+            <param name="info">任務執行相關資訊物件</param>
+            <returns>執行結果</returns>
+            <remarks>
+            依據資訊物件寫入任務描述檔後, 透過外部程式或TaskExecutor程式執行
+            </remarks>
+        </member>
+        <member name="P:KioskClient.Framework.Job.Executor.BackupFolder">
+            <summary>
+            任務執行完成後描述檔存放的備份目錄
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Job.Executor.ErrorFolder">
+            <summary>
+            封裝檔上傳發生異常時存放的待確認目錄
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Job.Executor.GetExtension">
+            <summary>
+            取得任務描述檔副檔名字串清單
+            </summary>
+            <returns>任務描述檔副檔名字串</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Job.Executor.DoJob(System.String)">
+            <summary>
+            執行任務啟動作業
+            </summary>
+            <param name="targetFile">待執行任務描述檔路徑</param>
+        </member>
+        <member name="M:KioskClient.Framework.Job.Executor.#ctor(System.String)">
+            <summary>
+            建構子
+            </summary>
+            <param name="path">指定要監看的目錄路徑</param>
+        </member>
+        <member name="M:KioskClient.Framework.Job.Executor.DoOnceTask(System.String,System.Diagnostics.ProcessStartInfo)">
+            <summary>
+            執行一次性任務啟動作業
+            </summary>
+            <param name="targetFile">待執行任務描述檔路徑</param>
+            <param name="startInfo">處理序呼叫資訊</param>
+            <returns>是否執行過程中發生例外</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Job.Executor.DoIntervalTask(System.String,System.Diagnostics.ProcessStartInfo)">
+            <summary>
+            執行定時性任務啟動作業
+            </summary>
+            <param name="targetFile">待執行任務描述檔路徑</param>
+            <param name="startInfo">處理序呼叫資訊</param>
+            <returns>是否啟動過程中發生例外</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Job.Executor.Retry(System.String,System.Exception)">
+            <summary>
+            當發生異常時執行的Retry動作
+            </summary>
+            <param name="targetFile">待執行任務描述檔路徑</param>
+            <param name="exception">發生的異常</param>
+        </member>
+        <member name="T:KioskClient.Framework.Job.JobInfo">
+            <summary>
+            定義工作相關資訊的類別
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.JobInfo.RETRY_INFINITE">
+            <summary>
+            用來指定不限制重試次數的常數
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.JobInfo.RETRY_ZERO">
+            <summary>
+             用來指定無需重試的常數
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.JobInfo.intRetryLimit">
+            <summary>
+            工作失敗時的最大重試次數, 預設為不重試
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Job.JobInfo.RetryLimit">
+            <summary>
+            取得或設定工作失敗時的最大重試次數, 預設為不重試
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.JobInfo.strStartTime">
+            <summary>
+            最大重試次數為RETRY_INFINITE時, 開始重試時間的格式化字串(ex:01:00:00)
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Job.JobInfo.StartTime">
+            <summary>
+            取得或設定最大重試次數為RETRY_INFINITE時, 開始重試時間的格式化字串(ex:01:00:00)
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.JobInfo.strStopTime">
+            <summary>
+            最大重試次數為RETRY_INFINITE時, 結束重試時間的格式化字串(ex:01:00:00)
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Job.JobInfo.StopTime">
+            <summary>
+            取得或設定最大重試次數為RETRY_INFINITE時, 結束重試時間的格式化字串(ex:01:00:00)
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Job.JobInfo.ConvertTimeToInteger(System.String)">
+            <summary>
+            將格式化時間字串轉成數值表達值
+            </summary>
+            <param name="time">表示時間的格式化字串(ex:01:00:00)</param>
+            <returns>代表時間的數值表達值</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Job.JobInfo.ConvertIntegerToTime(System.Int32)">
+            <summary>
+            將時間數值表達值轉成DateTime
+            </summary>
+            <param name="time">代表時間的數值表達值</param>
+            <returns>DateTime物件</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Job.JobInfo.ConvertIntegerToTimeString(System.Int32)">
+            <summary>
+            將時間數值表達值轉成代表時間的格式化字串
+            </summary>
+            <param name="time">代表時間的數值表達值</param>
+            <returns>代表時間的格式化字串</returns>
+        </member>
+        <member name="T:KioskClient.Framework.Job.JobManager">
+            <summary>
+            管理應用程式各類工作的類別
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.JobManager.lstWatcher">
+            <summary>
+            應用程式控管工作清單集合
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Job.JobManager.#ctor">
+            <summary>
+            建構子
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Job.JobManager.StartJob">
+            <summary>
+            開始執行應用程式控管工作
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.JobManager.disposed">
+            <summary>
+            是否已處置過執行個體資源的旗標
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Job.JobManager.Dispose">
+            <summary>
+            將目前的執行個體所使用的資源全部釋出。
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Job.JobManager.Dispose(System.Boolean)">
+            <summary>
+            釋放執行個體所使用的 Unmanaged 資源，並選擇性地釋放Managed 資源。
+            </summary>
+            <param name="disposing">true 表示釋放 Managed 和 Unmanaged 資源，false 則表示只釋放 Unmanaged 資源。</param>
+        </member>
+        <member name="M:KioskClient.Framework.Job.JobManager.Finalize">
+            <summary>
+            解構子
+            </summary>
+        </member>
+        <member name="T:KioskClient.Framework.Job.JobWatcher">
+            <summary>
+            封裝接聽應用程式工作的抽象類別
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.JobWatcher.FILE_EXTENSION">
+            <summary>
+            定義預設工作描述檔的副檔名字串常數。
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Job.JobWatcher.BackupFolder">
+            <summary>
+            應用程式工作完成後存放的備份目錄
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Job.JobWatcher.ErrorFolder">
+            <summary>
+            應用程式工作發生異常時存放的待確認目錄
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.JobWatcher.objLock">
+            <summary>
+            用來鎖定的物件，保證有執行緒在鎖定關鍵區段時，絕對不會有任何其他執行緒同時也進入鎖定的關鍵區段執行。
+            </summary>
+            <remarks>如果其他執行緒嘗試進入已鎖定的區段，它將會等候、封鎖，直到該物件被釋出。</remarks>
+        </member>
+        <member name="F:KioskClient.Framework.Job.JobWatcher.objWatch">
+            <summary>
+            接聽檔案系統變更告知的處理物件
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.JobWatcher.lstToDoJob">
+            <summary>
+            表示待執行工作的先進先出 (FIFO) 集合。
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.JobWatcher.strPath">
+            <summary>
+            要監看的目錄路徑。
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Job.JobWatcher.Path">
+            <summary>
+            取得要監看的目錄路徑。
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.JobWatcher.intInterval">
+            <summary>
+            檢查待執行工作項目的間隔秒數(單位:毫秒)
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Job.JobWatcher.Interval">
+            <summary>
+            取得檢查待執行工作項目的間隔秒數(單位:毫秒)
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.JobWatcher.objTask">
+            <summary>
+            表示非同步工作作業
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.JobWatcher.objCancellationTokenSource">
+            <summary>
+            向非同步工作作業發出取消通知的物件
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Job.JobWatcher.CancellationTokenSource">
+            <summary>
+            向非同步工作作業發出取消通知的物件
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Job.JobWatcher.IsWatching">
+            <summary>
+            取得接聽工作是否進行中
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Job.JobWatcher.IsRunning">
+            <summary>
+            取得非同步工作是否執行中
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Job.JobWatcher.#ctor(System.String)">
+            <summary>
+            建構子
+            </summary>
+            <param name="path">指定要監看的目錄路徑</param>
+        </member>
+        <member name="M:KioskClient.Framework.Job.JobWatcher.objWatch_Created(System.Object,System.IO.FileSystemEventArgs)">
+            <summary>
+            發生在指定目錄路徑內的檔案或目錄建立時。
+            </summary>
+            <param name="sender">事件的來源。</param>
+            <param name="e"> 包含事件資料的 System.IO.FileSystemEventArgs。</param>
+        </member>
+        <member name="M:KioskClient.Framework.Job.JobWatcher.DoJob(System.String)">
+            <summary>
+            執行指定工作作業
+            </summary>
+            <param name="targetFile">待執行工作的工作描述檔檔案路徑</param>
+        </member>
+        <member name="M:KioskClient.Framework.Job.JobWatcher.GetExtension">
+            <summary>
+            取得工作描述檔副檔名字串清單
+            </summary>
+            <returns>工作描述檔副檔名字串</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Job.JobWatcher.StartWatch">
+            <summary>
+            開始接聽應用程式工作
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Job.JobWatcher.StopWatch">
+            <summary>
+            停止接聽應用程式工作
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Job.JobWatcher.JobComplete(System.Threading.Tasks.Task)">
+            <summary>
+            當非同步作業執行完成時接續執行的工作
+            </summary>
+            <param name="task"></param>
+        </member>
+        <member name="F:KioskClient.Framework.Job.JobWatcher.disposed">
+            <summary>
+            是否已處置過執行個體資源的旗標
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Job.JobWatcher.Dispose">
+            <summary>
+            將目前的執行個體所使用的資源全部釋出。
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Job.JobWatcher.Dispose(System.Boolean)">
+            <summary>
+            釋放執行個體所使用的 Unmanaged 資源，並選擇性地釋放Managed 資源。
+            </summary>
+            <param name="disposing">true 表示釋放 Managed 和 Unmanaged 資源，false 則表示只釋放 Unmanaged 資源。</param>
+        </member>
+        <member name="M:KioskClient.Framework.Job.JobWatcher.Finalize">
+            <summary>
+            解構子
+            </summary>
+        </member>
+        <member name="T:KioskClient.Framework.Job.Reporter">
+            <summary>
+            封裝HTTP回報操作的類別
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Job.Reporter.HttpReport(System.String,KioskClient.Framework.Common.Net.Http.RequestMethod,KioskClient.Framework.Job.JobInfo,System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.List{System.String})">
+            <summary>
+            對指定 Web 伺服器進行Http回報
+            </summary>
+            <param name="url">目標 Web 伺服器</param>
+            <param name="method">回報方式的列舉常數</param>
+            <param name="info">回報工作的相關資訊</param>
+            <param name="data">回報的資料, 選擇性項目</param>
+            <param name="files">回報的檔案清單, 選擇性項目</param>
+            <returns>執行結果</returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:KioskClient.Framework.Job.Reporter.BackupFolder">
+            <summary>
+            封裝檔上傳完成後存放的備份目錄
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Job.Reporter.ErrorFolder">
+            <summary>
+            封裝檔上傳發生異常時存放的待確認目錄
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Job.Reporter.GetExtension">
+            <summary>
+            取得工作描述檔副檔名字串清單
+            </summary>
+            <returns>工作描述檔副檔名字串</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Job.Reporter.DoJob(System.String)">
+            <summary>
+            執行封裝檔案上傳作業
+            </summary>
+            <param name="targetFile">待上傳封裝檔路徑</param>
+        </member>
+        <member name="M:KioskClient.Framework.Job.Reporter.#ctor(System.String)">
+            <summary>
+            建構子
+            </summary>
+            <param name="path">指定要監看的目錄路徑</param>
+        </member>
+        <member name="T:KioskClient.Framework.Job.TaskInfo">
+            <summary>
+            衍生自工作資訊物件, 封裝任務相關資訊的類別
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.TaskInfo.WAIT_INFINITE">
+            <summary>
+            用來指定無限等候的常數
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.TaskInfo.WAIT_NOT">
+            <summary>
+            用來指定不等候的常數
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.TaskInfo.enumMode">
+            <summary>
+            任務執行模式, 預設為一次性任務
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Job.TaskInfo.Mode">
+            <summary>
+            取得或設定任務執行模式, 預設為一次性任務
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.TaskInfo.enumLevel">
+            <summary>
+            任務啟動層級, 預設為應用程式啟動時執行
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Job.TaskInfo.Level">
+            <summary>
+            取得或設定任務啟動層級, 預設為應用程式啟動時執行
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.TaskInfo.enumType">
+            <summary>
+            調用任務類型, 預設為調用擴充組件執行的任務
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Job.TaskInfo.Type">
+            <summary>
+            取得或設定調用任務類型, 預設為調用擴充組件執行的任務
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.TaskInfo.dateApplyDate">
+            <summary>
+            任務執行的啟動生效時間
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Job.TaskInfo.ApplyDate">
+            <summary>
+            任務執行的啟動生效時間
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.TaskInfo.aryDays">
+            <summary>
+            任務執行日期, 當任務執行模式為Interval時會使用到此欄位
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Job.TaskInfo.Days">
+            <summary>
+            取得或設定任務執行日期, 當任務執行模式為Interval時會使用到此欄位
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.TaskInfo.aryTimes">
+            <summary>
+            任務執行時間, 當任務執行模式為Interval時會使用到此欄位
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Job.TaskInfo.Times">
+            <summary>
+            取得或設定任務執行時間, 當任務執行模式為Interval時會使用到此欄位
+            </summary>
+            <remarks>格式:00:00:00</remarks>
+        </member>
+        <member name="F:KioskClient.Framework.Job.TaskInfo.strPath">
+            <summary>
+            外部程式啟動路徑, 當調用任務類型為Application時會使用到此欄位
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Job.TaskInfo.Path">
+            <summary>
+            取得或設定外部程式啟動路徑, 當調用任務類型為Application時會使用到此欄位
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.TaskInfo.strFullName">
+            <summary>
+            任務所在擴充元件型別的完整名稱, 當調用任務類型為Task時會使用到此欄位
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Job.TaskInfo.FullName">
+            <summary>
+            取得或設定任務所在擴充元件型別的完整名稱, 當調用任務類型為Task時會使用到此欄位
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.TaskInfo.strMethod">
+            <summary>
+            任務執行名稱, 當調用任務類型為Task時會使用到此欄位
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Job.TaskInfo.Method">
+            <summary>
+            取得或設定任務執行名稱, 當調用任務類型為Task時會使用到此欄位
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.TaskInfo.aryParams">
+            <summary>
+            取得或設定任務執行參數
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Job.TaskInfo.Params">
+            <summary>
+            取得或設定任務執行參數
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.TaskInfo.intDelay">
+            <summary>
+            任務執行延遲時間(單位:豪秒)
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Job.TaskInfo.Delay">
+            <summary>
+            任務執行延遲時間(單位:豪秒)
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.TaskInfo.intTimeout">
+            <summary>
+            任務執行逾時時間(單位:豪秒), 預設為無限等候
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Job.TaskInfo.Timeout">
+            <summary>
+            任務執行逾時時間(單位:豪秒), 預設為無限等候
+            </summary>
+        </member>
+        <member name="T:KioskClient.Framework.Job.Uploader">
+            <summary>
+            封裝檔案上傳操作的類別
+            </summary>
+        </member>
+        <member name="T:KioskClient.Framework.Job.Uploader.UploadInfo">
+            <summary>
+            定義檔案上傳相關資訊的結構
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Job.Uploader.UploadInfo.#ctor(System.String,System.String,System.Int32,System.String,System.String)">
+            <summary>
+            建構子
+            </summary>
+            <param name="name">封裝上傳檔名</param>
+            <param name="host">伺服器主機位置</param>
+            <param name="port">伺服器連接埠</param>
+            <param name="username">伺服器帳號</param>
+            <param name="password">伺服器密碼</param>
+        </member>
+        <member name="F:KioskClient.Framework.Job.Uploader.UploadInfo.bolUnZipUpload">
+            <summary>
+            是原封裝檔直接上傳或是解壓縮後上傳, 預設是False代表封裝檔上傳 (預留擴充屬性)
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Job.Uploader.UploadInfo.UnZipUpload">
+            <summary>
+            是否解壓縮後上傳, 預設是False代表封裝檔上傳 (預留擴充屬性)
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Job.Uploader.UploadInfo.ServerFormatString">
+            <summary>
+            伺服器資訊格式化字串
+            </summary>
+            <remarks>[IP]:[Port],[UserName],[Password],[UploadFolder], ex:127.0.0.1:21,upload_user,upload_pass,\\</remarks>
+        </member>
+        <member name="F:KioskClient.Framework.Job.Uploader.UploadInfo.strFileName">
+            <summary>
+            封裝上傳檔名
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Job.Uploader.UploadInfo.FileName">
+            <summary>
+            封裝上傳檔名
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.Uploader.UploadInfo.strServerHost">
+            <summary>
+            伺服器主機位置
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Job.Uploader.UploadInfo.ServerHost">
+            <summary>
+            伺服器主機位置
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.Uploader.UploadInfo.intServerPort">
+            <summary>
+            伺服器連接埠
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Job.Uploader.UploadInfo.ServerPort">
+            <summary>
+            伺服器連接埠
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.Uploader.UploadInfo.strUserName">
+            <summary>
+            伺服器帳號
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Job.Uploader.UploadInfo.UserName">
+            <summary>
+            伺服器帳號
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.Uploader.UploadInfo.strPassword">
+            <summary>
+            伺服器密碼
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Job.Uploader.UploadInfo.Password">
+            <summary>
+            伺服器密碼
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.Uploader.UploadInfo.strFolder">
+            <summary>
+            伺服器上傳目錄, 預設為伺服器根目錄
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Job.Uploader.UploadInfo.Folder">
+            <summary>
+            伺服器上傳目錄, 預設為伺服器根目錄 (Ex:\\代表根目錄 或 \\目錄\子目錄 代表階層目錄)
+            </summary>
+            <remarks>Ex:\\ => ftp://127.0.0.1/, \\data\upload\ => ftp://127.0.0.1/data/upload </remarks>
+        </member>
+        <member name="F:KioskClient.Framework.Job.Uploader.UploadInfo.objJobInfo">
+            <summary>
+            上傳工作相關資訊
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Job.Uploader.UploadInfo.JobInfo">
+            <summary>
+            取得或設定上傳工作相關資訊
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Job.Uploader.ZipAndUploadFiles(System.Collections.Generic.List{System.String},KioskClient.Framework.Job.Uploader.UploadInfo,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            壓縮封裝並上傳檔案
+            </summary>
+            <param name="files">待上傳檔案清單</param>
+            <param name="info">封裝上傳資訊</param>
+            <param name="comment">額外封裝註解資訊, 選擇性項目</param>
+            <returns>執行結果</returns>
+        </member>
+        <member name="P:KioskClient.Framework.Job.Uploader.BackupFolder">
+            <summary>
+            封裝檔上傳完成後存放的備份目錄
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Job.Uploader.ErrorFolder">
+            <summary>
+            封裝檔上傳發生異常時存放的待確認目錄
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Job.Uploader.#ctor(System.String)">
+            <summary>
+            建構子
+            </summary>
+            <param name="path">指定要監看的目錄路徑</param>
+        </member>
+        <member name="M:KioskClient.Framework.Job.Uploader.DoJob(System.String)">
+            <summary>
+            執行封裝檔案上傳作業
+            </summary>
+            <param name="targetFile">待上傳封裝檔路徑</param>
+        </member>
+        <member name="T:KioskClient.Framework.Job.JobType">
+            <summary>
+            代表機台上各項工作的列舉常數
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.JobType.Unknow">
+            <summary>
+            未知工作
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.JobType.Upload">
+            <summary>
+            檔案上傳工作
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.JobType.HttpReport">
+            <summary>
+            Http回報工作
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.JobType.TcpReport">
+            <summary>
+            Tcp/IP回報工作
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.JobType.Update">
+            <summary>
+            程式更新工作
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.JobType.Task">
+            <summary>
+            任務執行工作
+            </summary>
+        </member>
+        <member name="T:KioskClient.Framework.Job.JobStatus">
+            <summary>
+            代表工作當前執行狀態的列舉常數
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.JobStatus.Init">
+            <summary>
+            初始值
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.JobStatus.Success">
+            <summary>
+            工作已執行成功
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.JobStatus.Fail">
+            <summary>
+            工作執行失敗
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.JobStatus.Retry">
+            <summary>
+            工作嘗試重新執行中
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.JobStatus.Process">
+            <summary>
+            工作處理中
+            </summary>
+        </member>
+        <member name="T:KioskClient.Framework.Job.JobMode">
+            <summary>
+            代表工作模式的列舉常數
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.JobMode.Once">
+            <summary>
+            一次性工作
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.JobMode.Interval">
+            <summary>
+            定時性工作
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.JobMode.Permanent">
+            <summary>
+            常駐型工作(需納入監控, 尚待實作)
+            </summary>
+        </member>
+        <member name="T:KioskClient.Framework.Job.JobLevel">
+            <summary>
+            代表工作啟動層級的列舉常數
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.JobLevel.Reboot">
+            <summary>
+            代表系統開機時執行
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.JobLevel.Application">
+            <summary>
+            代表應用程式啟動時執行
+            </summary>
+        </member>
+        <member name="T:KioskClient.Framework.Job.TaskType">
+            <summary>
+            代表調用任務類型的列舉常數
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.TaskType.Task">
+            <summary>
+            代表調用擴充組件執行的任務
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Job.TaskType.Application">
+            <summary>
+            代表調用外部應用程式執行的任務
+            </summary>
+        </member>
+        <member name="T:KioskClient.Framework.Script.ExternalInfo">
+            <summary>
+            封裝擴充元件相關資訊與操作的類別
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Script.ExternalInfo.INVALID_CHAR">
+            <summary>
+            定義檔案系統中允許但程式語言中不允許的字元常數
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Script.ExternalInfo.FILETER_EXTENSION">
+            <summary>
+            擴充元件資訊檔篩選字串
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Script.ExternalInfo.objExternalFileInfo">
+            <summary>
+            擴充元件檔案資訊物件
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Script.ExternalInfo.ExternalFileInfo">
+            <summary>
+            擴充元件檔案資訊物件
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Script.ExternalInfo.objExternalAssembly">
+            <summary>
+            擴充元件組件資訊物件
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Script.ExternalInfo.ExternalAssembly">
+            <summary>
+            擴充元件組件資訊物件
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Script.ExternalInfo.objExternalType">
+            <summary>
+            擴充元件型別資訊物件
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Script.ExternalInfo.ExternalType">
+            <summary>
+            擴充元件型別資訊物件
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Script.ExternalInfo.strRootNamespace">
+            <summary>
+            擴充元件命名空間(依檔案系統架構)
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Script.ExternalInfo.RootNamespace">
+            <summary>
+            擴充元件命名空間(依檔案系統架構)
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Script.ExternalInfo.FullNamespace">
+            <summary>
+            擴充元件完整命名空間(依檔案系統架構與組件命名空間)
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Script.ExternalInfo.FullName">
+            <summary>
+            擴充元件完整名稱(依檔案系統架構與型別名稱)
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Script.ExternalInfo.#ctor(System.IO.FileInfo,System.Reflection.Assembly,System.Type)">
+            <summary>
+            建構子
+            </summary>
+            <param name="fileInfo">擴充元件檔案資訊物件</param>
+            <param name="assembly">擴充元件組件資訊物件</param>
+            <param name="type">擴充元件型別資訊物件</param>
+        </member>
+        <member name="M:KioskClient.Framework.Script.ExternalInfo.IsComVisible(System.Type)">
+            <summary>
+            檢查型別是否具有ComVisible屬性標籤
+            </summary>
+            <param name="type">檢查的型別物件</param>
+            <returns>檢查結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Script.ExternalInfo.IsComVisible(System.Reflection.MemberInfo,System.Type)">
+            <summary>
+            檢查成員是否具有ComVisible屬性標籤
+            </summary>
+            <param name="member">檢查的成員物件</param>
+            <param name="type">方法所在型別物件</param>
+            <returns>檢查結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Script.ExternalInfo.GetExternalInfo">
+            <summary>
+            取得擴充元件目錄下所有擴充資訊物件集合
+            </summary>
+            <returns>擴充元件資訊物件集合</returns>
+            <remarks>會進行組件載入</remarks>
+        </member>
+        <member name="M:KioskClient.Framework.Script.ExternalInfo.GetExternalInfo(System.IO.FileInfo)">
+            <summary>
+            取得指定EXT資訊檔內擴充元件資訊物件集合
+            </summary>
+            <param name="info">指定EXT資訊檔的檔案物件</param>
+            <returns>擴充元件資訊物件集合</returns>
+            <remarks>會進行組件載入</remarks>
+        </member>
+        <member name="M:KioskClient.Framework.Script.ExternalInfo.GetExternal">
+            <summary>
+            取得擴充元件型別執行個體
+            </summary>
+            <returns>擴充元件執行個體</returns>
+        </member>
+        <member name="T:KioskClient.Framework.Script.GenerateScript">
+            <summary>
+            封裝網頁擴充指令碼內容的邏輯類別
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Script.GenerateScript.strDefaultScript">
+            <summary>
+            取得預設內嵌的指令碼內容
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Script.GenerateScript.DefaultScript">
+            <summary>
+            取得預設內嵌的指令碼內容
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Script.GenerateScript.strExternalScript">
+            <summary>
+            取得擴充的指令碼內容
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Script.GenerateScript.ExternalScript">
+            <summary>
+            取得擴充的指令碼內容
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Script.GenerateScript.strFunctionList">
+            <summary>
+            取得擴充的功能清單
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Script.GenerateScript.FunctionList">
+            <summary>
+            取得擴充的功能清單
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Script.GenerateScript.lstExternalInfo">
+            <summary>
+            擴充元件資訊物件集合
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Script.GenerateScript.dicExternalObject">
+            <summary>
+            已載入的擴充元件實體物件字典集合
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Script.GenerateScript.#ctor">
+            <summary>
+            建構子
+            </summary>
+            <remarks>第一次執行時, 執行個體會替應用程式定義域載入擴充組件</remarks>
+        </member>
+        <member name="M:KioskClient.Framework.Script.GenerateScript.GetDefaultScript">
+            <summary>
+            取得預設內嵌的指令碼內容
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KioskClient.Framework.Script.GenerateScript.GetExternalScript">
+            <summary>
+            取得擴充指令碼內容
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KioskClient.Framework.Script.GenerateScript.GetExternal(System.String)">
+            <summary>
+            依據傳入的完整命名空間字串取得擴充元件執行個體
+            </summary>
+            <param name="fullNamespace">完整命名空間字串</param>
+            <returns>擴充元件執行個體</returns>
+        </member>
+        <member name="T:KioskClient.Framework.Script.JsonHelper">
+            <summary>
+            封裝物件序列化 JSON 字串與反序列化的類別
+            </summary>
+        </member>
+        <member name="T:KioskClient.Framework.Script.JsonHelper.KeyValuePairObject">
+            <summary>
+            定義可設定或擷取的索引鍵/值組。
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Script.JsonHelper.KeyValuePairObject.Key">
+            <summary>
+            取得索引鍵/值組中的索引鍵。
+            </summary>
+        </member>
+        <member name="P:KioskClient.Framework.Script.JsonHelper.KeyValuePairObject.Value">
+            <summary>
+            取得索引鍵/值組中的值。
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Script.JsonHelper.JsonSerializer``1(``0)">
+            <summary>
+            序列化物件並產生 JSON 字串
+            </summary>
+            <typeparam name="T">要序列化的物件的型別。</typeparam>
+            <param name="t">要序列化的物件。</param>
+            <returns>序列化的 JSON 字串。</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Script.JsonHelper.JsonDeserialize``1(System.String)">
+            <summary>
+            將指定的 JSON 字串轉換成 T 型別的物件。
+            </summary>
+            <typeparam name="T">產生的物件型別。</typeparam>
+            <param name="jsonString">要還原序列化的 JSON 字串。</param>
+            <returns>還原序列化的物件。</returns>
+        </member>
+        <member name="T:KioskClient.Framework.Win32.ShowWindowStyles">
+            <summary>
+            視窗狀態代碼
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Win32.ShowWindowStyles.SW_HIDE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Win32.ShowWindowStyles.SW_SHOWNORMAL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Win32.ShowWindowStyles.SW_NORMAL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Win32.ShowWindowStyles.SW_SHOWMINIMIZED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Win32.ShowWindowStyles.SW_SHOWMAXIMIZED">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Win32.ShowWindowStyles.SW_MAXIMIZE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Win32.ShowWindowStyles.SW_SHOWNOACTIVATE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Win32.ShowWindowStyles.SW_SHOW">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Win32.ShowWindowStyles.SW_MINIMIZE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Win32.ShowWindowStyles.SW_SHOWMINNOACTIVE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Win32.ShowWindowStyles.SW_SHOWNA">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Win32.ShowWindowStyles.SW_RESTORE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Win32.ShowWindowStyles.SW_SHOWDEFAULT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Win32.ShowWindowStyles.SW_FORCEMINIMIZE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Win32.ShowWindowStyles.SW_MAX">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:KioskClient.Framework.Win32.NativeMethods">
+            <summary>
+            提供應用程式呼叫Win32 API的靜態非公開存取類別
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Win32.NativeMethods.GetPrivateProfileString(System.String,System.String,System.String,System.Text.StringBuilder,System.Int32,System.String)">
+            <summary>
+            讀取指定文件區段的Key Value值
+            </summary>
+            <param name="section">區段名稱</param>
+            <param name="key">參數名稱</param>
+            <param name="def">預設回傳值（若無符合區段名稱與參數名稱，則回傳預設值）</param>
+            <param name="retVal">接收回傳值的StringBuffer物件</param>
+            <param name="size">StringBuffer物件大小</param>
+            <param name="filePath">指定文件路徑</param>
+            <returns>執行結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Win32.NativeMethods.WritePrivateProfileString(System.String,System.String,System.String,System.String)">
+            <summary>
+            寫入指定文件區段的Key Value值
+            </summary>
+            <param name="section">區段名稱</param>
+            <param name="key">參數名稱</param>
+            <param name="val">參數內容</param>
+            <param name="filePath">指定文件路徑</param>
+            <returns>執行結果</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Win32.NativeMethods.PostMessage(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr)">
+            <summary>
+            發送視窗訊息至指定視窗, 該訊息將會直接返回而不等待目標視窗處理訊息
+            </summary>
+            <param name="hWnd">視窗控制代碼 (Window Handle)。</param>
+            <param name="msg">訊息 ID。</param>
+            <param name="wParam">訊息的 wParam 值。</param>
+            <param name="lParam">訊息的 lParam 值。</param>
+            <returns>相應的傳回值視特定的訊息而定。 請參閱正在處理之 Win32 訊息的訊息文件詳細資訊。</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Win32.NativeMethods.SendMessage(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr)">
+            <summary>
+            發送視窗訊息至指定視窗, 該訊息並不會直接返回直到目標視窗處理了訊息
+            </summary>
+            <param name="hWnd">視窗控制代碼 (Window Handle)。</param>
+            <param name="msg">訊息 ID。</param>
+            <param name="wParam">訊息的 wParam 值。</param>
+            <param name="lParam">訊息的 lParam 值。</param>
+            <returns>相應的傳回值視特定的訊息而定。 請參閱正在處理之 Win32 訊息的訊息文件詳細資訊。</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Win32.NativeMethods.RegisterWindowMessage(System.String)">
+            <summary>
+            向系統註冊 Win32 視窗訊息
+            </summary>
+            <param name="lpString">註冊的視窗識別值</param>
+            <returns>取得的視窗訊息識別值</returns>
+            <remarks>提供給 Win32 訊息使用</remarks>
+        </member>
+        <member name="M:KioskClient.Framework.Win32.NativeMethods.DisableProcessWindowsGhosting">
+            <summary>
+            停用處理序重影功能, 停用後將關閉出現沒有回應視窗
+            </summary>
+            <remarks>
+            在呼叫停用重影功能後, 處理序執行其間重影功能將停用
+            </remarks>
+        </member>
+        <member name="M:KioskClient.Framework.Win32.NativeMethods.FindWindow(System.String,System.String)">
+            <summary>
+            尋找視窗控制代碼
+            </summary>
+            <param name="lpClassName">視窗類別名稱</param>
+            <param name="lpWindowName">視窗標題名稱</param>
+            <returns>回傳控制代碼</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Win32.NativeMethods.FindWindowEx(System.IntPtr,System.IntPtr,System.IntPtr,System.String)">
+            <summary>
+            尋找視窗控制代碼
+            </summary>
+            <param name="parentHwnd">父視窗控制代碼</param>
+            <param name="childAfterHwnd">下一個子視窗控制代碼</param>
+            <param name="className">視窗類別</param>
+            <param name="windowText">視窗標題</param>
+            <returns></returns>
+        </member>
+        <member name="M:KioskClient.Framework.Win32.NativeMethods.ShowWindow(System.IntPtr,System.Int16)">
+            <summary>
+            改變視窗狀態
+            </summary>
+            <param name="hWnd">指定視窗控制代碼</param>
+            <param name="State">視窗狀態</param>
+            <returns></returns>
+        </member>
+        <member name="M:KioskClient.Framework.Win32.NativeMethods.SetParent(System.IntPtr,System.IntPtr)">
+            <summary>
+            設定父視窗
+            </summary>
+            <param name="hChild">子視窗控制代碼</param>
+            <param name="hParent">父視窗控制代碼</param>
+            <returns></returns>
+        </member>
+        <member name="M:KioskClient.Framework.Win32.NativeMethods.SetWindowPos(System.IntPtr,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.UInt32)">
+            <summary>
+            設定視窗大小位置
+            </summary>
+            <param name="hWnd">指定視窗控制代碼</param>
+            <param name="hWndInsertAfter"></param>
+            <param name="X"></param>
+            <param name="Y"></param>
+            <param name="cx"></param>
+            <param name="cy"></param>
+            <param name="uFlags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KioskClient.Framework.Win32.NativeMethods.FindFirstUrlCacheGroup(System.Int32,System.Int32,System.IntPtr,System.Int32,System.Int64@,System.IntPtr)">
+            <summary>
+             For PInvoke: Initiates the enumeration of the cache groups in the Internet cache
+            </summary>
+            <param name="dwFlags"></param>
+            <param name="dwFilter"></param>
+            <param name="lpSearchCondition"></param>
+            <param name="dwSearchCondition"></param>
+            <param name="lpGroupId"></param>
+            <param name="lpReserved"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KioskClient.Framework.Win32.NativeMethods.FindNextUrlCacheGroup(System.IntPtr,System.Int64@,System.IntPtr)">
+            <summary>
+            For PInvoke: Retrieves the next cache group in a cache group enumeration
+            </summary>
+            <param name="hFind"></param>
+            <param name="lpGroupId"></param>
+            <param name="lpReserved"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KioskClient.Framework.Win32.NativeMethods.DeleteUrlCacheGroup(System.Int64,System.Int32,System.IntPtr)">
+            <summary>
+            For PInvoke: Releases the specified GROUPID and any associated state in the cache index file
+            </summary>
+            <param name="GroupId"></param>
+            <param name="dwFlags"></param>
+            <param name="lpReserved"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KioskClient.Framework.Win32.NativeMethods.FindFirstUrlCacheEntry(System.String,System.IntPtr,System.Int32@)">
+            <summary>
+            For PInvoke: Begins the enumeration of the Internet cache
+            </summary>
+            <param name="lpszUrlSearchPattern"></param>
+            <param name="lpFirstCacheEntryInfo"></param>
+            <param name="lpdwFirstCacheEntryInfoBufferSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KioskClient.Framework.Win32.NativeMethods.FindNextUrlCacheEntry(System.IntPtr,System.IntPtr,System.Int32@)">
+            <summary>
+            For PInvoke: Retrieves the next entry in the Internet cache
+            </summary>
+            <param name="hFind"></param>
+            <param name="lpNextCacheEntryInfo"></param>
+            <param name="lpdwNextCacheEntryInfoBufferSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KioskClient.Framework.Win32.NativeMethods.DeleteUrlCacheEntry(System.IntPtr)">
+            <summary>
+            For PInvoke: Removes the file that is associated with the source name from the cache, if the file exists
+            </summary>
+            <param name="lpszUrlName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KioskClient.Framework.Win32.INTERNET_CACHE_ENTRY_INFOA">
+            <summary>
+            For PInvoke: Contains information about an entry in the Internet cache
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Win32.INTERNET_CACHE_ENTRY_INFOA.dwStructSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Win32.INTERNET_CACHE_ENTRY_INFOA.lpszSourceUrlName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Win32.INTERNET_CACHE_ENTRY_INFOA.lpszLocalFileName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Win32.INTERNET_CACHE_ENTRY_INFOA.CacheEntryType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Win32.INTERNET_CACHE_ENTRY_INFOA.dwUseCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Win32.INTERNET_CACHE_ENTRY_INFOA.dwHitRate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Win32.INTERNET_CACHE_ENTRY_INFOA.dwSizeLow">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Win32.INTERNET_CACHE_ENTRY_INFOA.dwSizeHigh">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Win32.INTERNET_CACHE_ENTRY_INFOA.LastModifiedTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Win32.INTERNET_CACHE_ENTRY_INFOA.ExpireTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Win32.INTERNET_CACHE_ENTRY_INFOA.LastAccessTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Win32.INTERNET_CACHE_ENTRY_INFOA.LastSyncTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Win32.INTERNET_CACHE_ENTRY_INFOA.lpHeaderInfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Win32.INTERNET_CACHE_ENTRY_INFOA.dwHeaderInfoSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Win32.INTERNET_CACHE_ENTRY_INFOA.lpszFileExtension">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Win32.INTERNET_CACHE_ENTRY_INFOA.dwReserved">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:KioskClient.Framework.Win32.INTERNET_CACHE_ENTRY_INFOA.dwExemptDelta">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:KioskClient.Framework.Win32.Utility">
+            <summary>
+            封裝Win32相關處理的類別
+            </summary>
+        </member>
+        <member name="M:KioskClient.Framework.Win32.Utility.GetPrivateProfileString(System.String,System.String,System.String,System.String)">
+            <summary>
+            讀取指定文件區段的值
+            </summary>
+            <param name="FilePath">指定文件路徑</param>
+            <param name="section">參數所在區段</param>
+            <param name="Key">參數名稱</param>
+            <param name="defaultValue">若無此參數的回傳預設值, 預設為空字串</param>
+            <returns>參數值,若無此參數則為空字串</returns>
+        </member>
+        <member name="M:KioskClient.Framework.Win32.Utility.WritePrivateProfileString(System.String,System.String,System.String,System.Object)">
+            <summary>
+            設定指定文件區段的值
+            </summary>
+            <param name="FilePath">指定文件路徑</param>
+            <param name="section">參數所在區段</param>
+            <param name="Key">參數名稱</param>
+            <param name="Value">參數值</param>
+            <returns>執行結果</returns>
+        </member>
+        <member name="T:KioskClient.SecendMonitor">
+            <summary>
+            SecendMonitor.xaml 的互動邏輯
+            </summary>
+            <summary>
+            SecendMonitor
+            </summary>
+        </member>
+        <member name="M:KioskClient.SecendMonitor.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:KioskClient.App">
+            <summary>
+            應用程式 的互動邏輯
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="P:KioskClient.App.CurrentWindow">
+            <summary>
+            取得當前應用程式視窗類型
+            </summary>
+        </member>
+        <member name="F:KioskClient.App.intWindowMessageID">
+            <summary>
+            當前視窗與作業系統註冊的視窗訊息識別值
+            </summary>
+        </member>
+        <member name="P:KioskClient.App.WindowMessageID">
+            <summary>
+            取得當前視窗與作業系統註冊的視窗訊息識別值
+            </summary>
+        </member>
+        <member name="F:KioskClient.App.objArgs">
+            <summary>
+            用來存放應用程式啟動變數的字典集合
+            </summary>
+        </member>
+        <member name="P:KioskClient.App.CommandArgs">
+            <summary>
+            用來存放應用程式啟動變數的字典集合
+            </summary>
+        </member>
+        <member name="M:KioskClient.App.KioskClient_Startup(System.Object,System.Windows.StartupEventArgs)">
+            <summary>
+            當應用程式起動時觸發
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:KioskClient.App.currentDomain_UnhandledException(System.Object,System.UnhandledExceptionEventArgs)">
+            <summary>
+            當應用程式發生未攔截的錯誤時觸發的事件(會出現AP無回應對話視窗的例外)
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:KioskClient.App.SetCommand">
+            <summary>
+            註冊應用程式命令
+            </summary>
+        </member>
+        <member name="M:KioskClient.App.ApplicationCommand_EventHandler(System.Object,System.Windows.Input.ExecutedRoutedEventArgs)">
+            <summary>
+            接收到應用程式命令時觸發的事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:KioskClient.App.GetFolderPath(KioskClient.Framework.Application.SpecialFolder)">
+            <summary>
+            取得由指定之列舉識別的應用程式特殊資料夾的路徑。
+            </summary>
+            <param name="folder">列舉常數，識別應用程式特殊資料夾。</param>
+            <returns>應用程式特殊資料夾的路徑。</returns>
+        </member>
+        <member name="M:KioskClient.App.GetWindowMessageID(KioskClient.Framework.Application.WindowType)">
+            <summary>
+            取得指定視窗類型的視窗訊息識別值
+            </summary>
+            <param name="type">應用程式視窗類型</param>
+            <returns>視窗訊息識別值</returns>
+        </member>
+        <member name="M:KioskClient.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:KioskClient.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:KioskClient.KioskUI">
+            <summary>
+            瀏覽視窗 的互動邏輯
+            Debug 專用指令 --StartupUri:E:\元威專案\kioskplatform\KioskClient\html\index.html
+            </summary>
+            <summary>
+            KioskUI
+            </summary>
+        </member>
+        <member name="F:KioskClient.KioskUI.IDENTITY_TITLE">
+            <summary>
+            定義瀏覽視窗的標題字串常數
+            </summary>
+        </member>
+        <member name="E:KioskClient.KioskUI.GoHomeEvent">
+            <summary>
+            回首頁的事件
+            </summary>
+        </member>
+        <member name="P:KioskClient.KioskUI.AppConnection">
+            <summary>
+            模組通訊元件
+            </summary>
+        </member>
+        <member name="F:KioskClient.KioskUI.strStartPage">
+            <summary>
+            啟始首頁URL
+            </summary>
+        </member>
+        <member name="P:KioskClient.KioskUI.HomeUri">
+            <summary>
+            啟始首頁URL
+            </summary>
+        </member>
+        <member name="P:KioskClient.KioskUI.CurrentUrl">
+            <summary>
+            當前頁面URL
+            </summary>
+        </member>
+        <member name="F:KioskClient.KioskUI.objWebBrowser">
+            <summary>
+            頁面的WEB瀏覽控制項
+            </summary>
+        </member>
+        <member name="F:KioskClient.KioskUI.timerNavigatingTimeout">
+            <summary>
+            網頁載入是否逾時的計時器
+            </summary>
+        </member>
+        <member name="F:KioskClient.KioskUI.strNavigatingURL">
+            <summary>
+            正在導覽的頁面URL
+            </summary>
+        </member>
+        <member name="F:KioskClient.KioskUI.bolLoadCompletedFlag">
+            <summary>
+            網頁載入是否完成的旗標
+            </summary>
+        </member>
+        <member name="F:KioskClient.KioskUI.bolNavigatingStop">
+            <summary>
+            因發生導頁錯誤而停止導頁的旗標
+            </summary>
+        </member>
+        <member name="F:KioskClient.KioskUI.objGenerateScript">
+            <summary>
+            封裝擴充指令碼內容的執行個體
+            </summary>
+        </member>
+        <member name="F:KioskClient.KioskUI.dicFlowData">
+            <summary>
+            用來存放流程變數的字典集合
+            </summary>
+        </member>
+        <member name="T:KioskClient.KioskUI.TargetType">
+            <summary>
+            定義瀏覽視窗顯示頁面方式的列舉常數
+            </summary>
+        </member>
+        <member name="F:KioskClient.KioskUI.TargetType.Blank">
+            <summary>
+            將頁面內容顯示在新的瀏覽視窗中(預設值)
+            </summary>
+        </member>
+        <member name="F:KioskClient.KioskUI.TargetType.Self">
+            <summary>
+            將頁面內容顯示在目前頁面中
+            </summary>
+        </member>
+        <member name="F:KioskClient.KioskUI.TargetType.Parent">
+            <summary>
+            將頁面內容顯示在上一個瀏覽視窗中(尚未實作)
+            </summary>
+        </member>
+        <member name="F:KioskClient.KioskUI.TargetType.Top">
+            <summary>
+            將頁面內容顯示在獨立的瀏覽視窗中(不嵌入)(尚未實作)
+            </summary>
+        </member>
+        <member name="P:KioskClient.KioskUI.FunctionList">
+            <summary>
+            取得擴充的功能清單
+            </summary>
+        </member>
+        <member name="P:KioskClient.KioskUI.DocumentHTML">
+            <summary>
+            取得裝載的 HTML 頁面內容
+            </summary>
+        </member>
+        <member name="F:KioskClient.KioskUI.strCurrentURL">
+            <summary>
+            當前瀏覽頁面的URL
+            </summary>
+        </member>
+        <member name="P:KioskClient.KioskUI.CurrentURL">
+            <summary>
+            取得當前瀏覽頁面的未溢出表示URL
+            </summary>
+        </member>
+        <member name="P:KioskClient.KioskUI.IsScrollBarHide">
+            <summary>
+            取得或設定頁面卷軸是否隱藏
+            </summary>
+        </member>
+        <member name="P:KioskClient.KioskUI.CurrentApp">
+            <summary>
+            取得與目前應用程式關聯的 System.Windows.Application 物件。
+            </summary>
+        </member>
+        <member name="F:KioskClient.KioskUI.objWin32Helper">
+            <summary>
+            協助 Windows Presentation Foundation (WPF) 和 Win32 程式碼之間的互通物件。
+            </summary>
+        </member>
+        <member name="P:KioskClient.KioskUI.Handle">
+            <summary>
+            取得瀏覽視窗的控制代碼
+            </summary>
+        </member>
+        <member name="M:KioskClient.KioskUI.UpDateJobStatus">
+            <summary>
+            更新工作狀態
+            </summary>
+        </member>
+        <member name="M:KioskClient.KioskUI.#ctor">
+            <summary>
+            瀏覽視窗初始化
+            </summary>
+        </member>
+        <member name="M:KioskClient.KioskUI.ReviceHandler(System.Object,Kiosk.Remoting.KioskRemoting.ReceiveMessageEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="s"></param>
+            <param name="Args"></param>
+        </member>
+        <member name="T:KioskClient.KioskUI.OnScriptErrorEventArgs">
+            <summary>
+            定義指令碼錯誤事件資料的類別
+            </summary>
+        </member>
+        <member name="F:KioskClient.KioskUI.OnScriptErrorEventArgs.strErrorMessage">
+            <summary>
+            指令碼錯誤訊息
+            </summary>
+        </member>
+        <member name="P:KioskClient.KioskUI.OnScriptErrorEventArgs.ErrorMessage">
+            <summary>
+            指令碼錯誤訊息
+            </summary>
+        </member>
+        <member name="F:KioskClient.KioskUI.OnScriptErrorEventArgs.strURL">
+            <summary>
+            發生指令碼錯誤的URL
+            </summary>
+        </member>
+        <member name="P:KioskClient.KioskUI.OnScriptErrorEventArgs.URL">
+            <summary>
+            發生指令碼錯誤的URL
+            </summary>
+        </member>
+        <member name="F:KioskClient.KioskUI.OnScriptErrorEventArgs.intLineNumber">
+            <summary>
+            錯誤行號
+            </summary>
+        </member>
+        <member name="P:KioskClient.KioskUI.OnScriptErrorEventArgs.LineNumber">
+            <summary>
+            錯誤行號
+            </summary>
+        </member>
+        <member name="F:KioskClient.KioskUI.OnScriptErrorEventArgs.strDocument">
+            <summary>
+            網頁內容
+            </summary>
+        </member>
+        <member name="P:KioskClient.KioskUI.OnScriptErrorEventArgs.Document">
+            <summary>
+            網頁內容
+            </summary>
+        </member>
+        <member name="M:KioskClient.KioskUI.OnScriptErrorEventArgs.#ctor(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            建構子
+            </summary>
+            <param name="errorMsg">指令碼錯誤訊息</param>
+            <param name="url">發生指令碼錯誤的URL</param>
+            <param name="lineNumber">錯誤行號</param>
+            <param name="document">網頁內容</param>
+        </member>
+        <member name="E:KioskClient.KioskUI.OnPageLoadComplete">
+            <summary>
+            網頁載入完成觸發的事件,發生於網頁載入指定URL後
+            </summary>
+        </member>
+        <member name="E:KioskClient.KioskUI.OnPageLoadTimeout">
+            <summary>
+            網頁載入逾時觸發的事件,發生於網頁載入指定URL一定時間內未觸發LoadCompleted事件
+            </summary>
+        </member>
+        <member name="E:KioskClient.KioskUI.OnScriptError">
+            <summary>
+            網頁指令碼錯誤時觸發的事件
+            </summary>
+        </member>
+        <member name="M:KioskClient.KioskUI.timerNavigatingTimeout_Tick(System.Object,System.EventArgs)">
+            <summary>
+            當網頁導頁逾時時觸發的事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:KioskClient.KioskUI.BrowserHook_Refreshed(System.Object,System.EventArgs)">
+            <summary>
+            網頁重整時觸發
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+            <remarks>必須在此事件重新呼叫網頁相關操作, 否則指令碼在重整後會失效</remarks>
+        </member>
+        <member name="M:KioskClient.KioskUI.KioskUI_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            網頁載入時觸發
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:KioskClient.KioskUI.SetDefaultScreen(System.Collections.Generic.Dictionary{System.String,System.Int32})">
+            <summary>
+            回寫回預設值
+            </summary>
+            <param name="result"></param>
+        </member>
+        <member name="M:KioskClient.KioskUI.RefuseRedirectUri(System.Uri)">
+            <summary>
+            檢查Uri是否允許轉址
+            </summary>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KioskClient.KioskUI.objWebBrowser_Navigating(System.Object,System.Windows.Navigation.NavigatingCancelEventArgs)">
+            <summary>
+            網頁準備導頁時觸發
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:KioskClient.KioskUI.objWebBrowser_Navigated(System.Object,System.Windows.Navigation.NavigationEventArgs)">
+            <summary>
+            網頁導頁完成時觸發(但尚未載入完成頁面)
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:KioskClient.KioskUI.objWebBrowser_LoadCompleted(System.Object,System.Windows.Navigation.NavigationEventArgs)">
+            <summary>
+            網頁載入完成時觸發
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:KioskClient.KioskUI.Window_SourceInitialized(System.Object,System.EventArgs)">
+            <summary>
+            這個事件是為了支援與 Win32 的互通性而引發。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:KioskClient.KioskUI.WndProc(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr,System.Boolean@)">
+            <summary>
+            接收所有視窗訊息的事件處理常式(表示處理 Win32 視窗訊息的方法)
+            </summary>
+            <param name="hwnd">視窗控制代碼 (Window Handle)。</param>
+            <param name="msg">訊息 ID。</param>
+            <param name="wParam_W">訊息的 wParam 值。</param>
+            <param name="lParam_W">訊息的 lParam 值。</param>
+            <param name="handled">表示訊息是否已處理的值。 如果訊息已經過處理則將值設定為 true，否則為 false。</param>
+            <returns>相應的傳回值視特定的訊息而定。 請參閱正在處理之 Win32 訊息的訊息文件詳細資訊。</returns>
+        </member>
+        <member name="M:KioskClient.KioskUI.HtmlDocumentDOMControl">
+            <summary>
+            Html文件的DOM操作
+            </summary>
+        </member>
+        <member name="M:KioskClient.KioskUI.HtmlDocumentScriptinjection">
+            <summary>
+            注射指令碼處理以操作Html文件
+            </summary>
+        </member>
+        <member name="M:KioskClient.KioskUI.HideScrollBar(System.Boolean)">
+            <summary>
+            隱藏網頁中的垂直捲動捲軸
+            <param name="flag">是否隱藏捲軸</param>
+            </summary>
+        </member>
+        <member name="M:KioskClient.KioskUI.CatchContextMenu">
+            <summary>
+            處理網頁快顯示窗事件
+            </summary>
+        </member>
+        <member name="M:KioskClient.KioskUI.objWebBrowser_PreviewKeyDown(System.Object,System.Windows.Input.KeyEventArgs)">
+            <summary>
+            當焦點在網頁上鍵盤按下時處發的事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+            <remarks>取消事件後將不會觸發javascript的onkeydown事件</remarks>
+        </member>
+        <member name="M:KioskClient.KioskUI.CatchKeydown">
+            <summary>
+            處理網頁鍵盤事件
+            </summary>
+        </member>
+        <member name="M:KioskClient.KioskUI.onScriptError(System.Object,System.Object,System.Object)">
+            <summary>
+            當網頁發生指令碼錯誤時觸發
+            </summary>
+            <param name="errorMsg">錯誤訊息</param>
+            <param name="url">發生錯誤的URL</param>
+            <param name="lineNumber">發生錯誤的行號</param>
+        </member>
+        <member name="M:KioskClient.KioskUI.CatchIEScriptError">
+            <summary>
+            攔截IE指令碼錯誤訊息視窗(Navigated與LoadCompleted事件皆需使用才有效)
+            </summary>
+        </member>
+        <member name="M:KioskClient.KioskUI.SetSilent(System.Windows.Controls.WebBrowser,System.Boolean)">
+            <summary>
+            設定啟用或停用IE指令碼錯誤錯誤的對話視窗
+            </summary>
+            <param name="browser">指定的WebBrowser控制項</param>
+            <param name="silent">啟用或停用</param>
+        </member>
+        <member name="T:KioskClient.KioskUI.IOleServiceProvider">
+            <summary>
+            提供OLE COM元件相關服務存取的介面
+            </summary>
+        </member>
+        <member name="M:KioskClient.KioskUI.IOleServiceProvider.QueryService(System.Guid@,System.Guid@,System.Object@)">
+            <summary>
+            取得指定物件底層對應的COM元件實體
+            </summary>
+            <param name="guidService"></param>
+            <param name="riid"></param>
+            <param name="ppvObject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KioskClient.KioskUI.AddDefaultJavaScriptReference">
+            <summary>
+            新增預設指令碼參考
+            </summary>
+        </member>
+        <member name="M:KioskClient.KioskUI.GetExternal(System.String)">
+            <summary>
+            依據傳入的完整命名空間字串取得擴充元件執行個體
+            </summary>
+            <param name="fullNamespace">完整命名空間字串</param>
+            <returns>擴充元件執行個體</returns>
+        </member>
+        <member name="M:KioskClient.KioskUI.LockBrowser">
+            <summary>
+            嵌入瀏覽視窗
+            </summary>
+        </member>
+        <member name="M:KioskClient.KioskUI.SetData(System.String,System.Object)">
+            <summary>
+            設定流程變數
+            </summary>
+            <param name="key">變數名稱</param>
+            <param name="value">值</param>
+        </member>
+        <member name="M:KioskClient.KioskUI.GetData(System.String)">
+            <summary>
+            取得流程變數
+            </summary>
+            <param name="key">變數名稱</param>
+            <returns>值</returns>
+        </member>
+        <member name="M:KioskClient.KioskUI.RemoveData(System.String)">
+            <summary>
+            移除流程變數
+            </summary>
+            <param name="key">變數名稱</param>
+        </member>
+        <member name="M:KioskClient.KioskUI.GoStartPage">
+            <summary>
+            返回起始頁面
+            </summary>
+        </member>
+        <member name="M:KioskClient.KioskUI.GoHome">
+            <summary>
+            回到首頁
+            </summary>
+        </member>
+        <member name="M:KioskClient.KioskUI.ShowSourceWindow">
+            <summary>
+            顯示網頁原始檔內容
+            </summary>
+        </member>
+        <member name="M:KioskClient.KioskUI.changeTarget">
+            <summary>
+            提供變更處理指令碼呼叫功能實體
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KioskClient.KioskUI.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:KioskClient.KioskMain">
+            <summary>
+            主控視窗 的互動邏輯
+            </summary>
+            <summary>
+            KioskMain
+            </summary>
+        </member>
+        <member name="F:KioskClient.KioskMain.IDENTITY_TITLE">
+            <summary>
+            定義主控視窗的標題字串常數
+            </summary>
+        </member>
+        <member name="F:KioskClient.KioskMain.objWin32Helper">
+            <summary>
+            協助 Windows Presentation Foundation (WPF) 和 Win32 程式碼之間的互通物件。
+            </summary>
+        </member>
+        <member name="P:KioskClient.KioskMain.Handle">
+            <summary>
+            取得主控視窗的控制代碼
+            </summary>
+        </member>
+        <member name="F:KioskClient.KioskMain.hwndBrowser">
+            <summary>
+            瀏覽視窗的控制代碼
+            </summary>
+        </member>
+        <member name="P:KioskClient.KioskMain.KioskUIHandle">
+            <summary>
+            取得瀏覽視窗的控制代碼
+            </summary>
+        </member>
+        <member name="P:KioskClient.KioskMain.CurrentApp">
+            <summary>
+            取得與目前應用程式關聯的 System.Windows.Application 物件。
+            </summary>
+        </member>
+        <member name="M:KioskClient.KioskMain.#ctor">
+            <summary>
+            主控視窗初始化
+            </summary>
+            <remarks>
+            <para>若是瀏覽視窗重啟,啟動流程則是如下:</para>
+            <para>1.舊瀏覽視窗呼叫新主控視窗代入重啟參數 </para>
+            <para>2.舊瀏覽視窗結束執行</para>
+            <para>3.新主控視窗呼叫新瀏覽視窗並進行嵌入到舊主控視窗</para>
+            <para>4.新主控視窗結束執行</para>
+            <para></para>
+            <para>此好處是啟動邏輯寫在主控視窗,另有一做法如下:</para>
+            <para>1.舊瀏覽視窗呼叫新瀏覽視窗代入重啟參數 </para>
+            <para>2.舊瀏覽視窗結束執行</para>
+            <para>3.新瀏覽視窗自行嵌入至主控視窗</para>
+            <para>此好處是無須呼叫2次處理序,缺點是啟動邏輯必須寫在瀏覽視窗</para>
+            <para>或者可思考啟動邏輯寫在App層,由視窗呼叫執行</para>
+            </remarks>
+        </member>
+        <member name="M:KioskClient.KioskMain.Window_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            當主控視窗載入時觸發的事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:KioskClient.KioskMain.Window_Closing(System.Object,System.ComponentModel.CancelEventArgs)">
+            <summary>
+            當主控視窗關閉時觸發的事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:KioskClient.KioskMain.Window_SourceInitialized(System.Object,System.EventArgs)">
+            <summary>
+            這個事件是為了支援與 Win32 的互通性而引發。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:KioskClient.KioskMain.WndProc(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr,System.Boolean@)">
+            <summary>
+            接收所有視窗訊息的事件處理常式(表示處理 Win32 視窗訊息的方法)
+            </summary>
+            <param name="hwnd">視窗控制代碼 (Window Handle)。</param>
+            <param name="msg">訊息 ID。</param>
+            <param name="wParam_W">訊息的 wParam 值。</param>
+            <param name="lParam_W">訊息的 lParam 值。</param>
+            <param name="handled">表示訊息是否已處理的值。 如果訊息已經過處理則將值設定為 true，否則為 false。</param>
+            <returns>相應的傳回值視特定的訊息而定。 請參閱正在處理之 Win32 訊息的訊息文件詳細資訊。</returns>
+        </member>
+        <member name="M:KioskClient.KioskMain.LockBrowser(System.IntPtr)">
+            <summary>
+            嵌入瀏覽視窗
+            </summary>
+            <param name="ParentWindow">嵌入的主控視窗控制代碼</param>
+        </member>
+        <member name="M:KioskClient.KioskMain.SetDefaultScreen(System.Collections.Generic.Dictionary{System.String,System.Int32})">
+            <summary>
+            回寫回預設值
+            </summary>
+            <param name="result"></param>
+        </member>
+        <member name="M:KioskClient.KioskMain.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:KioskClient.Properties.Resources">
+            <summary>
+              用於查詢當地語系化字串等的強類型資源類別。
+            </summary>
+        </member>
+        <member name="P:KioskClient.Properties.Resources.ResourceManager">
+            <summary>
+              傳回這個類別使用的快取的 ResourceManager 執行個體。
+            </summary>
+        </member>
+        <member name="P:KioskClient.Properties.Resources.Culture">
+            <summary>
+              覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+              使用這個強類型資源類別的資源查閱。
+            </summary>
+        </member>
+    </members>
+</doc>

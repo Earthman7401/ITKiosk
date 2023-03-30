@@ -1,0 +1,22 @@
+2019/10/05 10:39:24
+inCheckProcess = 96,96
+2019/10/05 10:39:24
+inComOpen failed 1 2,\\.\COM2
+2019/10/05 10:39:24
+inComOpen failed 1 2,\\.\COM2
+2019/10/05 10:39:24
+inComOpen failed 1 2,\\.\COM2
+2019/10/05 10:39:24
+inComOpen failed 1 2,\\.\COM2
+2019/10/05 10:39:24
+inComOpen failed 1 2,\\.\COM2
+2019/10/05 10:39:24
+inInitialTxn Fail 2:-2
+2019/10/05 10:39:24
+main Fail 1:-2
+2019/10/05 10:39:24
+gCurrentFolder RES:C:\ITKiosk\Reader\ECC_API\ICERData
+2019/10/05 10:39:24
+TM RES :<TransXML><TRANS><T3901>-2</T3901><T1101>175964</T1101><T1102>000000</T1102><T1103>000000</T1103></TRANS></TransXML>
+2019/10/05 10:39:24
+inFileWrite (C:\ITKiosk\Reader\ECC_API\ICERData\ICERAPI.RES.OK) FILE_WRITE_FAIL:0

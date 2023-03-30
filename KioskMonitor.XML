@@ -1,0 +1,225 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KioskMonitor</name>
+    </assembly>
+    <members>
+        <member name="T:MonitorModule.DeviceManager">
+            <summary>
+            裝置管理員
+            </summary>
+        </member>
+        <member name="P:MonitorModule.DeviceManager.DeviceMap">
+            裝置列表
+        </member>
+        <member name="P:MonitorModule.DeviceManager.DeviceSetting">
+            <summary>
+            硬體設定資料
+            </summary>
+        </member>
+        <member name="P:MonitorModule.DeviceManager.DeviceInited">
+            <summary>
+            裝置全部初始化完成
+            </summary>
+        </member>
+        <member name="M:MonitorModule.DeviceManager.PrepareStatusData(System.Int32)">
+            <summary>
+            準備裝置狀態的資料
+            </summary>
+            <param name="jobId"></param>
+            <returns>所有裝置狀態集合而成的JSON字串</returns>
+        </member>
+        <member name="M:MonitorModule.DeviceManager.GetDevice(System.String)">
+            <summary>
+            取得動態讀取外部裝置
+            </summary>
+            <param name="devicName">裝置名稱</param>
+            <returns></returns>
+        </member>
+        <member name="M:MonitorModule.DeviceManager.InitDevice">
+            <summary>
+            init All Device By Device.map
+            1.建立新的執行序，負責執行外部呼叫硬體工作
+            </summary>
+        </member>
+        <member name="M:MonitorModule.DeviceManager.StartupMonitor">
+            <summary>
+            開始監控裝置
+            </summary>
+        </member>
+        <member name="M:MonitorModule.DeviceManager.StopMonitor">
+            <summary>
+            停止監控裝置
+            </summary>
+        </member>
+        <member name="M:MonitorModule.DeviceManager.#ctor(Kiosk.Remoting.KioskRemoting,System.String,System.Action{System.String,System.String})">
+            <summary>
+            建構式
+            </summary>
+            <param name="moduleConn">KioskRemoting物件</param>
+            <param name="currentPath">當前執行目錄</param>
+            <param name="postToMiddle">傳送訊息到Middleware的委派</param>
+        </member>
+        <member name="T:MonitorModule.ModuleManager">
+            <summary>
+            模組管理員
+            </summary>
+        </member>
+        <member name="M:MonitorModule.ModuleManager.#ctor(Kiosk.Remoting.KioskRemoting,System.Action{System.String,System.String})">
+            <summary>
+            建構式
+            </summary>
+            <param name="moduleConn"></param>
+            <param name="postErr"></param>
+        </member>
+        <member name="M:MonitorModule.ModuleManager.StartupMonitor">
+            <summary>
+            開始監控其他模組
+            KioskRemotingTimeOut 必須大於1分鐘
+            </summary>
+        </member>
+        <member name="M:MonitorModule.ModuleManager.IsAlive(KMSEntityLib.SystemEnum.Module)">
+            <summary>
+            是否還活著
+            1.發送訊息
+            2.等待回復
+            3.無回復或是Exception則開始重啟模組
+            </summary>
+            <param name="md"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MonitorModule.ModuleManager.RebootModule(DataLib.DataModel.ModuleModel,System.Int32)">
+            <summary>
+            重啟模組
+            1.檢查模組狀況是否為重啟中，開始時間是否大於3分鐘 Y=>2,N=>離開
+            2.取出所有同名的執行序
+            3.關閉所有執行序，等待時間2分鐘，超過時間會強制關閉。
+            4.等待所有執行結束後，啟動模組
+            </summary>
+            <param name="md"></param>
+        </member>
+        <member name="M:MonitorModule.ModuleManager.StartupModule(DataLib.DataModel.ModuleModel)">
+            <summary>
+            啟動模組
+            1.檢查是否開機中 => True -> 2,False ->3
+            2.開始啟動模組
+            3.檢查是否逾時 =>True -> 4,False=> End
+            4.執行重啟模組
+            </summary>
+            <param name="md"></param>
+        </member>
+        <member name="M:MonitorModule.ModuleManager.StopMonitor">
+            <summary>
+            停止監控模組
+            </summary>
+        </member>
+        <member name="M:MonitorModule.ModuleManager.PrepareStatusData(System.Collections.Hashtable)">
+            <summary>
+            將模組狀態資料轉換為KioskRemoting傳送用的資料
+            </summary>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MonitorModule.ModuleManager.GeneruteCPUUsageTable">
+            <summary>
+            取得CPU使用率
+            </summary>
+        </member>
+        <member name="M:MonitorModule.ModuleManager.MonitorResoure">
+            <summary>
+            監控個模組的資源使用狀況
+            </summary>
+        </member>
+        <member name="T:MonitorModule.MonitorManager">
+            <summary>
+            負責監控Client 模組與裝置
+            </summary>
+        </member>
+        <member name="P:MonitorModule.MonitorManager.MonitorTimer">
+            <summary>
+            監控的時間頻率 S/次
+            </summary>
+        </member>
+        <member name="P:MonitorModule.MonitorManager.ModuleManager">
+            <summary>
+            ModuleManager的實體
+            </summary>
+        </member>
+        <member name="P:MonitorModule.MonitorManager.DeviceManager">
+            <summary>
+            DeviceManager的實體
+            </summary>
+        </member>
+        <member name="T:MonitorModule.MonitorManager.WatchMode">
+            <summary>
+            監控模式
+            </summary>
+        </member>
+        <member name="F:MonitorModule.MonitorManager.WatchMode.Device">
+            <summary>
+            僅裝置
+            </summary>
+        </member>
+        <member name="F:MonitorModule.MonitorManager.WatchMode.Module">
+            <summary>
+            僅模組
+            </summary>
+        </member>
+        <member name="F:MonitorModule.MonitorManager.WatchMode.Both">
+            <summary>
+            監控裝置與模組
+            </summary>
+        </member>
+        <member name="P:MonitorModule.MonitorManager.KioskRemotingTimeOut">
+            <summary>
+            KioskRemoting逾時的
+            </summary>
+        </member>
+        <member name="P:MonitorModule.MonitorManager.IsAliveWaitTime">
+            <summary>
+            等待模組回應的時間
+            </summary>
+        </member>
+        <member name="M:MonitorModule.MonitorManager.#ctor(Kiosk.Remoting.KioskRemoting,log4net.ILog,MonitorModule.MonitorManager.WatchMode)">
+            <summary>
+            建構式
+            </summary>
+            <param name="conn">核心通訊模組</param>
+            <param name="loggger">log實體</param>
+            <param name="mode">啟動模式</param>
+        </member>
+        <member name="M:MonitorModule.MonitorManager.SendRequest(DataLib.DataModel.WorkManagerDataModel)">
+            <summary>
+            發送命令給裝置(等待回傳)
+            </summary>
+            <param name="command">裝置執行命令</param>
+            <returns></returns>
+        </member>
+        <member name="M:MonitorModule.MonitorManager.PostRequest(DataLib.DataModel.WorkManagerDataModel)">
+            <summary>
+            發送命令給裝置(不等帶回傳)
+            </summary>
+            <param name="command">裝置執行命令</param>
+        </member>
+        <member name="M:MonitorModule.MonitorManager.OnModuleRevice(System.Object,Kiosk.Remoting.KioskRemoting.ReceiveMessageEventArgs)">
+            Receive From Other Module Call
+        </member>
+        <member name="M:MonitorModule.MonitorManager.PostModuleErrToMiddleWare(System.String,System.String)">
+            <summary>
+            將模組的錯誤訊息傳回Middleware
+            </summary>
+            <param name="info">錯誤資訊</param>
+            <param name="moduleName">發生模組名稱ㄩㄟ</param>
+        </member>
+        <member name="M:MonitorModule.MonitorManager.PostDeviceErrToMiddleWare(System.String,System.String)">
+            <summary>
+            將裝置發生的錯誤訊息傳回Middleware
+            </summary>
+            <param name="info"></param>
+            <param name="deviceName"></param>
+        </member>
+        <member name="M:MonitorModule.MonitorManager.StartupMonitor(MonitorModule.MonitorManager.WatchMode)">
+            啟動監控
+        </member>
+    </members>
+</doc>

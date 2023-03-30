@@ -1,0 +1,373 @@
+function ECCCovertErrorCode(error_cod) {
+    //error_cod = res.resultJson[0];
+    var msg = "";
+    if (error_cod.T3900) {
+        switch (error_cod.T3900) {
+            case '03':
+                msg += "不合法的店號(T3900:" + error_cod.T3900 + ")<br>";
+                break;
+            case '04':
+            case '05':
+            case '15':
+            case '41':
+                msg += "錯誤代碼+票卡異常(T3900:" + error_cod.T3900 + ")<br>";
+                break;
+            case '06':
+                msg += "錯誤代碼：T3900+T3909+T3903(T3900:" + error_cod.T3900 + ")<br>";
+                break;
+            case '12':
+            case '25':
+            case '30':
+            case '58':
+            case '76':
+            case '77':
+            case '98':
+                msg += "錯誤代碼+交易異常(T3900:" + error_cod.T3900 + ")<br>";
+                break;
+            case '13':
+                msg += "金額不合法(T3900:" + error_cod.T3900 + ")<br>";
+                break;
+            case '14':
+                msg += "卡號不合法(T3900:" + error_cod.T3900 + ")<br>";
+                break;
+            case '19':
+                msg += "交易重複(T3900:" + error_cod.T3900 + ")<br>";
+                break;
+            case '51':
+                msg += "額度不足(T3900:" + error_cod.T3900 + ")<br>";
+                break;
+            case '54':
+                msg += "卡片過期(T3900:" + error_cod.T3900 + ")<br>";
+                break;
+            case '57':
+                msg += "請持卡人與發卡銀行確認(T3900:" + error_cod.T3900 + ")<br>";
+                break;
+            case '59':
+                msg += "端末設備不合法(T3900:" + error_cod.T3900 + ")<br>";
+                break;
+            case '60':
+                msg += "配對失敗(T3900:" + error_cod.T3900 + ")<br>";
+                break;
+            case '61':
+                msg += "超過金額上限(T3900:" + error_cod.T3900 + ")<br>";
+                break;
+            case '63':
+            case '96':
+            case '97':
+                msg += "錯誤代碼+設備異常(T3900:" + error_cod.T3900 + ")<br>";
+                break;
+        }
+    }
+    if (error_cod.T3901) {
+        switch (error_cod.T3901) {
+            case '-101':
+                msg += "CMAS主機回應+T3900畫面呈現(T3901:" + error_cod.T3900 + ")<br>";
+                break;
+            case '-102':
+                msg += "EZHOST主機回應+T3902畫面呈現(T3901:" + error_cod.T3900 + ")<br>";
+                break;
+            case '-103':
+            case '-104':
+            case '-105':
+            case '-106':
+            case '-109':
+            case '-118':
+            case '-119':
+            case '-120':
+            case '-121':
+            case '-122':
+            case '-128':
+            case '-136':
+                msg += "錯誤代碼+程式異常(T3901:" + error_cod.T3901 + ")<br>";
+                break;
+            case '-110':
+                msg += "網路傳送逾時(T3901:" + error_cod.T3901 + ")<br>";
+                break;
+            case '-111':
+                msg += "網路接收逾時(T3901:" + error_cod.T3901 + ")<br>";
+                break;
+            case '-117':
+                msg += "前次交易尚未結帳，需先結帳(T3901:" + error_cod.T3901 + ")<br>";
+                break;
+            case '-111':
+                msg += "網路接收逾時(T3901:" + error_cod.T3901 + ")<br>";
+                break;
+            case '-123':
+                msg += "餘額不足(T3901:" + error_cod.T3901 + ")<br>";
+                break;
+            case '-124':
+                msg += "錯誤代碼+設備異常(T3901:" + error_cod.T3901 + ")<br>";
+                break;
+            case '-125':
+                msg += "感應不良，請重試，請勿移動卡片(T3901:" + error_cod.T3901 + ")<br>";
+                break;
+            case '-126':
+                msg += "非Retry交易(T3901:" + error_cod.T3901 + ")<br>";
+                break;
+            case '-130':
+                msg += "票卡已退(T3901:" + error_cod.T3901 + ")<br>";
+                break;
+            case '-131':
+                msg += "卡別錯誤(T3901:" + error_cod.T3901 + ")<br>";
+                break;
+            case '-132':
+                msg += "票卡異常(T3901:" + error_cod.T3901 + ")<br>";
+                break;
+            case '-133':
+                msg += "票卡已鎖(T3901:" + error_cod.T3901 + ")<br>";
+                break;
+            case '-134':
+                msg += "未開卡之票卡(T3901:" + error_cod.T3901 + ")<br>";
+                break;
+            case '-138':
+                msg += "T3908畫面呈現(T3901:" + error_cod.T3901 + ")<br>";
+                break;
+            case '-139':
+                msg += "學生票已展期, 不需展期帳戶連結已設定, 不需設定(T3901:" + error_cod.T3901 + ")<br>";
+                break;
+            case '-1':
+            case '-2':
+                msg += "Comport開啟失敗(T3901:" + error_cod.T3901 + ")<br>";
+                break;
+            case '-3':
+            case '-4':
+            case '-5':
+            case '-6':
+            case '-7':
+            case '-8':
+            case '-9':
+            case '-11':
+            case '-18':
+            case '-21':
+            case '-22':
+            case '-32':
+            case '-34':
+            case '-36':
+                msg += "錯誤代碼+設備異常(T3901:" + error_cod.T3901 + ")<br>";
+                break;
+            case '-19':
+                msg += "Comport接收失敗(T3901:" + error_cod.T3901 + ")<br>";
+                break;
+            case '-23':
+                msg += "Log檔案開啟失敗(T3901:" + error_cod.T3901 + ")<br>";
+                break;
+        }
+    }
+    if (error_cod.T3903) {
+        switch (error_cod.T3903) {
+            case '04':
+            case '05':
+            case '14':
+            case '15':
+            case '54':
+            case '57':
+            case 'N3':
+                msg += "錯誤代碼+票卡異常(T3903:" + error_cod.T3903 + ")<br>";
+                break;
+            case '12':
+            case '19':
+            case '51':
+            case '58':
+            case '61':
+            case '65':
+            case '76':
+            case '77':
+            case '90':
+            case '91':
+            case '92':
+            case '94':
+            case '96':
+                msg += "錯誤代碼+交易異常(T3903:" + error_cod.T3903 + ")<br>";
+                break;
+            case '13':
+                msg += "錯誤代碼+請確認交易金額(T3903:" + error_cod.T3903 + ")<br>";
+                break;
+            case '30':
+            case '93':
+            case '99':
+                msg += "錯誤代碼+程式異常(T3903:" + error_cod.T3903 + ")<br>";
+                break;
+            case '55':
+                msg += "無需展期(T3903:" + error_cod.T3903 + ")<br>";
+                break;
+            case '59':
+            case '97':
+            case '98':
+                msg += "錯誤代碼+設備異常(T3903:" + error_cod.T3903 + ")<br>";
+                break;
+        }
+    }
+    if (error_cod.T3904) {
+        switch (error_cod.T3904) {
+            case "6001":
+            case "6002":
+            case "6003":    
+            case "6004":
+            case "6005":
+            case "60A1":
+            case "60A2":    
+            case "6205":
+            case "6206":
+            case "6207":    
+            case "6208":
+            case "6302":
+            case "6303":
+            case "6304":
+            case "6305":
+            case "6306":
+            case "6307":
+            case "6308":
+            case "6309":
+            case "630A":     
+            case "630B":
+            case "630C":
+            case "6700":
+            case "6A80":
+            case "6B00":
+            case "6D00":
+            case "6E00":
+            case "6F00":                
+                msg += "錯誤代碼+設備異常(T3904:" + error_cod.T3904 + ")<br>";
+                break;
+            case "6088":
+                msg += "線路不良／Time Out，請進行Retry(T3904:" + error_cod.T3904 + ")<br>";
+                break;
+            case "6101":
+                msg += "票卡不適用(T3904:" + error_cod.T3904 + ")<br>";
+                break;
+            case "6102":
+            case "6104":
+            case "6105":
+            case "6106":
+            case "6107":
+            case "610B":
+            case "610C":
+            case "610D":
+            case "610E":
+            case "610F":
+            case "6111":
+                msg += "錯誤代碼+票卡異常(T3904:" + error_cod.T3904 + ")<br>";
+                break;
+            case "6103":
+                msg += "票卡CPD Error(T3904:" + error_cod.T3904 + ")<br>";
+                break;
+            case "6108":
+                msg += "票卡過期(T3904:" + error_cod.T3904 + ")<br>";
+                break;
+            case "6109":
+                msg += "票卡已鎖卡(T3904:" + error_cod.T3904 + ")<br>";
+                break;
+            case "610A":
+                msg += "票卡內檢核碼錯誤(T3904:" + error_cod.T3904 + ")<br>";
+                break;
+            case "6201":
+                msg += "找不到卡片，請重新操作(T3904:" + error_cod.T3904 + ")<br>";
+                break;
+            case "6202":
+                msg += "讀卡失敗，請重新操作(T3904:" + error_cod.T3904 + ")<br>";
+                break;
+            case "6203":
+                msg += "寫卡失敗，請重新操作(T3904:" + error_cod.T3904 + ")<br>";
+                break;
+            case "6204":
+                msg += "多張卡，請重新操作(T3904:" + error_cod.T3904 + ")<br>";
+                break;
+            case "6301":
+                msg += "請確認卡機版本(T3904:" + error_cod.T3904 + ")<br>";
+                break;
+            case "6401":
+                msg += "確認是否為上一筆交易之卡片(T3904:" + error_cod.T3904 + ")<br>";
+                break;
+            case "6402":
+                msg += "交易金額超過額度(T3904:" + error_cod.T3904 + ")<br>";
+                break;
+            case "6403":
+                msg += "額度不足(T3904:" + error_cod.T3904 + ")<br>";
+                break;
+            case "6404":
+                msg += "卡號錯誤(T3904:" + error_cod.T3904 + ")<br>";
+                break;
+            case "6406":
+            case "6409":
+            case "640A":
+            case "640B":
+            case "640F":
+            case "641A":
+            case "641B":
+            case "641C":    
+                msg += "錯誤代碼+交易異常(T3904:" + error_cod.T3904 + ")<br>";
+                break;
+            case "640C":
+                msg += "超過交易日限額(T3904:" + error_cod.T3904 + ")<br>";
+                break;
+            case "640D":
+                msg += "超過交易次限額(T3904:" + error_cod.T3904 + ")<br>";
+                break;
+            case "640E":
+                msg += "票卡640E(T3904:" + error_cod.T3904 + ")<br>";
+                break;
+            case "6410":
+            case "6411":
+            case "6412":
+            case "6413":
+            case "6414":    
+            case "6417":    
+            case "6419":        
+                msg += "該卡不適用於此交易(T3904:" + error_cod.T3904 + ")<br>";
+                break;
+            case "6415":
+                msg += "須執行交易合法驗證(T3904:" + error_cod.T3904 + ")<br>";
+                break;
+            case "6416":
+                msg += "自動加值功能已開啟,不需再次開啟(T3904:" + error_cod.T3904 + ")<br>";
+                break;
+            case "6418":
+                msg += "票卡於此通路限制使用(T3904:" + error_cod.T3904 + ")<br>";
+                break;           
+            case "6501":
+            case "6502":
+            case "6503":
+            case "6504":
+            case "6505":
+            case "6506":
+            case "6507":
+            case "6508":
+            case "6509":
+            case "6522":
+            case "65FF":    
+                msg += "錯誤代碼+安全錯誤(T3904:" + error_cod.T3904 + ")<br>";
+                break;
+            case "6602":
+            case "6604":
+            case "6608":
+            case "6610":
+            case "6612":
+            case "6620":
+            case "6624":
+            case "6625":
+            case "6640":
+            case "6650":
+            case "667C":
+            case "667F":    
+                msg += "錯誤代碼+卡機錯誤(T3904:" + error_cod.T3904 + ")<br>";
+                break;
+        }
+    }
+    if (error_cod.T3908 === 'XX') {
+        msg += "請參照各銀行規格<br>";
+    }
+    if (error_cod.T3909) {
+        switch (error_cod.T3909) {
+            case "SVC":
+                msg += "主機代碼:SVC(T3909:" + error_cod.T3909 + ")<br>";
+                break;
+            case "ISS":
+                msg += "主機代碼:ISS(T3909:" + error_cod.T3909 + ")<br>";
+                break;
+            case "KMS":
+                msg += "主機代碼:KMS(T3909:" + error_cod.T3909 + ")<br>";
+                break;
+        }
+    }
+    return msg
+}

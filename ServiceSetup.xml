@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Parameter_Set>
+<KMS_INFO>
+
+    <ftp_ip>192.168.0.228</ftp_ip>
+    <ftp_port>21</ftp_port>
+    <ftp_userid>onepluskms</ftp_userid>
+    <ftp_userpwd>Yphs0@77300089</ftp_userpwd>
+    <server_path>ftpblc</server_path>
+
+    <kiosk_register_id>69f8e315-28e6-e811-80d1-d43d7e78b709</kiosk_register_id>
+    <kiosk_path>C:\\ITKiosk\\</kiosk_path>
+    <kiosk_kill>C:\\ITKiosk\\Tool\\KillMainApModule.exe</kiosk_kill>
+    <kiosk_start>C:\\ITKiosk\\KioskClient.exe</kiosk_start>
+    <getjob>http://203.72.178.228:8080/API/GetSyncFileList.ashx</getjob>
+    <updatejob>http://203.72.178.228:8080/API/UpdateSyncFileList.ashx</updatejob>
+
+    <kiosk_type>2</kiosk_type>
+    <kiosk_id>1</kiosk_id>
+    <kiosk_monitor>http://218.32.44.153/CGMHPAY/Report/kioskMonitor</kiosk_monitor>
+
+</KMS_INFO>
+</Parameter_Set>

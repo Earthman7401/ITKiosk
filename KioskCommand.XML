@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KioskCommand</name>
+    </assembly>
+    <members>
+        <member name="T:CommandModule.biz.CommandBiz">
+            <summary>
+            負責Command 的處理邏輯
+            </summary>
+        </member>
+        <member name="P:CommandModule.biz.CommandBiz.CurrentModule">
+            <summary>
+            目前模組
+            </summary>
+        </member>
+        <member name="F:CommandModule.biz.CommandBiz.passResendStatus">
+            <summary>
+            不需要重送工作命令的狀態
+            </summary>
+        </member>
+        <member name="M:CommandModule.biz.CommandBiz.#ctor(Kiosk.Remoting.KioskRemoting,log4net.ILog)">
+            <summary>
+            建構式
+            </summary>
+            <param name="conn">Kiosk 模組通訊物件</param>
+            <param name="logger"> Kiosk Log物件</param>
+        </member>
+        <member name="M:CommandModule.biz.CommandBiz.SetClient">
+            <summary>
+            <para>設定Client</para>
+            <para>1.與Middleware連線，如果有 KioskID 則進行登入，如果沒有則進行註冊動作並在成功後登入</para>
+            <para>2.在登入後將 authcookie 轉發給Middleware的singalr的hub，作為已登入的憑證，並連接</para>
+            <para>3.成功後則會啟動新的執行序來執行定時 Hearbeat 與 回報工作狀態</para>
+            </summary>
+        </member>
+        <member name="M:CommandModule.biz.CommandBiz.UpDateJobStatus">
+            <summary>
+            覆寫基底類別的 更新工作狀態，限定只有在連線時才會更新
+            </summary>
+        </member>
+        <member name="M:CommandModule.biz.CommandBiz.PostToMiddleWare(DataLib.DataModel.ModuleRequestDataModel)">
+            <summary>
+            發送訊息到Middleware(不等待回復)
+            </summary>
+            <param name="request">訊息內容主體</param>
+        </member>
+        <member name="M:CommandModule.biz.CommandBiz.SendToMiddleWare``1(DataLib.DataModel.ModuleRequestDataModel)">
+            <summary>
+            發送訊息到Middleware(會等待MiddleWare回復)
+            </summary>
+            <typeparam name="T">泛型類別，會將回傳結果轉為指定類別後傳回</typeparam>
+            <param name="request">訊息主體</param>
+            <returns> 指定的類型處理結果</returns>
+        </member>
+        <member name="M:CommandModule.biz.CommandBiz.PrepareUploadFile(System.Int32,System.String)">
+            <summary>
+            將Log檔案傳送到要壓縮的暫存資料夾中
+            </summary>
+            <param name="mappingId">工作編號(JobId)</param>
+            <param name="date">要上傳的Log指定日期</param>
+            <returns>壓縮檔完整路徑</returns>
+        </member>
+        <member name="M:CommandModule.biz.CommandBiz.ProcessUploadLog(DataLib.DataModel.ScheduleJobDataModel)">
+             <summary>
+            <para> 1.檢查壓縮檔是否存在，如果不存在則執行 PrepareUploadFile 與 ZipFile</para>
+            <para> 2.上傳至指定的FTP</para>
+             </summary>
+             <param name="model">遠端工作命令內容</param>
+        </member>
+        <member name="M:CommandModule.biz.CommandBiz.RestartModule(DataLib.DataModel.ScheduleJobDataModel)">
+            <summary>
+            將重啟啟動模組命令傳送給工作指定的模組
+            </summary>
+            <param name="requestModel">遠端工作命令內容</param>
+        </member>
+        <member name="M:CommandModule.biz.CommandBiz.GetDevicesStatus(DataLib.DataModel.ScheduleJobDataModel)">
+            <summary>
+            傳送命令給監控模組，要求取得裝置狀態
+            </summary>
+            <param name="requestModel">遠端工作命令內容</param>
+        </member>
+        <member name="M:CommandModule.biz.CommandBiz.Upgrade(DataLib.DataModel.ScheduleJobDataModel)">
+            <summary>
+            傳送命令給啟動模組要求執行更新
+            </summary>
+            <param name="requestModel">遠端工作命令內容</param>
+        </member>
+        <member name="M:CommandModule.biz.CommandBiz.UploadLogFile(DataLib.DataModel.ScheduleJobDataModel)">
+            <summary>
+            啟動上傳本機log
+            </summary>
+            <param name="requestModel">遠端工作命令內容</param>
+        </member>
+        <member name="M:CommandModule.biz.CommandBiz.TriggerEvent(DataLib.DataModel.ScheduleJobDataModel)">
+            <summary>
+            觸發終端註冊的事件
+            </summary>
+            <param name="requestModel"></param>
+        </member>
+        <member name="M:CommandModule.biz.CommandBiz.Reboot(DataLib.DataModel.ScheduleJobDataModel)">
+            <summary>
+            執行重開機工作命令
+            </summary>
+            <param name="requestModel">遠端工作命令內容</param>
+        </member>
+        <member name="M:CommandModule.biz.CommandBiz.Showdown(DataLib.DataModel.ScheduleJobDataModel)">
+            <summary>
+            執行關機工作命令
+            </summary>
+            <param name="requestModel">遠端工作命令內容</param>
+        </member>
+        <member name="M:CommandModule.biz.CommandBiz.ScreenShot(DataLib.DataModel.ScheduleJobDataModel)">
+            <summary>
+            擷取螢幕
+            </summary>
+        </member>
+        <member name="M:CommandModule.biz.CommandBiz.RecevieCommand(DataLib.DataModel.ScheduleJobDataModel)">
+            <summary>
+            接收 Middleware 派送過來的工作，並依工作內容分派給其他模組
+            </summary>
+            <param name="requestModel">遠端工作命令內容</param>
+        </member>
+        <member name="M:CommandModule.biz.CommandBiz.ResponseJob">
+            <summary>
+            回報給 Middleware 工作結果
+            </summary>
+        </member>
+        <member name="M:CommandModule.biz.CommandBiz.StartUpReport">
+            <summary>
+            重新請動模組時，如果有重啟工作則回報警告，沒有則回報錯誤
+            </summary>
+        </member>
+        <member name="M:CommandModule.biz.CommandBiz.TrackUserBehavior(System.String)">
+            <summary>
+            傳送追蹤使用者行為的資料
+            </summary>
+            <param name="logData">使用者行為資料</param>
+        </member>
+        <member name="M:CommandModule.biz.CommandBiz.OnModuleRevice(System.Object,Kiosk.Remoting.KioskRemoting.ReceiveMessageEventArgs)">
+            <summary>
+            <para>接收 kiosk 其他模組的事件</para>
+            <para>1.發送紀錄給 MiddleWare</para>
+            <para>2.發送取得裝置狀態紀錄內容給 MiddleWare</para>
+            <para>3.執行 Heartbeat</para>
+            <para>4.發送工作完成給 MiddleWare</para>
+            <para>5.回報狀態給監控模組</para>
+            <para>6.發送使用者行為給 MiddleWare</para>
+            </summary>
+            <param name="s">發送端物件</param>
+            <param name="Args">發送參數</param>
+        </member>
+        <member name="T:CommandModule.CommandModule">
+            <summary>
+            KioskCommand 應用程式
+            </summary>
+        </member>
+        <member name="M:CommandModule.CommandModule.Main(System.String[])">
+            <summary>
+            KioskCommand 程式進入點
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:CommandModule.CommandModule.CommandMode(System.String[])">
+            <summary>
+            命令視窗
+            </summary>
+            <param name="command"></param>
+        </member>
+        <member name="F:CommandModule.CommandModule.ShellEnum.MODULECONNECTION">
+            <summary>
+            Module Connection
+            </summary>
+        </member>
+    </members>
+</doc>

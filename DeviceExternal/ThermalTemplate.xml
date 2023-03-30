@@ -1,0 +1,933 @@
+﻿<THERMAL_TEMPLATE>
+  <THERMAL_PRINT id="ASEtest">
+    <THERMAL_PAGE>
+    <THERMAL_TEXT wide_character="2" bold='true' alignment="center">ASEKH\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT bold='true' alignment="center">WiFi Information\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>Account：Amy_humg@aseglobal.com\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>Password：</THERMAL_TEXT>
+    <THERMAL_TEXT wide_character="2" bold='true' >vg4shs\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>Name：AmyHung\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT  bold='true' alignment="center">此資料視為機密文件，請妥善保管\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT  bold='true' alignment="center">ASE Confidential</THERMAL_TEXT>
+    <THERMAL_TEXT>\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT>
+
+  <THERMAL_PRINT id="CreditCardSettle">
+    <THERMAL_PAGE>
+    <THERMAL_BITMAP file="C:\ITKiosk\html\img\bank.bmp" alignment="center" size="400"></THERMAL_BITMAP>
+    <THERMAL_TEXT alignment="center">{{store_id}}\r\n</THERMAL_TEXT>
+	  <THERMAL_TEXT wide_character="2" bold='true' alignment="center">-----------------\r\n</THERMAL_TEXT>
+	  <THERMAL_TEXT bold='true' alignment="center">信用卡結帳\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>商店代號：{{merchant_id}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>端末機代號：{{terminal}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>批次號碼：{{BatchNo}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>銷售筆數：{{SaleTotalCnt}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>銷售總額：{{SaleTotalAmount}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT alignment="center"> 列印時間:{{date}} {{time}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT>
+
+  <THERMAL_PRINT id="MedicalOrderError">
+    <THERMAL_PAGE>
+    <THERMAL_TEXT wide_character="2" bold='true' alignment="center">IC寫入未完成\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT wide_character="2" bold='true' alignment="center">請洽藥師櫃台\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT wide_character="2" bold='true' alignment="center">列印時間：\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT wide_character="2" bold='true' alignment="center">{{time}}\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT>
+  <THERMAL_PRINT id="PrintTest">
+    <THERMAL_PAGE>
+    <THERMAL_TEXT wide_character="2" bold='true' alignment="center">測試列印\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT wide_character="2" bold='true' alignment="center">列印時間\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT alignment="center"> {{date}}　{{time}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT>
+ <THERMAL_PRINT id="school-receipt">
+    <THERMAL_PAGE>
+    <THERMAL_TEXT wide_character="2" bold='true' alignment="center">XX大學\r\n</THERMAL_TEXT>
+	<THERMAL_TEXT wide_character="1" bold='true' alignment="center">自助化繳費存根聯\r\n</THERMAL_TEXT>
+	<THERMAL_TEXT>----------------------------------\r\n</THERMAL_TEXT>
+	<THERMAL_TEXT>申請時間：2019/05/31\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>申請編號：123456789\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>申請身分：畢業生\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>學號：12345678\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>姓名：張學友\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>項目：修業證明書\r\n\r\n</THERMAL_TEXT>
+	
+    <THERMAL_TEXT>工作時程：3工作日\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>單價：30元\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>申請份數：1份\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>總金額：30元\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>受理單位：註冊組\r\n</THERMAL_TEXT>
+	<THERMAL_TEXT>機器編號：A001\r\n</THERMAL_TEXT>    
+	<THERMAL_TEXT>----------------------------------\r\n</THERMAL_TEXT>
+	<THERMAL_TEXT alignment="center">請持「申請聯」至註冊組填\r\n</THERMAL_TEXT>
+	<THERMAL_TEXT alignment="center">寫文件申請表辦理\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT>
+ <THERMAL_PRINT id="PrintBarcode">
+    <THERMAL_PAGE>
+    <THERMAL_TEXT wide_character="2" bold='true' alignment="center">測試列印\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_BARCODE alignment="left" CodeType="Code39" size="80">*10810TX120407642312*</THERMAL_BARCODE>
+    <THERMAL_TEXT wide_character="2" alignment="center">{{code}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT>
+
+<THERMAL_PRINT id="HotelProject">
+    <THERMAL_PAGE>
+    <THERMAL_TEXT wide_character="2" bold='true' alignment="center">德安花園行旅\r\n\r\n</THERMAL_TEXT>
+	  <THERMAL_TEXT wide_character="2" bold='true' alignment="center">台北館\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT bold='true'>入住日期 : 2018/05/22\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT bold='true'>退房日期 : 2018/05/23\r\n</THERMAL_TEXT>   
+	  <THERMAL_TEXT bold='true'>住客姓名 : 王大明　　貴賓\r\n</THERMAL_TEXT>     
+	  <THERMAL_TEXT bold='true'>房型 : 豪華雙人房  \r\n</THERMAL_TEXT>     
+	  <THERMAL_TEXT bold='true'>房價 : NTD$ 2,500  \r\n</THERMAL_TEXT>   
+	  <THERMAL_TEXT bold='true'>專案 : 國人住宿優惠專案價 \r\n</THERMAL_TEXT>  
+	  <THERMAL_TEXT bold='true'>早餐份數 : 2客 \r\n\r\n</THERMAL_TEXT>    	  
+    <THERMAL_TEXT>1. 請利用客房內所提供之保險箱存放貴重物品。\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>2. 飯店恕不擔負旅客住宿期間之相關物品保管責任。\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>3. 同意授權上述資料，並儘提供行銷使用。\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>4. 退房時間為早上 11 : 00以前\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>5. 早餐餐廳位置 :3F 雨林廳\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>07 : 00-10:00\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT  bold='true' alignment="center">德安花園行旅 祝您住宿愉快</THERMAL_TEXT>
+    <THERMAL_TEXT>\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT>
+      <THERMAL_PRINT id="Test">
+    <THERMAL_PAGE>
+    <THERMAL_TEXT>Check-in notice:\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>The whole hotel is a non-smoking\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>1.BreakSlow provide time: 07:00\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>-14:00. For dining need to bring\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>your room card. Vegetarian, please\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>inform the counter staff at\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>check-in.\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>2.Room Floor Identification: For\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>example, NO.1201 is at 2F,\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>NO.2001 is at 10F.\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>3.After check-in, taking elevator\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>need to inductive room card. And\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>press the floor number.\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>4.Gym is at 2F. Need room card\r\n</THERMAL_TEXT>    
+    <THERMAL_TEXT>to open the door lock. Inside we\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>have provided drinking water and\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>towel. Please wear\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>sportswear/shoes.\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>Gym opening hours:\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>6:00~10:00,15:00~22:00。\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>5.Self-served laundry room is at\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>2F. Need room card to open the\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>door lock.\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>We have provided environmentally\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>friendly laundry detergent. It’s\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>free to use.\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>6.There are a variety types of\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>pillows (Latex Pillow/Memory\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>Pillow/)and guest items available\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>for rental. Please contact the\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>front desk for more information.\r\n</THERMAL_TEXT>    
+    <THERMAL_TEXT>7.Guest room Wi-Fi login\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>information. Wi-Fi\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>account: GFHOTEL. \r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>Password: 062200366. \r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>8.If you need any front desk\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>assistance, press the reception \r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>button, please. Calling room to \r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>room, dial the room number\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>directly.\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>9.Please return two room cards at\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>the time of check-out. The\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>self-service machine will \r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>automatically print your\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>accommodation invoice.\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>10.Smoking are not allowed in the \r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>entire building. There is a smoke\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>detector in the room. The smoke\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>will make the automatic fire\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>alarm system operate. The fire\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>broadcast will broadcast\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>immediately, evacuate the guests\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>of the hotel. To avoid causing\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>panic, do not smoke in the room, \r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>please. Smoking in the room will\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>cause the residue of second-hand\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>smoke. The hotel will charge\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>NT$2000 from cleaning fee. To\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>protect the health of other guests\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>.Smoking in public places can be\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>punished with a maximum of\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>NT$10,000 under Taiwan's Tobacco\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>Hazards Prevention Act.\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT  bold='true' alignment="center">榮美金鬱金香酒店祝您假期精彩愉快\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT  bold='true' alignment="center">Golden Tulip Glory Fine Hotel-\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT  bold='true' alignment="center">Wish you have a pleasant journey.\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT> 
+    <THERMAL_PRINT id="HotelProjectEN">
+    <THERMAL_PAGE>
+	  <THERMAL_TEXT wide_character="2" bold='true'>Room No.601\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>Check out time is before\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>12:00 noon\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>Breakfast is served from\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>06:00-10:00\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>Your breakfast is: 1 / daily\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>After checking out, you will  \r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>receive an electronic invoice.\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>The whole hotel is a non-smoking\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>hotel, and the hotel will have a\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>smoke sensor.\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>If you smoke in the room, you will\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>be charged NTD$2000.\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>Please keep your valuables and you\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>will be responsible for any loss\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>if you are lost.\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>WiFi account :Flytech\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>WiFi password:Flytech\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>CheckIn:2019/09/01\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>CheckOut:2019/09/02\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>Please return the room key to\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>hotel,upon check out\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT  bold='true' alignment="center">Flytech Hotel\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT  bold='true' alignment="center">We wish you a pleasant stay.\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT> 
+    <THERMAL_PRINT id="BreakfastVoucher">
+    <THERMAL_PAGE>
+    <THERMAL_BITMAP file="C:\ITKiosk\html\img\logo.bmp" alignment="center" size="200"></THERMAL_BITMAP>
+    <THERMAL_TEXT>\r\n</THERMAL_TEXT>
+	 <THERMAL_TEXT>{{CustomerName}}  貴賓。\r\n</THERMAL_TEXT>
+	  <THERMAL_TEXT wide_character="2" bold='true'>房號：{{RoomNo}}\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT bold='true'>{{DurationType}}{{DurationTime}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>退房時間為中午12:00以前。\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>一天活力的開始-早餐，提供時間為\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>06:00-10:00\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>您的早餐客數為：{{Count}}客 / 每天 \r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>辦理退房手續後，你將會收到電子發票\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>本飯店整館為禁菸飯店，飯店將有煙霧感測器，\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>若顧客戶內吸菸將收取新台幣NTD$2000\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>請保管你的貴重財物，如有遺失需自行負擔責任。\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>WiFi帳號：{{account}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>WiFi密碼：{{password}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>入住時間：{{beginDate}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>退房時間：{{endDate}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>退房時，請將房卡歸還櫃檯\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT  bold='true' alignment="center">{{HotelName}} 祝您住宿愉快\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT> 
+ 
+    <THERMAL_PRINT id="BreakfastVoucherEN">
+    <THERMAL_PAGE>
+    <THERMAL_BITMAP file="C:\ITKiosk\html\img\logo.bmp" alignment="center" size="200"></THERMAL_BITMAP>
+    <THERMAL_TEXT>\r\n</THERMAL_TEXT>
+	 <THERMAL_TEXT>{{CustomerName}} Mr./Ms\r\n</THERMAL_TEXT>
+	  <THERMAL_TEXT wide_character="2" bold='true'>Room No.{{RoomNo}}\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT bold='true'>{{DurationType}}{{DurationTime}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>Check out time is before\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>12:00 noon\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>Breakfast is served from\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>06:00-10:00\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>Your breakfast is: {{Count}} / daily\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>After checking out, you will  \r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>receive an electronic invoice.\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>The whole hotel is a non-smoking\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>hotel, and the hotel will have a\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>smoke sensor.\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>If you smoke in the room, you will\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>be charged NTD$2000.\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>Please keep your valuables and you\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>will be responsible for any loss\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>if you are lost.\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>WiFi account :{{account}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>WiFi password:{{password}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>CheckIn：{{beginDate}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>CheckOut：{{endDate}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>Please return the room key to\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>hotel,upon check out\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT  bold='true' alignment="center">{{HotelNameEng}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT  bold='true' alignment="center">We wish you a pleasant stay.\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT> 
+
+    <THERMAL_PRINT id="BreakfastVouchersDetail">
+    <THERMAL_PAGE>
+    <THERMAL_BITMAP file="C:\ITKiosk\html\img\logo.bmp" alignment="center" size="200"></THERMAL_BITMAP>
+    <THERMAL_TEXT>\r\n</THERMAL_TEXT>
+	  <THERMAL_TEXT wide_character="2" bold='true'>房號：{{RoomNo}}\r\n\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT wide_character="2">使用日期:\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT wide_character="2">{{UseDate}}\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT wide_character="2" alignment="center">早餐卷 x 1\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT alignment="center">早餐供應時間:每日07:00-10:00 \r\n</THERMAL_TEXT>    
+    <THERMAL_TEXT>\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT>
+  
+    <THERMAL_PRINT id="BreakfastVouchersDetailEN">
+    <THERMAL_PAGE>
+    <THERMAL_BITMAP file="C:\ITKiosk\html\img\logo.bmp" alignment="center" size="200"></THERMAL_BITMAP>
+    <THERMAL_TEXT>\r\n</THERMAL_TEXT>
+	  <THERMAL_TEXT wide_character="2" bold='true'>Room No.{{RoomNo}}\r\n\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT wide_character="2">Date of use:\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT wide_character="2">{{UseDate}}\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT wide_character="2" alignment="center">breakfast x 1\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT alignment="center">Breakfast is served from\r\n</THERMAL_TEXT>    
+    <THERMAL_TEXT alignment="center">07:00-10:00 \r\n</THERMAL_TEXT>    
+    <THERMAL_TEXT>\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT>
+
+  <THERMAL_PRINT id="CheckInVoucher">
+    <THERMAL_PAGE>
+    <THERMAL_BITMAP file="C:\ITKiosk\html\img\logo.bmp" alignment="center" size="200"></THERMAL_BITMAP>
+    <THERMAL_TEXT>\r\n</THERMAL_TEXT>
+	  <THERMAL_TEXT>{{CustomerName}}  貴賓。\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT wide_character="2" bold='true'>房號：{{RoomNo}}\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT bold='true'>{{DurationType}}{{DurationTime}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>辦理退房手續後，你將會收到電子發票\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>本飯店整館為禁菸飯店，飯店將有煙霧感測器，\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>若顧客戶內吸菸將收取新台幣NTD$2000\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>請保管你的貴重財物，如有遺失需自行負擔責任。\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>WiFi帳號：{{account}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>WiFi密碼：{{password}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>入住時間：{{beginDate}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>退房時間：{{endDate}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>退房時，請將房卡歸還櫃檯\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT  bold='true' alignment="center">{{HotelName}} 祝您住宿愉快</THERMAL_TEXT>
+    <THERMAL_TEXT>\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT>
+
+  <THERMAL_PRINT id="CheckInVoucherEN">
+    <THERMAL_PAGE>
+    <THERMAL_BITMAP file="C:\ITKiosk\html\img\logo.bmp" alignment="center" size="200"></THERMAL_BITMAP>
+    <THERMAL_TEXT>\r\n</THERMAL_TEXT>
+	  <THERMAL_TEXT>{{CustomerName}}  Mr./Ms\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT wide_character="2" bold='true'>Room No.{{RoomNo}}\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT bold='true'>{{DurationType}}{{DurationTime}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>After checking out, you will  \r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>receive an electronic invoice.\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>The whole hotel is a non-smoking\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>hotel, and the hotel will have a\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>smoke sensor.\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>If you smoke in the room, you will\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>be charged NTD$2000.\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>Please keep your valuables and you\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>will be responsible for any loss\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>if you are lost.\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>WiFi account:{{account}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>WiFi password:{{password}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>CheckIn ：{{beginDate}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>CheckOut：{{endDate}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>Please return the room key to\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>hotel,upon check out\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT  bold='true' alignment="center">{{HotelNameEng}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT  bold='true' alignment="center">We wish you a pleasant stay.\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT>
+
+  <THERMAL_PRINT id="DepositNum">
+    <THERMAL_PAGE>
+    <THERMAL_BITMAP file="C:\ITKiosk\html\img\logo.bmp" alignment="center" size="200"></THERMAL_BITMAP>
+    <THERMAL_TEXT wide_character="2" bold='true' alignment="center">\r\n您已付款完成\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT wide_character="2" bold='true' alignment="center">{{depositNumber}}\r\n\r\n</THERMAL_TEXT>
+	  <THERMAL_TEXT wide_character="2" bold='true' alignment="center">金額：{{amt}}\r\n\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT alignment="center"> {{date}}　{{time}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT>
+
+  <THERMAL_PRINT id="DepositNumEN">
+    <THERMAL_PAGE>
+    <THERMAL_BITMAP file="C:\ITKiosk\html\img\logo.bmp" alignment="center" size="200"></THERMAL_BITMAP>
+    <THERMAL_TEXT wide_character="2" bold='true' alignment="center">\r\npayment completed\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT wide_character="2" bold='true' alignment="center">{{depositNumber}}\r\n\r\n</THERMAL_TEXT>
+	  <THERMAL_TEXT wide_character="2" bold='true' alignment="center">Amount:{{amt}}\r\n\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT alignment="center"> {{date}}　{{time}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT>
+
+   <THERMAL_PRINT id="OrderSample">
+    <THERMAL_PAGE>
+    <THERMAL_TEXT wide_character="2" bold='true' alignment="center">{{HotelName}}\r\n\r\n</THERMAL_TEXT>
+	  <THERMAL_TEXT wide_character="2" bold='true' alignment="center">Athena Garden Hotel\r\n\r\n</THERMAL_TEXT>
+  	<THERMAL_TEXT wide_character="2" bold='true' alignment="center">訂單編號\r\n\r\n</THERMAL_TEXT>
+	  <THERMAL_QRCODE alignment="center">{{TransactionNumber}}</THERMAL_QRCODE> 
+    <THERMAL_TEXT>\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT>
+
+  <THERMAL_PRINT id="Receipt">
+    <THERMAL_PAGE>
+    <THERMAL_BITMAP file="C:\ITKiosk\html\img\logo.bmp" alignment="center" size="200"></THERMAL_BITMAP>
+    <THERMAL_TEXT>\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>希望您有個愉快的住宿體驗期待能再次為您服務\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>貼心提醒:隨身物品是否都已帶齊了?\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT>
+
+  <THERMAL_PRINT id="ReceiptEN">
+    <THERMAL_PAGE>
+    <THERMAL_BITMAP file="C:\ITKiosk\html\img\logo.bmp" alignment="center" size="200"></THERMAL_BITMAP>
+    <THERMAL_TEXT>\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>We hope that you have a pleasant\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>stay and look forward to serving\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>you again.\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>Intimate reminder: Have you\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>brought all your belongings\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>together?\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT>
+
+  <THERMAL_PRINT id="Receipt-logo">
+    <THERMAL_PAGE>
+    <THERMAL_BITMAP file="C:\ITKiosk\html\img\logo.bmp" alignment="center" size="200"></THERMAL_BITMAP>
+    <THERMAL_TEXT>希望您有個愉快的住宿體驗期待能再次為您服務\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>貼心提醒:隨身物品是否都已帶齊了?\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>{{HotelName}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT>
+
+  <THERMAL_PRINT id="ReceiptEN-logo">
+    <THERMAL_PAGE>
+    <THERMAL_BITMAP file="C:\ITKiosk\html\img\logo.bmp" alignment="center" size="200"></THERMAL_BITMAP>
+    <THERMAL_TEXT>We hope that you have a pleasant stay and look forward to serving you again.\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>Intimate reminder: Have you brought all your belongings together?\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>{{HotelName}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT>
+
+ <THERMAL_PRINT id="CreditCardReceipt">
+    <THERMAL_PAGE>
+    <THERMAL_BITMAP file="C:\ITKiosk\html\img\logo.bmp" alignment="center" size="400"></THERMAL_BITMAP>
+    <THERMAL_TEXT wide_character="2" bold='true' alignment="center">\r\n</THERMAL_TEXT>
+	  <THERMAL_TEXT wide_character="2" bold='true' alignment="center">-----------------\r\n\r\n</THERMAL_TEXT>
+	  <THERMAL_TEXT bold='true' alignment="center">信用卡顧客收執聯\r\n\r\n</THERMAL_TEXT>
+	  <THERMAL_TEXT>卡別：{{card_name}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>商店代號：{{merchant_id}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>端末機號：{{terminal}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>信用卡號：{{card_no}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>交易類別：{{trans_type}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>授權號碼：{{approval_code}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>交易日期：{{trans_date}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>交易時間：{{trans_time}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>調閱編號：{{invoice_no}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>交易序號：{{ref_no}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>交易金額：NT${{trans_amt}}\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_BARCODE position="none" alignment="center" CodeType="Code39" size="40">*{{ref_no}}*</THERMAL_BARCODE>
+    <THERMAL_TEXT>\r\nI AGREE TO PAY TOTAL AMOUNT\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>ACCORDING TO CARD ISSUER AGREEMENT\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>----------------------------------\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>列印時間：{{print_time}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT>
+
+ <THERMAL_PRINT id="CreditCardSignature">
+    <THERMAL_PAGE>
+    <THERMAL_BITMAP file="C:\ITKiosk\html\img\logo.bmp" alignment="center" size="200"></THERMAL_BITMAP>
+    <THERMAL_TEXT wide_character="2" bold='true' alignment="center">\r\n</THERMAL_TEXT>
+	  <THERMAL_TEXT wide_character="2" bold='true' alignment="center">-----------------\r\n\r\n</THERMAL_TEXT>
+	  <THERMAL_TEXT bold='true' alignment="center">信用卡顧客收執聯\r\n\r\n</THERMAL_TEXT>
+	  <THERMAL_TEXT>卡別：{{card_name}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>商店代號：{{merchant_id}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>端末機號：{{terminal}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>信用卡號：{{card_no}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>交易類別：{{trans_type}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>授權號碼：{{approval_code}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>交易日期：{{trans_date}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>交易時間：{{trans_time}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>調閱編號：{{invoice_no}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>交易序號：{{ref_no}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>交易金額：NT${{trans_amt}}\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>Signature：-----------------------\r\n\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>----------------------------------\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>\r\nI AGREE TO PAY TOTAL AMOUNT\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>ACCORDING TO CARD ISSUER AGREEMENT\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>----------------------------------\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>列印時間：{{print_time}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT>
+  <THERMAL_PRINT id="Voucher for GC.txt">
+    <THERMAL_PAGE>
+      <THERMAL_TEXT height="2" width="1" alignment="center">VIESHOW CINEWAS\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="3" alignment="center">請持本券至頂級影廳點餐折抵\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1" alignment="center">{{CinemaName}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1" alignment="left">品項 數量\r\n</THERMAL_TEXT>
+      <THERMAL_SUBCONTENT datasource="ITEMALT">
+        <THERMAL_TEXT wide_character="1" alignment="left">{{item}} * {{count}}\r\n</THERMAL_TEXT>
+      </THERMAL_SUBCONTENT>
+      <THERMAL_TEXT>列印本券機台:{{Workstation}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>員 工:{{UserFirstName}} {{UserLastName}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>列 印 日 期:{{Date}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>列 交易序號:{{TransactionNumber}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>取票 序號:{{PICKUPNUMBER}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT>
+  <THERMAL_PRINT id="Voucher for GC Event.txt">
+    <THERMAL_PAGE>
+      <THERMAL_TEXT height="2" width="1" alignment="center">VIESHOW CINEWAS\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="3" alignment="center">請持本券至頂級影廳點餐折抵\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1" alignment="center">有效期限：{{VoucherEffectiveDate}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1" alignment="center">{{CinemaName}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1" alignment="left">品項 數量\r\n</THERMAL_TEXT>
+      <THERMAL_SUBCONTENT datasource="ITEMALT">
+        <THERMAL_TEXT wide_character="1" alignment="left">{{item}} * {{count}}\r\n</THERMAL_TEXT>
+      </THERMAL_SUBCONTENT>
+      <THERMAL_TEXT>列印本券機台:{{Workstation}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>員 工:{{UserFirstName}} {{UserLastName}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>列 印 日 期:{{Date}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>列 交易序號:{{TransactionNumber}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>取票 序號:{{PICKUPNUMBER}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT>
+  <THERMAL_PRINT id="Voucher.txt">
+    <THERMAL_PAGE>
+      <THERMAL_TEXT height="2" width="1" alignment="center">VIESHOW CINEWAS\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="3" alignment="center">請持本券至販賣部兌換餐飲\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1" alignment="center">{{CinemaName}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1" alignment="left">品項 數量\r\n</THERMAL_TEXT>
+      <THERMAL_SUBCONTENT datasource="ITEMALT">
+        <THERMAL_TEXT wide_character="1" alignment="left">{{item}} * {{count}}\r\n</THERMAL_TEXT>
+      </THERMAL_SUBCONTENT>
+      <THERMAL_TEXT>列印本券機台:{{Workstation}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>員 工:{{UserFirstName}} {{UserLastName}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>列 印 日 期:{{Date}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>列 交易序號:{{TransactionNumber}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>取票 序號:{{PICKUPNUMBER}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT>  
+  <THERMAL_PRINT id="Voucher for WEBMK.txt">
+    <THERMAL_PAGE>
+      <THERMAL_TEXT height="2" width="1" alignment="center">VIESHOW CINEWAS\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="3" alignment="center">請持本券至販賣部兌換餐飲\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="2" alignment="center">提醒您,可憑訂票序號至Memory Ticket紀念票機台印製專屬相片喔!\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1" alignment="center">{{CinemaName}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1" alignment="left">品項 數量\r\n</THERMAL_TEXT>
+      <THERMAL_SUBCONTENT datasource="ITEMALT">
+        <THERMAL_TEXT wide_character="1" alignment="left">{{item}} * {{count}}\r\n</THERMAL_TEXT>
+      </THERMAL_SUBCONTENT>
+      <THERMAL_TEXT>列印本券機台:{{Workstation}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>員 工:{{UserFirstName}} {{UserLastName}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>列 印 日 期:{{Date}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>列 交易序號:{{TransactionNumber}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>取票 序號:{{PICKUPNUMBER}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT>
+  <THERMAL_PRINT id="Voucher for KIOSK.txt">
+    <THERMAL_PAGE>
+      <THERMAL_TEXT height="2" width="1" alignment="center">VIESHOW CINEWAS\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="3" alignment="center">請持電子發票至販賣部領取餐飲品</THERMAL_TEXT>   
+      <THERMAL_TEXT>\r\n\r\n\r\n</THERMAL_TEXT>  
+  </THERMAL_PAGE>
+  </THERMAL_PRINT>
+  <THERMAL_PRINT id="svcVoucher.txt">
+    <THERMAL_PAGE>
+      <THERMAL_TEXT height="2" width="1" alignment="center">VIESHOW CINEWAS\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1" alignment="center">{{CinemaName}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1" alignment="left">品項 儲值金額\r\n</THERMAL_TEXT>
+      <THERMAL_SUBCONTENT datasource="ITEMALT">
+        <THERMAL_TEXT wide_character="1" alignment="left">{{item}} * {{count}}\r\n</THERMAL_TEXT>
+      </THERMAL_SUBCONTENT>
+      <THERMAL_TEXT>列印本券機台:{{Workstation}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>員工:{{UserFirstName}} {{UserLastName}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>列印日期:{{Date}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>交易序號:{{TransactionNumber}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT>
+  <THERMAL_PRINT id="Voucher for MK.txt">
+    <THERMAL_PAGE>
+      <THERMAL_TEXT height="2" width="1" alignment="center">VIESHOW CINEWAS\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="3" alignment="center">請至Memory Ticket紀念票機台輸入下方交易序號印製專屬相片\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1" alignment="center">{{CinemaName}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1" alignment="left">品項 數量\r\n</THERMAL_TEXT>
+      <THERMAL_SUBCONTENT datasource="ITEMALT">
+        <THERMAL_TEXT wide_character="1" alignment="left">{{item}} * {{count}}\r\n</THERMAL_TEXT>
+      </THERMAL_SUBCONTENT>
+      <THERMAL_TEXT>列印本券機台:{{Workstation}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>員工:{{UserFirstName}} {{UserLastName}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>列印日期:{{Date}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>交易序號:{{TransactionNumber}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>取票序號:{{PICKUPNUMBER}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT>
+  <THERMAL_PRINT id="Ticket.txt">
+    <THERMAL_PAGE markfeed="Cutter">
+      <THERMAL_TEXT wide_character="1" linespace="0">存根聯\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1" linespace="0">{{FilmNameC}}　{{ScreenNum}}廳 {{SeatGridRowName}}排 {{GridSeatNum}}號\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1" linespace="0">{{ReadShowDate}} {{ReadShowTime}} {{TransactionNumber}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1" linespace="0">　{{TicketTypeName}}　{{Price}}　內含代徵娛樂稅 \r\n票號 {{TicketCode}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1">{{TransTime}} {{SalesUser}}\r\n\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1" bold="true">{{FilmNameC}} \r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1">放映影城 </THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1" bold="true"> {{CinemaName}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1">放映時間 </THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1"> {{ReadShowTime}} </THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1">級數 </THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1" bold="true"> {{CensorE}}　\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1">放映日期 </THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1"> {{ReadShowDate}} </THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1">{{weekDay}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT height="2" width="2" bold="true"> {{ScreenNum}}</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1">廳 </THERMAL_TEXT>
+      <THERMAL_TEXT height="2" width="2" bold="true"> {{SeatGridRowName}}</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1">排 </THERMAL_TEXT>
+      <THERMAL_TEXT height="2" width="2" bold="true"> {{GridSeatNum}}</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1">號\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1" linespace="0">票種 </THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1" linespace="0"> {{TicketTypeName}}     </THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1" linespace="0">票價　</THERMAL_TEXT>
+      <THERMAL_TEXT height="2" width="1" bold="true" linespace="0"> {{Price}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1" linespace="0" >交易序號 {{TransactionNumber}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1" linespace="0">交易時間 {{TransTime}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1" linespace="0">售票員 {{SalesUser}} {{SalesMachine}} \r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1" linespace="0">票號 {{TicketCode}} 內含代徵娛樂稅\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1" linespace="0">本娛樂票券經臺北市稅捐稽徵處106年\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1" linespace="0">12月22日北市稽信義乙字第10646402700\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1" linespace="0">號核准使用並向稅捐稽徵機關報繳娛樂稅\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1" linespace="0"> \r\n</THERMAL_TEXT>
+      <THERMAL_BARCODE alignment="left" CodeType="Code39" size="80">*{{TransactionNumber}}*</THERMAL_BARCODE>
+      <THERMAL_TEXT wide_character="1">\r\n\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1">{{CinemaName}}　　存根聯\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1">{{FilmNameC}} {{ScreenNum}}廳 {{SeatGridRowName}}排 {{GridSeatNum}}號\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1">{{ReadShowDate}} {{ReadShowTime}} {{TransactionNumber}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1" linespace="0">　{{TicketTypeName}}　{{Price}}　內含代徵娛樂稅 \r\n票號 {{TicketCode}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="1">{{TransTime}} {{SalesUser}}</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT>
+  <THERMAL_PRINT id="MemberReceipt">
+    <THERMAL_PAGE>
+      <THERMAL_TEXT height="2" width="1" alignment="center">VIESHOW CINEWAS\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="3" alignment="center">會員儲值金收據\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>消費影城:{{CinemaName}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>卡號:{{CardNumber}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>交易時間:{{TransTime}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>交易號碼:{{TransNo}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>交易內容:{{TransItem}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>支付儲值金:{{PaymentTotal}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>剩餘儲值金:{{iShowDollars}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>剩餘點數:{{iShowPoints}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>列印本券機台:{{Workstation}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>列 印 日 期:{{Date}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>\r\n\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT>
+  <THERMAL_PRINT id="DropCashReceipt">
+    <THERMAL_PAGE>
+      <THERMAL_TEXT height="2" width="1" alignment="center">VIESHOW CINEWAS\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="3" alignment="center">流現收據\r\n\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>影城:{{CinemaName}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>1000:{{1000}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT> 500:{{500}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT> 100:{{100}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT> 50:{{50}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT> 10:{{10}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT> 5:{{5}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT> 1:{{1}}\r\n\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>人員姓名:{{Staff}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>人員ID:{{UserID}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>列印本券機台:{{Workstation}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>列 印 日 期:{{Date}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>\r\n\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT>
+  <THERMAL_PRINT id="BillPayment">
+    <THERMAL_PAGE>
+      <THERMAL_TEXT wide_character="2" alignment="center">This is not a </THERMAL_TEXT>
+      <THERMAL_TEXT wide_character="2" alignment="center" bold="true" underline="true">RECEIPT</THERMAL_TEXT>
+      <THERMAL_TEXT>\r\n</THERMAL_TEXT>
+      <THERMAL_BARCODE alignment="center" size="100">{{code}}</THERMAL_BARCODE>
+      <THERMAL_TEXT>\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT height="2">Printed:{{now}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT height="2">Store ID:{{storeCode}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT height="2">Description:{{prodcutName}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT height="2">Amount:{{cruuency}}{{amount}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT tab="1">Please proceed for payment\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT tab="1">at the cashier counter within\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT tab="1">30 minutes before it expires\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT>
+   <THERMAL_PRINT id="MemberReceipt2">
+    <THERMAL_PAGE>
+      <THERMAL_TEXT wide_character="3" alignment="center">{{SampleTitle}}\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT height="2" width="1" alignment="center">訂購單品項\r\n</THERMAL_TEXT>
+      <THERMAL_TEXT>店名:亞尼克內湖總店\r\n</THERMAL_TEXT>   
+	  <THERMAL_TEXT>訂購編號:123456789 \r\n</THERMAL_TEXT>   
+	  <THERMAL_BARCODE alignment="center" CodeType="Code39" size="80">123456789012345</THERMAL_BARCODE>  
+	  <THERMAL_TEXT>訂購時間:2018/05/10 15:30 \r\n</THERMAL_TEXT>     
+	  <THERMAL_TEXT>訂購品項:巧克力生乳捲 \r\n</THERMAL_TEXT>   
+	  <THERMAL_TEXT>數量:2條 \r\n</THERMAL_TEXT>  
+	  <THERMAL_TEXT>總金額:500元 \r\n</THERMAL_TEXT>    	  
+      <THERMAL_TEXT>\r\n\r\n\r\n\r\n\r\n</THERMAL_TEXT>	  
+    </THERMAL_PAGE>
+  </THERMAL_PRINT>
+
+   <THERMAL_PRINT id="museum">
+    <THERMAL_PAGE>
+    <THERMAL_TEXT alignment="center">Exp 2018/10/10 當日有效 \r\n</THERMAL_TEXT>
+	<THERMAL_TEXT alignment="center">掃碼入場 Check-in with QR Code</THERMAL_TEXT>
+	<THERMAL_QRCODE size='200' alignment="center">827001709024\r\n</THERMAL_QRCODE>
+	<THERMAL_TEXT alignment="center">#827001709024\r\n</THERMAL_TEXT>
+	<THERMAL_TEXT alignment="center">         O-205256138 / PO-0781256377     票券聯\r\n</THERMAL_TEXT>
+	<THERMAL_TEXT>------------------------------------------------\r\n</THERMAL_TEXT>
+	<THERMAL_TEXT wide_character="2" bold='true' alignment="center">國立故宮博物院普通參觀券\r\n</THERMAL_TEXT>
+	<THERMAL_TEXT bold='true' alignment="center">Nation Palace Museum General Admission \r\n\r\n</THERMAL_TEXT>
+	<THERMAL_TEXT alignment="left">票價 Ticket Price            TWD $250\r\n</THERMAL_TEXT>
+	<THERMAL_TEXT alignment="left">購票時間 Transaction Date    2018/10/10 18:36:42  / KIOSK001 \r\n</THERMAL_TEXT>
+	<THERMAL_TEXT alignment="left">訂單編號 Order Number O205256138 / PO-0781256377\r\n</THERMAL_TEXT>
+	<THERMAL_TEXT alignment="right">存根聯  \r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+   </THERMAL_PRINT>
+
+   <THERMAL_PRINT id="museum-creadcard">
+    <THERMAL_PAGE>
+    <THERMAL_TEXT>            永 豐 銀 行   信用卡簽單 \r\n</THERMAL_TEXT>
+	<THERMAL_TEXT>            Bank Sinopac  Credit Card Receipt \r\n\r\n</THERMAL_TEXT>
+	<THERMAL_TEXT bold='true'>       國立故宮博物院 Nation Palace Museum\r\n\r\n</THERMAL_TEXT>
+	<THERMAL_TEXT> 特店代碼:807299048098001 端末代號:80010563\r\n</THERMAL_TEXT>
+	<THERMAL_TEXT> 卡號:5241 08** **** 0204 MasterCard \r\n</THERMAL_TEXT>
+	<THERMAL_TEXT> 交易時間:2015/05/01 10:12:24 \r\n</THERMAL_TEXT>
+	<THERMAL_TEXT> 調閱編號:009655批次號碼:000322 \r\n</THERMAL_TEXT>
+	<THERMAL_TEXT> 交易類別:SALE  授權號碼:468853 序號:00000014203\r\n</THERMAL_TEXT>
+	<THERMAL_TEXT> 金額 AMOUNT:NT$ 1,402 \r\n</THERMAL_TEXT>
+	<THERMAL_TEXT alignment="center"> ************************************* \r\n</THERMAL_TEXT>
+	<THERMAL_TEXT alignment="center"> 此交易免簽名 NO SIGNATURE REQUIRED \r\n</THERMAL_TEXT>
+	<THERMAL_TEXT alignment="center"> ************************************* \r\n</THERMAL_TEXT>
+	<THERMAL_TEXT alignment="right"> KAO SHENG CHE          簽單聯 \r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+   </THERMAL_PRINT>
+   
+   <THERMAL_PRINT id="origination">
+    <THERMAL_PAGE>
+    <THERMAL_TEXT>               農特產品認證行銷暨 \r\n</THERMAL_TEXT>
+	<THERMAL_TEXT>                智慧觀光服務平台 \r\n</THERMAL_TEXT>
+	<THERMAL_BARCODE alignment='center'>111111</THERMAL_BARCODE>
+	<THERMAL_TEXT> 訂購單(店配) \r\n</THERMAL_TEXT>
+	<THERMAL_TEXT> 門市:XXX 店號:XXX \r\n</THERMAL_TEXT>
+	<THERMAL_TEXT> 交易編號:XXXXX \r\n</THERMAL_TEXT>
+	<THERMAL_TEXT> 交易時間:2018/4/25 10:30 \r\n</THERMAL_TEXT>
+	<THERMAL_TEXT> 付款方式:icash \r\n\r\n</THERMAL_TEXT>
+	<THERMAL_TEXT> 商品名稱 X1       $1000 \r\n</THERMAL_TEXT>
+	<THERMAL_TEXT> 合計              $1000 \r\n\r\n</THERMAL_TEXT>
+	<THERMAL_TEXT> 注意事項 \r\n</THERMAL_TEXT>
+	<THERMAL_TEXT> 1.何時來KIOSK印取貨單 \r\n</THERMAL_TEXT>
+	<THERMAL_TEXT> 2.取貨時在KIOSK掃QRcode \r\n</THERMAL_TEXT>
+	<THERMAL_TEXT> 3.注意事項注意事項 \r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+   </THERMAL_PRINT>
+  
+  <THERMAL_PRINT id="airBonjays">
+    <THERMAL_PAGE>
+    <THERMAL_BARCODE CodeType="Code39" size="80">1234567898765</THERMAL_BARCODE>
+    <THERMAL_BARCODE CodeType="Code39" size="90">9876543212345</THERMAL_BARCODE>
+    <THERMAL_TEXT>______________________________________________\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT wide_character="2">TO           </THERMAL_TEXT>
+    <THERMAL_TEXT wide_character="3" bold='true'>PVG\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT wide_character="2" alignment="center">PU DONG\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT wide_character="2">  CA  1655    19APR\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>______________________________________________\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>  VIA\r\n\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>______________________________________________\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>  VIA\r\n\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>______________________________________________\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>  VIA\r\n\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT wide_character="3">                Bonjays \r\n</THERMAL_TEXT>
+  	<THERMAL_TEXT wide_character="3">                智慧觀光服務平台\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT wide_character="3">                邦捷航空 \r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT wide_character="2" bold='true'>CA</THERMAL_TEXT> <THERMAL_TEXT>CA  1655 \r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT wide_character="2">姓名:{{name}}\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT wide_character="2">日期:{{date}}\r\n\r\n</THERMAL_TEXT>
+	  <THERMAL_TEXT wide_character="2">出發地:{{departure}}\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT wide_character="2">目的地:{{destination}}\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT wide_character="2">班次:{{flight}}\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_BARCODE size="130">{{id}}</THERMAL_BARCODE>
+    <THERMAL_TEXT>\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+   </THERMAL_PRINT>
+<THERMAL_PRINT id="digitalPin">
+  <THERMAL_PAGE> 
+   
+   <THERMAL_TEXT wide_character="2" bold="true">PURCHASE RECEIPT\r\n</THERMAL_TEXT>    <THERMAL_TEXT>\r\n</THERMAL_TEXT>   
+  <THERMAL_BARCODE alignment="left" >123456789</THERMAL_BARCODE> 
+<THERMAL_TEXT height="{{height}}" >\r\n</THERMAL_TEXT>
+ <THERMAL_TEXT height="2" >No:    {{No}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT height="2" >ID:    123456789\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT height="2" >NAME:  Wang Dan Ming\r\n</THERMAL_TEXT>
+	<THERMAL_TEXT height="2">PRICE: 2000\r\n</THERMAL_TEXT>  
+ <THERMAL_TEXT >------------------------------\r\n</THERMAL_TEXT>
+   <THERMAL_TEXT >.Return items to store in 30 days.\r\n</THERMAL_TEXT>
+   <THERMAL_TEXT >.Get a full refund in conditions.\r\n</THERMAL_TEXT>
+   <THERMAL_TEXT >.Original sales receipt is required.\r\n</THERMAL_TEXT>
+   <THERMAL_TEXT >.Special products are non-refundable.\r\n\r\n</THERMAL_TEXT>
+   <THERMAL_TEXT >Call us at 02-77335686 Bonjays Corp.\r\n\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+   
+  </THERMAL_PAGE>
+
+ </THERMAL_PRINT>
+ 
+    <THERMAL_PRINT id="BreakfastVoucher">
+    <THERMAL_PAGE>
+    <THERMAL_TEXT wide_character="2" bold='true' alignment="center">{{HotelName}}\r\n\r\n</THERMAL_TEXT>
+	<THERMAL_TEXT wide_character="2" bold='true' alignment="center">{{HotelNameEng}}\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>觀迎蒞臨{{HotelName}}。\r\n</THERMAL_TEXT>
+	 <THERMAL_TEXT>{{CustomerName}}  貴賓。\r\n</THERMAL_TEXT>
+	<THERMAL_TEXT wide_character="2" bold='true'>你的房間號碼：{{RoomNo}}\r\n\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>退房時間為中午12:00以前。\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>一天活力的開始-早餐，提供時間為 06:00-10:00\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>您的早餐客數為：{{Count}}客 / 每天 \r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>辦理退房手續後，你將會收到電子發票。\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>本飯店整館為禁菸飯店，飯店將有煙霧感測器，\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>若顧客戶內吸菸將收取新台幣NTD$6000\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>請保管你的貴重財物，如有遺失需自行負擔責任。\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT  bold='true' alignment="center">{{HotelName}} 祝您住宿愉快</THERMAL_TEXT>
+    <THERMAL_TEXT>\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT> 
+ 
+    <THERMAL_PRINT id="BreakfastVouchersDetail">
+    <THERMAL_PAGE>
+    <THERMAL_TEXT wide_character="2" bold='true' alignment="center">{{HotelName}}\r\n\r\n</THERMAL_TEXT>
+	<THERMAL_TEXT wide_character="2" bold='true' alignment="center">{{HotelNameEng}}\r\n\r\n</THERMAL_TEXT>
+	<THERMAL_TEXT wide_character="2" bold='true'>房號：{{RoomNo}}\r\n\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT wide_character="2">使用日期:{{UseDate}}。\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT wide_character="2" alignment="center">早餐卷 x 1\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT alignment="center">早餐供應時間:每日07:00-10:00 \r\n</THERMAL_TEXT>    
+    <THERMAL_TEXT>\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT>
+  
+   <THERMAL_PRINT id="OrderSample">
+    <THERMAL_PAGE>
+    <THERMAL_TEXT wide_character="2" bold='true' alignment="center">{{HotelName}}\r\n\r\n</THERMAL_TEXT>
+	<THERMAL_TEXT wide_character="2" bold='true' alignment="center">Athena Garden Hotel\r\n\r\n</THERMAL_TEXT>
+	<THERMAL_TEXT wide_character="2" bold='true' alignment="center">訂單編號\r\n\r\n</THERMAL_TEXT>
+	<THERMAL_QRCODE alignment="center">{{TransactionNumber}}</THERMAL_QRCODE> 
+    <THERMAL_TEXT>\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT>
+
+ <THERMAL_PRINT id="CreditCardReceipt">
+    <THERMAL_PAGE>
+    <THERMAL_BITMAP file="C:\ITKiosk\html\img\bank.bmp" alignment="center" size="200"></THERMAL_BITMAP>
+    <THERMAL_TEXT wide_character="2" bold='true' alignment="center">\r\n</THERMAL_TEXT>
+	  <THERMAL_TEXT wide_character="2" bold='true' alignment="center">-----------------\r\n\r\n</THERMAL_TEXT>
+	  <THERMAL_TEXT bold='true' alignment="center">信用卡顧客收執聯\r\n\r\n</THERMAL_TEXT>
+	  <THERMAL_TEXT>卡別：{{card_name}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>商店代號：{{merchant_id}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>端末機號：{{terminal}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>信用卡號：{{card_no}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>交易類別：{{trans_type}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>授權號碼：{{approval_code}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>交易日期：{{trans_date}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>交易時間：{{trans_time}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>調閱編號：{{invoice_no}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>交易序號：{{ref_no}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>交易金額：NT${{trans_amt}}\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_BARCODE position="none" alignment="center" CodeType="Code39" size="40">*{{ref_no}}*</THERMAL_BARCODE>
+    <THERMAL_TEXT>\r\nI AGREE TO PAY TOTAL AMOUNT\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>ACCORDING TO CARD ISSUER AGREEMENT\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>----------------------------------\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>列印時間：{{print_time}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT>
+
+ <THERMAL_PRINT id="CreditCardSignature">
+    <THERMAL_PAGE>
+    <THERMAL_BITMAP file="C:\ITKiosk\html\img\bank.bmp" alignment="center" size="200"></THERMAL_BITMAP>
+    <THERMAL_TEXT wide_character="2" bold='true' alignment="center">\r\n</THERMAL_TEXT>
+	  <THERMAL_TEXT wide_character="2" bold='true' alignment="center">-----------------\r\n\r\n</THERMAL_TEXT>
+	  <THERMAL_TEXT bold='true' alignment="center">信用卡顧客收執聯\r\n\r\n</THERMAL_TEXT>
+	  <THERMAL_TEXT>卡別：{{card_name}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>商店代號：{{merchant_id}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>端末機號：{{terminal}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>信用卡號：{{card_no}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>交易類別：{{trans_type}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>授權號碼：{{approval_code}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>交易日期：{{trans_date}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>交易時間：{{trans_time}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>調閱編號：{{invoice_no}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>交易序號：{{ref_no}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>交易金額：NT${{trans_amt}}\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>Signature：-----------------------\r\n\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>----------------------------------\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>\r\nI AGREE TO PAY TOTAL AMOUNT\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>ACCORDING TO CARD ISSUER AGREEMENT\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>----------------------------------\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>列印時間：{{print_time}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT>
+
+   <THERMAL_PRINT id="schoolSample">
+    <THERMAL_PAGE>
+    <THERMAL_TEXT>               巨耀系統 \r\n</THERMAL_TEXT>
+	<THERMAL_TEXT>          巨耀系統服務平台 \r\n</THERMAL_TEXT>
+	<THERMAL_BARCODE alignment='center'>111111</THERMAL_BARCODE>
+	<THERMAL_TEXT> 訂購單\r\n</THERMAL_TEXT>
+	<THERMAL_TEXT> 門市:巨耀南昌店  店號:0001 \r\n</THERMAL_TEXT>
+	<THERMAL_TEXT> 交易編號:123456789 \r\n</THERMAL_TEXT>
+	<THERMAL_TEXT> 交易時間:{{time}} \r\n</THERMAL_TEXT>
+	<THERMAL_TEXT> 付款方式:靠卡支付 \r\n\r\n</THERMAL_TEXT>
+	<THERMAL_SUBCONTENT datasource="ITEMALT">
+      <THERMAL_TEXT wide_character="1" alignment="left">{{twname}} * {{order}}   ${{subtotal}}\r\n</THERMAL_TEXT>
+  </THERMAL_SUBCONTENT>
+	<THERMAL_TEXT> 合計                 ${{totalPay}} \r\n\r\n</THERMAL_TEXT>
+	<THERMAL_TEXT> 注意事項 \r\n</THERMAL_TEXT>
+	<THERMAL_TEXT> 1.商品售出恕不退換。 \r\n</THERMAL_TEXT>
+	<THERMAL_TEXT> 2.請自行確認結帳金額，金額紀錄無誤後始離開結帳櫃台，若於離開櫃台後對金額有疑義時，恕不賠償任何任何損失\r\n</THERMAL_TEXT>
+	
+    <THERMAL_TEXT>\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+   </THERMAL_PRINT>
+
+<THERMAL_PRINT id="clinic">
+    <THERMAL_PAGE>
+    <THERMAL_TEXT wide_character="2" bold='true' alignment="center">{{clinicName}}診所\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>看診日期：{{registerDate}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>科別：{{registerClass}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>看診號碼：\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT wide_character="3" bold='true' alignment="center">{{number}}\r\n\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT alignment="center">列印日期：{{time}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT>
+<THERMAL_PRINT id="clinic-AF">
+    <THERMAL_PAGE>
+    <THERMAL_TEXT wide_character="2" bold='true' alignment="center">{{clinicName}}藥局\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>繳費日期：{{registerDate}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>科別：{{registerClass}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>實繳金額：${{number}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>領藥號：\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT wide_character="3" bold='true' alignment="center">{{medicineNumber}}\r\n\r\n\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT alignment="center">列印日期：{{time}}\r\n</THERMAL_TEXT>
+    <THERMAL_TEXT>\r\n\r\n\r\n\r\n</THERMAL_TEXT>
+    </THERMAL_PAGE>
+  </THERMAL_PRINT>
+</THERMAL_TEMPLATE>

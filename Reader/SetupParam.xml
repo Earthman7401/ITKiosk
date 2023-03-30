@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Parameter_Set>
+  
+  <!-- 支付寶設定 -->
+  <O2O>
+    <PRODUCTION>N</PRODUCTION>
+    <NAME>故宮票務網購測試店</NAME>
+    <MERCHANT_ID>000812461900025</MERCHANT_ID>
+    <STORE_ID>SID01</STORE_ID>
+    <TERMINAL_ID>001</TERMINAL_ID>
+    <TOKEN_KEY>17991a4f1effa3e6bd46fcb23bbe3bc80631dc58121ea24e8fe0cfcb5bf9fa60</TOKEN_KEY>
+    <!-- 支付寶正向QR_CODE -->
+    <GETQRCODE>https://tscboweb.taishinbank.com.tw/TSCBOgwAPI/gwMerchantApiQRCodePlus.ashx</GETQRCODE>
+    <GETQRCODE_TEST>https://tscbweb-t.taishinbank.com.tw/TSCBOgwAPI/gwMerchantApiQRCodePlus.ashx</GETQRCODE_TEST>
+    <!-- 支付寶付款 -->
+    <PAYMENT>https://tscboweb.taishinbank.com.tw/TSCBOgwAPI/gwMerchantApiPay.ashx</PAYMENT>
+    <PAYMENT_TEST>https://tscbweb-t.taishinbank.com.tw/TSCBOgwAPI/gwMerchantApiPay.ashx</PAYMENT_TEST>
+    <!-- 支付寶查詢 -->
+    <QUERY>https://tscboweb.taishinbank.com.tw/TSCBOgwAPI/gwMerchantApiQuery.ashx</QUERY>
+    <QUERY_TEST>https://tscbweb-t.taishinbank.com.tw/TSCBOgwAPI/gwMerchantApiQuery.ashx</QUERY_TEST>
+    <!-- 支付寶退貨 -->
+    <REFUND>https://tscboweb.taishinbank.com.tw/TSCBOgwAPI/gwMerchantApiRefund.ashx</REFUND>
+    <REFUND_TEST>https://tscbweb-t.taishinbank.com.tw/TSCBOgwAPI/gwMerchantApiRefund.ashx</REFUND_TEST>
+  </O2O>
+
+  <!-- ECC 設定 [在 ECC ICSERINI.xml ]-->
+  <ECC>
+    <MERCHANT_ID>34800000</MERCHANT_ID>
+  </ECC>
+
+  <!-- CTBC 中國信托設定 -->
+  <CTBC>
+    <!-- Y:Systex，N:S300 -->
+    <CALL_EXE>N</CALL_EXE>
+    <COMPORT>4</COMPORT>
+    <BAUDRATE>115200</BAUDRATE>
+    <STOREID_18>1</STOREID_18>
+  </CTBC>
+  
+  <!-- 永豐 BANK 設定 -->
+  <BANK>
+    <!-- 商家設定檔路徑 -->
+    <MER_CONFIG_PATH>D:\BANK_COMP\807299048098001.conf</MER_CONFIG_PATH>
+    <!-- 伺服器設定檔路徑 -->
+    <SERVER_CONFIG_PATH>D:\BANK_COMP\HiServer.conf</SERVER_CONFIG_PATH>
+    <!-- 商家代號 -->
+    <MERCHANT_ID>807299048098001</MERCHANT_ID>
+    <!-- 商家網路代碼 -->
+    <TERMINAL_ID>80010563</TERMINAL_ID>
+    <!-- 收單行 -->
+    <MER_ID>807</MER_ID>
+  </BANK>
+  
+</Parameter_Set>

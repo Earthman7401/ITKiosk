@@ -1,0 +1,1406 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ITSLib</name>
+    </assembly>
+    <members>
+        <member name="T:ITSLib.BaseObj.ITSDynamic">
+            <summary>
+            可透過ITSBinder 綁定之dynamic物件
+            </summary>
+        </member>
+        <member name="M:ITSLib.BaseObj.ITSDynamic.Count">
+            <summary>
+            取得目前dynamic物件的成員數
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:ITSLib.BaseObj.ITSGridData`1.DataSource">
+            <summary>
+            Grid資料來源
+            </summary>
+        </member>
+        <member name="P:ITSLib.BaseObj.ITSGridData`1.Query">
+            <summary>
+            可綁定的查詢條件，並自動綁定
+            </summary>
+        </member>
+        <member name="P:ITSLib.BaseObj.ITSMenu.MenuId">
+            <summary>
+            編號
+            </summary>
+        </member>
+        <member name="P:ITSLib.BaseObj.ITSMenu.Text">
+             <summary>
+            選單文字
+             </summary>
+        </member>
+        <member name="P:ITSLib.BaseObj.ITSMenu.Link">
+             <summary>
+            連結網頁
+             </summary>
+        </member>
+        <member name="P:ITSLib.BaseObj.ITSMenu.Parent">
+             <summary>
+            父選單
+             </summary>
+        </member>
+        <member name="P:ITSLib.BaseObj.ITSMenu.Childs">
+             <summary>
+            子選單
+             </summary>
+        </member>
+        <member name="P:ITSLib.BaseObj.ITSMenu.Tooltip">
+             <summary>
+            提示說明
+             </summary>
+        </member>
+        <member name="P:ITSLib.BaseObj.ITSMenu.Seq">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:ITSLib.BaseObj.ITSMenu.Level">
+            <summary>
+            選單階層
+            </summary>
+        </member>
+        <member name="P:ITSLib.BaseObj.ITSMenu.Programs">
+            <summary>
+            該選單的Program List
+            </summary>
+        </member>
+        <member name="P:ITSLib.BaseObj.ITSMenu.IsValid">
+            <summary>
+            是否為有效選單
+            </summary>
+        </member>
+        <member name="M:ITSLib.BaseObj.ExcelHelper.ConvertIntDateTime(System.Double)">
+            <summary>
+            將Unix時間戳轉換為DateTime類型時間
+            </summary>
+            <param name="d">double 型數字</param>
+            <returns>DateTime</returns>
+        </member>
+        <member name="P:ITSLib.BaseObj.ITSMail.smtpServer">
+            <summary>
+            寄信smtp server
+            </summary>
+        </member>
+        <member name="P:ITSLib.BaseObj.ITSMail.smtpPort">
+            <summary>
+            寄信smtp server的Port，預設25
+            </summary>
+        </member>
+        <member name="P:ITSLib.BaseObj.ITSMail.mailAccount">
+            <summary>
+            寄信帳號
+            </summary>
+        </member>
+        <member name="P:ITSLib.BaseObj.ITSMail.mailPwd">
+            <summary>
+            寄信密碼
+            </summary>
+        </member>
+        <member name="P:ITSLib.BaseObj.ITSMail.enableSsl">
+            <summary>
+            是否需要安全認證，預設false
+            </summary>
+        </member>
+        <member name="P:ITSLib.BaseObj.ITSMail.useDefaultCredentials">
+            <summary>
+            是否需要驗證身分，預設false
+            </summary>
+        </member>
+        <member name="M:ITSLib.BaseObj.ITSMail.Send(System.String,System.String,System.String,System.String,System.Boolean,System.String[],System.String[],System.Boolean)">
+            <summary>
+            完整的寄信功能
+            </summary>
+            <param name="MailFrom">寄信人E-mail Address</param>
+            <param name="MailTo">收信人E-mail Address</param>
+            <param name="Ccs">副本E-mail Address</param>
+            <param name="MailSub">主旨</param>
+            <param name="MailBody">信件內容</param>
+            <param name="isBodyHtml">是否採用HTML格式</param>
+            <param name="filePaths">附檔</param>
+            <param name="deleteFileAttachment">是否刪除在WebServer上的附件</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:ITSLib.BaseObj.ITSMail.Send(System.String,System.Collections.Generic.List{System.String},System.String,System.String,System.Boolean,System.String[],System.String[],System.Boolean)">
+            <summary>
+            完整的寄信功能
+            </summary>
+            <param name="MailFrom">寄信人E-mail Address</param>
+            <param name="MailTos">收信人E-mail Address</param>
+            <param name="Ccs">副本E-mail Address</param>
+            <param name="MailSub">主旨</param>
+            <param name="MailBody">信件內容</param>
+            <param name="isBodyHtml">是否採用HTML格式</param>
+            <param name="filePaths">附檔</param>
+            <param name="deleteFileAttachment">是否刪除在WebServer上的附件</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:ITSLib.BaseObj.ITSMail.Send(System.String,System.String,System.String,System.String,System.Collections.Generic.List{ITSLib.BaseObj.ITSMailFile},System.Boolean,System.String[],System.Boolean)">
+            <summary>
+            完整的寄信功能
+            </summary>
+            <param name="MailFrom">寄信人E-mail Address</param>
+            <param name="MailTo">收信人E-mail Address</param>
+            <param name="Ccs">副本E-mail Address</param>
+            <param name="MailSub">主旨</param>
+            <param name="MailBody">信件內容</param>
+            <param name="isBodyHtml">是否採用HTML格式</param>
+            <param name="filePaths">附檔</param>
+            <param name="deleteFileAttachment">是否刪除在WebServer上的附件</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:ITSLib.BaseObj.ITSMail.Send(System.String,System.Collections.Generic.List{System.String},System.String,System.String,System.Collections.Generic.List{ITSLib.BaseObj.ITSMailFile},System.Boolean,System.String[],System.Boolean)">
+            <summary>
+            完整的寄信功能
+            </summary>
+            <param name="MailFrom">寄信人E-mail Address</param>
+            <param name="MailTos">收信人E-mail Address</param>
+            <param name="Ccs">副本E-mail Address</param>
+            <param name="MailSub">主旨</param>
+            <param name="MailBody">信件內容</param>
+            <param name="isBodyHtml">是否採用HTML格式</param>
+            <param name="filePaths">附檔</param>
+            <param name="deleteFileAttachment">是否刪除在WebServer上的附件</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="P:ITSLib.BaseObj.ITSProgram.Program">
+            <summary>
+            Controller(Program)
+            </summary>
+        </member>
+        <member name="P:ITSLib.BaseObj.ITSProgram.Action">
+            <summary>
+            Action
+            </summary>
+        </member>
+        <member name="P:ITSLib.BaseObj.ITSUserInfo.UserID">
+             <summary>
+            系統定義使用者代碼
+             </summary>
+        </member>
+        <member name="P:ITSLib.BaseObj.ITSUserInfo.AccountID">
+             <summary>
+            登入帳號/各客戶自定義使用者代碼
+             </summary>
+        </member>
+        <member name="P:ITSLib.BaseObj.ITSUserInfo.Password">
+            <summary>
+            密碼
+            </summary>
+        </member>
+        <member name="P:ITSLib.BaseObj.ITSUserInfo.UserName">
+             <summary>
+            使用者名稱
+             </summary>
+        </member>
+        <member name="P:ITSLib.BaseObj.ITSUserInfo.IsAdmin">
+            <summary>
+            是否為管理者
+            </summary>
+        </member>
+        <member name="P:ITSLib.BaseObj.ITSUserInfo.Roles">
+            <summary>
+            該使用者的角色清單
+            </summary>
+        </member>
+        <member name="P:ITSLib.BaseObj.ITSUserInfo.LoginTime">
+            <summary>
+            登入系統時間
+            </summary>
+        </member>
+        <member name="P:ITSLib.BaseObj.ITSUserInfo.LoginIP">
+            <summary>
+            登入系統IP
+            </summary>
+        </member>
+        <member name="P:ITSLib.BaseObj.ITSUserInfo.Menus">
+            <summary>
+            該使用者有權限的選單
+            </summary>
+        </member>
+        <member name="P:ITSLib.BaseObj.ITSUserInfo.Programs">
+            <summary>
+            該使用者有權限的Program
+            </summary>
+        </member>
+        <member name="M:ITSLib.BaseObj.ITSUserInfo.CheckAction(System.String,System.String)">
+            <summary>
+            檢查目前使用者是否有傳入之Action,Controller權限
+            </summary>
+            <param name="ActionName"></param>
+            <param name="ControllerName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ITSLib.Common.ContextExtensions">
+            <summary>
+            DbContext/ObjectContext extensions
+            </summary>
+        </member>
+        <member name="M:ITSLib.Common.ContextExtensions.GetTableName``1(System.Data.Entity.DbContext)">
+            <summary>
+            Get the table name of Entity
+            </summary>
+            <typeparam name="T">Entity's type</typeparam>
+            <param name="context">DbContext</param>
+            <returns>Table name</returns>
+        </member>
+        <member name="M:ITSLib.Common.ContextExtensions.GetTableName``1(System.Data.Entity.Core.Objects.ObjectContext)">
+            <summary>
+            Get the table name of Entity
+            </summary>
+            <typeparam name="T">Entity's type</typeparam>
+            <param name="context">ObjectContext</param>
+            <returns>Table name</returns>
+        </member>
+        <member name="P:ITSLib.Common.ImageHelper.conDrawingImageSetting.strMessage">
+            <summary>
+             要寫入的訊息
+            </summary>
+        </member>
+        <member name="P:ITSLib.Common.ImageHelper.conDrawingImageSetting.postionX">
+            <summary>
+            位置 X
+            </summary>
+        </member>
+        <member name="P:ITSLib.Common.ImageHelper.conDrawingImageSetting.positionY">
+            <summary>
+            位置 Y
+            </summary>
+        </member>
+        <member name="P:ITSLib.Common.ImageHelper.conDrawingImageSetting.width">
+            <summary>
+            區塊寬度
+            </summary>
+        </member>
+        <member name="P:ITSLib.Common.ImageHelper.conDrawingImageSetting.height">
+            <summary>
+            區塊長度
+            </summary>
+        </member>
+        <member name="P:ITSLib.Common.ImageHelper.conDrawingImageSetting.isNeedToBarcode">
+            <summary>
+            內容是否有需要轉成 Barcode(限文字)
+            </summary>
+        </member>
+        <member name="P:ITSLib.Common.ImageHelper.conDrawingImageSetting.isContentFromImage">
+            <summary>
+            內容是否直接來自於圖片
+            </summary>
+        </member>
+        <member name="P:ITSLib.Common.ImageHelper.conDrawingImageSetting.ContetntImageFilePath">
+            <summary>
+            圖片的檔案
+            </summary>
+        </member>
+        <member name="P:ITSLib.Common.ImageHelper.conDrawingImageSetting.isNeedBackgroundColor">
+            <summary>
+            區塊是否需要底色(圖片一律不處理)
+            </summary>
+        </member>
+        <member name="P:ITSLib.Common.ImageHelper.conDrawingImageSetting.BackgroundColor">
+            <summary>
+            區塊底色
+            </summary>
+        </member>
+        <member name="P:ITSLib.Common.ImageHelper.conDrawingImageSetting.intTextSize">
+            <summary>
+            字體大小
+            </summary>
+        </member>
+        <member name="P:ITSLib.Common.ImageHelper.conDrawingImageSetting.TextAlign">
+            <summary>
+            文字對齊方式
+            </summary>
+        </member>
+        <member name="P:ITSLib.Common.ImageHelper.conDrawingImageSetting.TextType">
+            <summary>
+            字形
+            </summary>
+        </member>
+        <member name="P:ITSLib.Common.ImageHelper.conDrawingImageSetting.isTextBold">
+            <summary>
+            字體是否為粗體
+            </summary>
+        </member>
+        <member name="P:ITSLib.Common.ImageHelper.conDrawingImageSetting.TextColor">
+            <summary>
+            字體顏色
+            </summary>
+        </member>
+        <member name="T:ITSLib.Common.ImageHelper.ImageFileType">
+            <summary>
+            圖片類別
+            </summary>
+        </member>
+        <member name="M:ITSLib.Common.ImageHelper.ImageFileTypeValue(ITSLib.Common.ImageHelper.ImageFileType)">
+            <summary>
+            圖片副檔名
+            </summary>
+            <param name="enums">圖片類型</param>
+            <returns>副檔名</returns>
+        </member>
+        <member name="T:ITSLib.Common.ImageHelper.TextAlign">
+            <summary>
+            文字對齊方式
+            </summary>
+        </member>
+        <member name="T:ITSLib.Common.ImageHelper.TextType">
+            <summary>
+            字形
+            </summary>
+        </member>
+        <member name="M:ITSLib.Common.ImageHelper.TextTypeValue(ITSLib.Common.ImageHelper.TextType)">
+            <summary>
+            字形
+            </summary>
+            <param name="enums">字形Enum</param>
+            <returns>字形名稱 String</returns>
+        </member>
+        <member name="M:ITSLib.Common.ImageHelper.ZoomingImage(System.Drawing.Image,System.Int32,System.Int32)">
+            <summary>
+            縮放圖片
+            </summary>
+            <param name="strFilePath">檔案讀取路徑</param>
+            <param name="strFileOutPath">檔案輸出路徑</param>
+            <param name="douScalePercent">縮放比例</param>
+            <param name="enumFileType">檔案類型</param>
+        </member>
+        <member name="M:ITSLib.Common.ImageHelper.ScaleImage(System.String,System.String,System.Double,ITSLib.Common.ImageHelper.ImageFileType)">
+            <summary>
+            縮放圖片
+            </summary>
+            <param name="strFilePath">檔案讀取路徑</param>
+            <param name="strFileOutPath">檔案輸出路徑</param>
+            <param name="douScalePercent">縮放比例</param>
+            <param name="enumFileType">檔案類型</param>
+        </member>
+        <member name="M:ITSLib.Common.ImageHelper.GenerateImage(System.Collections.Generic.List{ITSLib.Common.ImageHelper.conDrawingImageSetting},System.Int32,System.Int32,System.String,System.String,ITSLib.Common.ImageHelper.ImageFileType,System.Drawing.Color)">
+            <summary>
+            寫入特定內容設定並產生 jpeg 檔案
+            </summary>
+            <param name="listSettings"></param>
+            <param name="intTotalWidth"></param>
+            <param name="intTotalHeight"></param>
+            <param name="strFileOutPath"></param>
+            <param name="enumFileType"></param>
+        </member>
+        <member name="M:ITSLib.Common.ImageHelper.ConvertImageToPDF(System.String,System.String)">
+            <summary>
+            將繪出的 Image 檔案轉成 PDF 
+            </summary>
+            <param name="strFilePath"></param>
+            <param name="strOutPutPath"></param>
+        </member>
+        <member name="M:ITSLib.Common.ImageHelper.GenerateBarcode(ITSLib.Common.ImageHelper.conDrawingImageSetting)">
+            <summary>
+            產生 BarCode的Method
+            </summary>
+            <param name="item">單一 conDrawingImageSetting 的繪圖設定</param>
+            <returns>Barcode Image</returns>
+        </member>
+        <member name="M:ITSLib.Common.EnumExtensions.GetEnumGroupName(System.Enum)">
+            <summary>
+            取得 Enum 的 Group Name
+            </summary>
+            <param name="e">Enum</param>
+            <returns>Enum Group Name</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:ITSLib.Common.EnumHelper.GetEnumValue``1(System.Object)" -->
+        <!-- Badly formed XML comment ignored for member "M:ITSLib.Common.EnumHelper.GetSelectListItems(System.Type)" -->
+        <!-- Badly formed XML comment ignored for member "M:ITSLib.Common.EnumHelper.GetSelectListItems(System.Type,System.String)" -->
+        <!-- Badly formed XML comment ignored for member "M:ITSLib.Common.EnumHelper.GetSelectListItems(System.Type,System.Func{System.String,System.Boolean})" -->
+        <member name="M:ITSLib.Common.EnumHelper.GetSelectedEnums``1(System.Collections.Generic.List{System.Web.Mvc.SelectListItem})">
+            <summary>
+            將有選的 SelectListItem 列表 轉換為列舉列表
+            </summary>
+            <typeparam name="T">泛行列舉 </typeparam>
+            <param name="src">SelectListItem 列表</param>
+            <returns> 列舉列表</returns>
+        </member>
+        <member name="M:ITSLib.Common.EnumHelper.ConvertToSelectListItemOptions``1(System.Collections.Generic.List{``0},System.Collections.Generic.List{``0})">
+            <summary>
+            將列舉列表 轉換為對應的 SelectListItem 列表
+            </summary>
+            <typeparam name="T">泛行列舉 </typeparam>
+            <param name="src">列舉列表</param>
+            <param name="disableLsit">停用或是被限制的列舉列表</param>
+            <returns> SelectListItem 列表</returns>
+        </member>
+        <member name="T:ITSLib.Common.EntityExtensions">
+            <summary>
+            取得Model的DisplayName
+            </summary>
+        </member>
+        <member name="P:ITSLib.Common.EnumPropertyAttribute.IsFlags">
+            <summary>
+            宣告該enum 可以包含 複選值(Value需要自己指定為2的次方)
+            </summary>
+        </member>
+        <member name="M:ITSLib.Common.ExpressionExtensions.GetPropertyName``2(System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+            <summary>
+            取得Lambda Expression Property full name
+            </summary>
+            <returns>boolean</returns>
+        </member>
+        <member name="M:ITSLib.Common.DateTimeExtensions.ToMinDateTime(System.DateTime,ITSLib.Common.DateTimeExtensions.DateTimeMode)">
+            <summary>
+            將DateTime以standard為準，之後的時段轉換為最小值，用於起始時間。如2003/4/4 04:03:11 standard為Month時，會轉換為2003/4/1 00:00:00
+            </summary>
+            <returns>boolean</returns>
+        </member>
+        <member name="M:ITSLib.Common.DateTimeExtensions.ToMaxDateTime(System.DateTime,ITSLib.Common.DateTimeExtensions.DateTimeMode)">
+            <summary>
+            將DateTime以standard為準，之後的時段轉換為最大值，用於結束時間。如2003/4/4 04:03:11 standard為Month時，會轉換為2003/4/30 23:59:59
+            </summary>
+            <returns>boolean</returns>
+        </member>
+        <member name="P:ITSLib.Common.GenEnumAttribute.IsFlags">
+            <summary>
+            宣告該enum 可以包含 複選值(Value需要自己指定為2的次方)
+            </summary>
+        </member>
+        <member name="M:ITSLib.Common.GenEnumAttribute.#ctor(System.String[])">
+            <summary>
+            指定enum中每個項目的名稱、displayname、value(如果要特別指定)
+            語法如："Created" 或 "Created(進件)"或 "Created(進件)=1"
+            若沒有指定displayname則預設採用 項目名稱
+            </summary>
+            <param name="EnumSpecs"></param>
+        </member>
+        <member name="T:ITSLib.Common.BindedProperty">
+            <summary>
+            ModelIncludeFields欄位處理
+            </summary>
+        </member>
+        <member name="M:ITSLib.Common.BindedProperty.SetViewData(System.Web.Mvc.HtmlHelper,System.String,System.Boolean)">
+            <summary>
+            設定ModelIncludeFields欄位
+            </summary>
+            <param name="htmlHelper"></param>
+            <param name="BindField"></param>
+            <param name="Enabled"></param>
+        </member>
+        <member name="T:ITSLib.Common.SystemEnum.AlertType">
+            <summary>
+            Warning=操作錯誤,Success=操作成功,Info=提示信息,Danger=操作失敗
+            </summary>
+        </member>
+        <member name="M:ITSLib.Common.SystemReflection.GetClasses(System.String)">
+            <summary>
+            取得命名空間下所有類別的名稱
+            </summary>
+            <param name="nameSpace"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ITSLib.Common.DES.Encrypt(System.String,System.String,System.String)">
+            <summary>
+            加密
+            </summary>
+            <param name="Source"></param>
+            <param name="Key"></param>
+            <param name="Iv"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ITSLib.Common.DES.Decrypt(System.String,System.String,System.String)">
+            <summary>
+            解密
+            </summary>
+            <param name="Encrypt"></param>
+            <param name="Key"></param>
+            <param name="Iv"></param>
+            <returns></returns>
+        </member>
+        <member name="F:ITSLib.Common.ConstLib.DESKey">
+            <summary>
+            DES預設加解密金鑰
+            </summary>
+        </member>
+        <member name="M:ITSLib.Common.StringExtensions.ToBoolean(System.String)">
+            <summary>
+            將文字("1","Y","True")轉換為Boolean
+            </summary>
+            <returns>boolean</returns>
+        </member>
+        <member name="M:ITSLib.Mvc.ActionResult.ExportExcelResult.ExportExcelEventHandler(System.Web.Mvc.ControllerContext)">
+            <summary>
+            Exports the excel event handler.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:ITSLib.Mvc.Helpers.MvcHtmlExtensions.ITSBrowse(System.Web.Mvc.HtmlHelper,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            ITSBrowse
+            </summary>
+            <param name="htmlHelper"></param>
+            <param name="ModelType">IBrowse Model Class Name</param>
+            <param name="Id">對應的Html Input Id1</param>
+            <param name="FieldName">對應Model的欄位名稱1</param>
+            <param name="BindField">綁定欄位(Model Binding用)</param>
+            <param name="DefaultValue">預設值</param>
+            <param name="SelectScript">Html Input Id1的Change事件，並且Value是存在的，會呼叫此Script</param>
+            <param name="SelectNoDataScript">Html Input Id1的Change事件，並且Value是不存在的，會呼叫此Scriptt</param>
+            <param name="Filter">可在此處設定資料的篩選條件，使用Entity to SQL語法</param>
+            <param name="IsFeelKeying">輸入的key，搜尋不到資料的話，不會被清掉。</param>
+            <returns></returns>
+        </member>
+        <member name="M:ITSLib.Mvc.Helpers.MvcHtmlExtensions.ITSBrowse2(System.Web.Mvc.HtmlHelper,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            ITSBrowse2
+            </summary>
+            <param name="htmlHelper"></param>
+            <param name="ModelType">IBrowse Model Class Name</param>
+            <param name="Id">對應的Html Input Id1</param>
+            <param name="FieldName">對應Model的欄位名稱1</param>
+            <param name="Id2">對應的Html Input Id2</param>
+            <param name="FieldName2">對應Model的欄位名稱2</param>
+            <param name="BindField">綁定欄位(Model Binding用)</param>
+            <param name="DefaultValue">預設值</param>
+            <param name="SelectScript">Html Input Id1的Change事件，並且Value是存在的，會呼叫此Script</param>
+            <param name="SelectNoDataScript">Html Input Id1的Change事件，並且Value是不存在的，會呼叫此Script</param>
+            <param name="Filter">可在此處設定資料的篩選條件，使用Entity to SQL語法</param>
+            <param name="IsFeelKeying">輸入的key，搜尋不到資料的話，不會被清掉。</param>
+            <returns></returns>
+        </member>
+        <member name="M:ITSLib.Mvc.Helpers.MvcHtmlExtensions.ITSBoxGrid(System.Web.Mvc.HtmlHelper,System.String,System.Func{System.Web.WebPages.HelperResult},System.String)">
+            <summary>
+            Grid區塊
+            </summary>
+            <param name="htmlHelper"></param>
+            <param name="title">標題</param>
+            <param name="buttonBlock">HTML區塊</param>
+            <returns></returns>
+        </member>
+        <member name="M:ITSLib.Mvc.Helpers.MvcHtmlExtensions.ITSBoxSearch(System.Web.Mvc.HtmlHelper,System.String,System.String)">
+            <summary>
+            Search區塊
+            </summary>
+            <param name="htmlHelper"></param>
+            <param name="title">標題</param>
+            <returns></returns>
+        </member>
+        <member name="M:ITSLib.Mvc.Helpers.MvcHtmlExtensions.ITSBoxEdit(System.Web.Mvc.HtmlHelper,System.String,System.String,System.Boolean)">
+            <summary>
+            Edit區塊
+            </summary>
+            <param name="htmlHelper"></param>
+            <param name="title">標題</param>
+            <returns></returns>
+        </member>
+        <member name="M:ITSLib.Mvc.Helpers.MvcHtmlExtensions.ITSBoxEdit2(System.Web.Mvc.HtmlHelper,System.String,System.String,System.Boolean)">
+            <summary>
+            Edit區塊-版型2
+            </summary>
+            <param name="htmlHelper"></param>
+            <param name="title">標題</param>
+            <returns></returns>
+        </member>
+        <member name="M:ITSLib.Mvc.Helpers.MvcHtmlExtensions.ITSBoxDialog(System.Web.Mvc.HtmlHelper,System.String,System.String)">
+            <summary>
+            Dialog區塊
+            </summary>
+            <param name="htmlHelper"></param>
+            <param name="title">標題</param>
+            <returns></returns>
+        </member>
+        <member name="M:ITSLib.Mvc.Helpers.MvcHtmlExtensions.ITSBox(System.Web.Mvc.HtmlHelper,System.String,System.String,System.String,System.Boolean,System.Func{System.Web.WebPages.HelperResult}[])">
+            <summary>
+            提供各種類型的區塊使用。
+            </summary>
+            <param name="htmlHelper"></param>
+            <param name="fileName">區塊類型</param>
+            <param name="title">標題</param>
+            <param name="blocks">HTML區塊</param>
+            <returns></returns>
+        </member>
+        <member name="M:ITSLib.Mvc.Helpers.MvcHtmlExtensions.ITSRadioButtonList(System.Web.Mvc.HtmlHelper,System.Collections.Generic.List{System.Web.Mvc.SelectListItem},System.String,System.String,System.Int32,System.String,System.Boolean,System.Boolean,System.Object)">
+            <summary>
+            RadioButtonList
+            </summary>
+            <param name="htmlHelper"></param>
+            <param name="SelectList">資料來源</param>
+            <param name="BindField">綁定欄位</param>
+            <param name="Value">值</param>
+            <param name="RepeatColumns">每行幾個RadioButton</param>
+            <param name="Id">ID</param>
+            <param name="Readonly">是否唯讀</param>
+            <param name="Visible">是否顯示</param>
+            <param name="htmlAttributes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ITSLib.Mvc.Helpers.MvcHtmlExtensions.ITSFileUpload(System.Web.Mvc.HtmlHelper,System.String,System.Collections.Generic.List{System.String},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.Object)">
+            <summary>
+            FileUpload元件
+            </summary>
+            <param name="htmlHelper"></param>
+            <param name="BindField">綁定欄位。</param>
+            <param name="LimitFileExtensions">限制可上傳的副檔名，如為null則不限制。</param>
+            <returns></returns>
+        </member>
+        <member name="M:ITSLib.Mvc.Helpers.MvcHtmlExtensions.ITSMultipleFileUpload(System.Web.Mvc.HtmlHelper,System.String,System.Int32,System.Int32,System.Int32,System.Boolean,System.Boolean,System.Collections.Generic.List{System.String},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Object)">
+            <summary>
+            ITSMultipleFileUpload元件
+            </summary>
+            <param name="htmlHelper"></param>
+            <param name="BindField">綁定欄位。</param>
+            <param name="DefualtCount">預設顯示FileUpload的數目。</param>
+            <param name="MaxCount">最大數目，FileUpload的數目大於等於此數量則不會顯示新增按鈕。</param>
+            <param name="MinCount">最小數目，FileUpload的數目小於等於此數量則不會顯示刪除按鈕。</param>
+            <param name="ShowDeleteButton">是否顯示刪除檔案的按鈕。</param>
+            <param name="ShowAddButton">是否顯示增加檔案的按鈕。</param>
+            <param name="LimitFileExtensions">限制可上傳的副檔名，如為null則不限制。</param>
+            <returns></returns>
+        </member>
+        <member name="M:ITSLib.Mvc.Helpers.MvcHtmlExtensions.ITSDisplayNameFor``3(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Collections.Generic.IEnumerable{``1}}},System.Linq.Expressions.Expression{System.Func{``1,``2}})">
+            <summary>
+            可以使用Enumable內欄位的DisplayNameFor
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <typeparam name="TEnumerable"></typeparam>
+            <typeparam name="TValue"></typeparam>
+            <param name="html"></param>
+            <param name="enumerableExpression">IEnumable物件</param>
+            <param name="valueExpression">欄位</param>
+            <returns></returns>
+        </member>
+        <member name="M:ITSLib.Mvc.Helpers.MvcHtmlExtensions.ITSParameterLabelFor``3(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Collections.Generic.IEnumerable{``1}}},System.Linq.Expressions.Expression{System.Func{``1,``2}})">
+            <summary>
+            Edit頁面的標題
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <typeparam name="TEnumerable"></typeparam>
+            <typeparam name="TValue"></typeparam>
+            <param name="html"></param>
+            <param name="enumerableExpression">IEnumable物件</param>
+            <param name="valueExpression">欄位</param>
+            <returns></returns>
+        </member>
+        <member name="M:ITSLib.Mvc.Helpers.MvcHtmlExtensions.ITSParameterLabelFor``2(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+            <summary>
+            Edit頁面的標題
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <typeparam name="TEnumerable"></typeparam>
+            <typeparam name="TValue"></typeparam>
+            <param name="htmlHelper"></param>
+            <param name="expression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ITSLib.Mvc.Helpers.MvcHtmlExtensions.ITSTextAreaFor``2(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.String,System.Boolean,System.Boolean,System.String,System.Object,System.Boolean)">
+            <summary>
+            產生Html Input Tag
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <typeparam name="TProp"></typeparam>
+            <param name="htmlHelper"></param>
+            <param name="expression">Html Input Value 的表達式</param>
+            <param name="Id">Html input id</param>
+            <param name="Readonly">是否為唯讀</param>
+            <param name="Visible">是否顯示</param>
+            <param name="format">String.Format格式</param>
+            <param name="Class">css Class</param>
+            <param name="htmlAttributes">Html Attribute</param>
+            <returns></returns>
+        </member>
+        <member name="M:ITSLib.Mvc.Helpers.MvcHtmlExtensions.ITSTextArea(System.Web.Mvc.HtmlHelper,System.String,System.String,System.String,System.Boolean,System.Boolean,System.String,System.Object,System.Boolean)">
+            <summary>
+            產生Html Input Tag
+            </summary>
+            <param name="htmlHelper"></param>
+            <param name="Value">Html Input Value</param>
+            <param name="BindField">綁定欄位名稱，即為input name屬性</param>
+            <param name="Id">Html input id</param>
+            <param name="Readonly">是否為唯讀</param>
+            <param name="Visible">是否顯示</param>
+            <param name="format">String.Format格式</param>
+            <param name="Class">css Class</param>
+            <param name="htmlAttributes">Html Attribute</param>
+            <returns></returns>
+        </member>
+        <member name="M:ITSLib.Mvc.Helpers.MvcHtmlExtensions.ITSAlert(System.Web.Mvc.HtmlHelper,System.String,ITSLib.Common.SystemEnum.AlertType,System.Boolean)">
+             <summary>
+            訊息框
+             </summary>
+             <param name="htmlHelper"></param>
+             <param name="htmlContent">訊息內容</param>
+             <param name="alertType">Warning=操作錯誤,Success=操作成功,Info=提示信息,Danger=操作失敗</param>
+             <returns></returns>
+        </member>
+        <member name="M:ITSLib.Mvc.Helpers.MvcHtmlExtensions.ITSValidationSummary(System.Web.Mvc.HtmlHelper)">
+            <summary>
+            提示訊息框，只會顯示其中一個，顯示優先順序驗證訊息(ValidationSummary)>TempData["Danger"]>TempData["Warning"]>TempData["Success"]>TempData["Info"]
+            </summary>
+            <param name="htmlHelper"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ITSLib.Mvc.Helpers.MvcHtmlExtensions.ITSCheckBoxFor``2(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.String,System.String,System.Boolean,System.Boolean,System.String,System.Object)">
+            <summary>
+            系統將自動自動產出一CheckBox與HiddenField,
+            Hidden Fiel的Name為綁定之欄位,
+            以便Form submit時可自動Model binding
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <typeparam name="TProp"></typeparam>
+            <param name="htmlHelper"></param>
+            <param name="expression">CheckBox值與Binding Model欄位做綁定(bool)</param>
+            <param name="Id">Html Input ID</param>
+            <param name="Readonly">是否為唯讀</param>
+            <param name="Text">為該CheckBox的文字</param>
+            <param name="Visible">是否顯示</param>
+            <param name="Class">套用Class</param>
+            <param name="htmlAttributes">Html屬性</param>
+            <returns></returns>
+        </member>
+        <member name="M:ITSLib.Mvc.Helpers.MvcHtmlExtensions.ITSCheckBox(System.Web.Mvc.HtmlHelper,System.Boolean,System.String,System.String,System.String,System.Boolean,System.Boolean,System.String,System.Object)">
+            <summary>
+            系統將自動自動產出一CheckBox與HiddenField,
+            Hidden Fiel的Name為綁定之欄位,
+            以便Form submit時可自動Model binding
+            </summary>
+            <param name="htmlHelper"></param>
+            <param name="Value">使否為True</param>
+            <param name="BindField">綁定的欄位名稱，同時亦為HiddenField的Name</param>
+            <param name="Id">Input Client ID</param>
+            <param name="Readonly">是否唯讀</param>
+            <param name="Text">顯示文字</param>
+            <param name="Visible">是否顯示</param>
+            <param name="Class">套用Class</param>
+            <param name="htmlAttributes">Html屬性</param>
+            <returns></returns>
+        </member>
+        <member name="M:ITSLib.Mvc.Helpers.MvcHtmlExtensions.ITSCheckBoxList(System.Web.Mvc.HtmlHelper,System.Collections.Generic.List{System.Web.Mvc.SelectListItem},System.String,System.Int32,System.String,System.Boolean,System.Boolean,System.Object)">
+            <summary>
+            CheckBoxList
+            </summary>
+            <param name="htmlHelper"></param>
+            <param name="SelectList">資料來源</param>
+            <param name="BindField">綁定欄位</param>
+            <param name="RepeatColumns">每行幾個Checkbox</param>
+            <param name="Id">ID</param>
+            <param name="Readonly">是否唯讀</param>
+            <param name="Visible">是否顯示</param>
+            <param name="htmlAttributes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ITSLib.Mvc.Helpers.MvcHtmlExtensions.ITSDialog(System.Web.Mvc.HtmlHelper,System.String,System.String,System.Boolean,System.Boolean,System.String,System.String,System.String,System.Object)">
+            <summary>
+            Dialog元件
+            </summary>
+            <param name="htmlHelper"></param>
+            <param name="Title">標題</param>
+            <param name="ID">ID</param>
+            <param name="Clear">關閉之後是否清空裡面的HTML</param>
+            <param name="Visible">是否顯示</param>
+            <param name="CloseScript">關閉之後要執行的JS Function</param>
+            <param name="htmlAttributes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ITSLib.Mvc.Helpers.MvcHtmlExtensions.ITSTextBoxFor``2(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.String,System.Boolean,System.Boolean,System.String,System.String,System.Object,System.Boolean)">
+            <summary>
+            產生Html Input Tag
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <typeparam name="TProp"></typeparam>
+            <param name="htmlHelper"></param>
+            <param name="expression">Html Input Value 的表達式</param>
+            <param name="Id">Html input id</param>
+            <param name="Readonly">是否為唯讀</param>
+            <param name="Visible">是否顯示</param>
+            <param name="format">String.Format格式</param>
+            <param name="Class">css Class</param>
+            <param name="htmlAttributes">Html Attribute</param>
+            <returns></returns>
+        </member>
+        <member name="M:ITSLib.Mvc.Helpers.MvcHtmlExtensions.ITSTextBox(System.Web.Mvc.HtmlHelper,System.String,System.String,System.String,System.Boolean,System.Boolean,System.String,System.String,System.Object,System.Boolean)">
+            <summary>
+            產生Html Input Tag
+            </summary>
+            <param name="htmlHelper"></param>
+            <param name="Value">Html Input Value</param>
+            <param name="BindField">綁定欄位名稱，即為input name屬性</param>
+            <param name="Id">Html input id</param>
+            <param name="Readonly">是否為唯讀</param>
+            <param name="Visible">是否顯示</param>
+            <param name="format">String.Format格式</param>
+            <param name="Class">css Class</param>
+            <param name="htmlAttributes">Html Attribute</param>
+            <returns></returns>
+        </member>
+        <member name="M:ITSLib.Mvc.Helpers.MvcHtmlExtensions.ITSDatePickerFor``2(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.String,System.String,System.String,System.Boolean,System.Boolean,System.String,System.Object,System.String)">
+            <summary>
+            ITS MVC 日期元件
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <typeparam name="TProp"></typeparam>
+            <param name="htmlHelper"></param>
+            <param name="expression">expression表達式</param>
+            <param name="Id">ID</param>
+            <param name="Readonly">是否唯讀</param>
+            <param name="Value">預設值</param>
+            <param name="Class">指定Class</param>
+            <param name="DateFormat">日期格式 ex:YYYY/MM/DD 參照http://momentjs.com/docs/#/displaying/format/</param>
+            <param name="TimeFormat">時間格式 ex:HH:mm 參照http://momentjs.com/docs/#/displaying/format/</param>
+            <param name="htmlAttributes">HTML其他屬性設定new {style = "width:120px;height:40px"}</param>
+            <param name="changeEvent">日期變更事件</param>
+            <returns></returns>
+        </member>
+        <member name="M:ITSLib.Mvc.Helpers.MvcHtmlExtensions.ITSDatePicker(System.Web.Mvc.HtmlHelper,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Boolean,System.String,System.Object,System.String)">
+            <summary>
+            ITS MVC 日期元件
+            </summary>
+            <param name="htmlHelper"></param>
+            <param name="Value"></param>
+            <param name="BindField">綁定欄位</param>
+            <param name="Id">ID</param>
+            <param name="Readonly">是否唯讀</param>
+            <param name="Visible">是否顯示</param>
+            <param name="Class">指定Class</param>
+            <param name="DateFormat">日期格式 ex:YYYY/MM/DD 參照http://momentjs.com/docs/#/displaying/format/</param>
+            <param name="TimeFormat">時間格式 ex:HH:mm 參照http://momentjs.com/docs/#/displaying/format/</param>
+            <param name="htmlAttributes">HTML其他屬性設定new {style = "width:120px;height:40px"}</param>
+            <param name="changeEvent">日期變更事件</param>
+            <returns></returns>
+        </member>
+        <member name="M:ITSLib.Mvc.Helpers.MvcHtmlExtensions.ITSDatePicker(System.Web.Mvc.HtmlHelper,System.Nullable{System.DateTime},System.String,System.String,System.String,System.String,System.Boolean,System.Boolean,System.String,System.Object,System.String)">
+            <summary>
+            ITS MVC 日期元件
+            </summary>
+            <param name="htmlHelper"></param>
+            <param name="Value"></param>
+            <param name="BindField">綁定欄位</param>
+            <param name="Id">ID</param>
+            <param name="Readonly">是否唯讀</param>
+            <param name="Visible">是否顯示</param>
+            <param name="Class">指定Class</param>
+            <param name="DateFormat">日期格式 ex:YYYY/MM/DD 參照http://momentjs.com/docs/#/displaying/format/</param>
+            <param name="TimeFormat">時間格式 ex:HH:mm 參照http://momentjs.com/docs/#/displaying/format/</param>
+            <param name="htmlAttributes">HTML其他屬性設定new {style = "width:120px;height:40px"}</param>
+            <returns></returns>
+        </member>
+        <member name="T:ITSLib.Mvc.Helpers.BrowseQuery.QueryMode">
+            <summary>
+            Fuzzy=模糊查詢,Precise=精確查詢
+            </summary>
+        </member>
+        <member name="F:ITSLib.Mvc.Helpers.GridDisplayText.saveText">
+            <summary>
+            儲存按鈕的顯示文字
+            </summary>
+        </member>
+        <member name="F:ITSLib.Mvc.Helpers.GridDisplayText.editText">
+            <summary>
+            編輯按鈕的顯示文字
+            </summary>
+        </member>
+        <member name="F:ITSLib.Mvc.Helpers.GridDisplayText.cancelEditText">
+            <summary>
+            取消按鈕的顯示文字
+            </summary>
+        </member>
+        <member name="F:ITSLib.Mvc.Helpers.GridDisplayText.deleteText">
+            <summary>
+            刪除按鈕的顯示文字
+            </summary>
+        </member>
+        <member name="F:ITSLib.Mvc.Helpers.GridDisplayText.firstText">
+            <summary>
+            Paeger顯示第一頁的文字
+            </summary>
+        </member>
+        <member name="F:ITSLib.Mvc.Helpers.GridDisplayText.previousText">
+            <summary>
+            Paeger顯示前一頁的文字
+            </summary>
+        </member>
+        <member name="F:ITSLib.Mvc.Helpers.GridDisplayText.nextText">
+            <summary>
+            Paeger顯示下一頁的文字
+            </summary>
+        </member>
+        <member name="F:ITSLib.Mvc.Helpers.GridDisplayText.lastText">
+            <summary>
+            Paeger顯示最後一頁的文字
+            </summary>
+        </member>
+        <member name="F:ITSLib.Mvc.Helpers.GridDisplayText.confirmSaveText">
+            <summary>
+            提示是否確定儲存的提示
+            </summary>
+        </member>
+        <member name="F:ITSLib.Mvc.Helpers.GridDisplayText.confirmDeleteText">
+            <summary>
+            提示是否確定刪除的文字
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.Helpers.GridParameter.Page">
+            <summary>
+            目前所在頁數
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.Helpers.GridParameter.Sort">
+            <summary>
+            目前排序欄位
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.Helpers.GridParameter.SortDir">
+            <summary>
+            目前排序方向
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.Helpers.GridParameter.Grid">
+            <summary>
+            目前傳送的Grid ID
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.Helpers.HtmlHelperINI.SelectList">
+            <summary>
+            SelectList版型
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.Helpers.HtmlHelperINI.TextBox">
+            <summary>
+            TextBox版型
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.Helpers.HtmlHelperINI.CheckBoxList">
+            <summary>
+            CheckBoxList
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.Helpers.HtmlHelperINI.RadioButtonList">
+            <summary>
+            RadioButtonList
+            </summary>
+        </member>
+        <member name="T:ITSLib.Mvc.Helpers.ColumnType">
+            <summary>
+            Grid 欄位類型
+            </summary>
+        </member>
+        <member name="F:ITSLib.Mvc.Helpers.ColumnType.Text">
+            <summary>
+            純文字顯示
+            </summary>
+        </member>
+        <member name="F:ITSLib.Mvc.Helpers.ColumnType.Num">
+            <summary>
+            數字顯示
+            </summary>
+        </member>
+        <member name="F:ITSLib.Mvc.Helpers.ColumnType.TextBox">
+            <summary>
+            TextBox顯示(ReadOnly時顯示Text)
+            </summary>
+        </member>
+        <member name="F:ITSLib.Mvc.Helpers.ColumnType.NumBox">
+            <summary>
+            NumBox顯示(ReadOnly時顯示Num)
+            </summary>
+        </member>
+        <member name="F:ITSLib.Mvc.Helpers.ColumnType.SelectAll">
+            <summary>
+            Row選取CheckBox
+            </summary>
+        </member>
+        <member name="F:ITSLib.Mvc.Helpers.ColumnType.CheckBox">
+            <summary>
+            CheckBox控制項
+            </summary>
+        </member>
+        <member name="F:ITSLib.Mvc.Helpers.ColumnType.DatePicker">
+            <summary>
+            日期選擇控制項
+            </summary>
+        </member>
+        <member name="F:ITSLib.Mvc.Helpers.ColumnType.Edit">
+            <summary>
+            編輯Action按鈕，點擊後變Save/Cancel Button
+            </summary>
+        </member>
+        <member name="F:ITSLib.Mvc.Helpers.ColumnType.SelectList">
+            <summary>
+            SelectList控制項，ReadOnly時顯示Text
+            </summary>
+        </member>
+        <member name="F:ITSLib.Mvc.Helpers.ColumnType.Action">
+            <summary>
+            Action Button
+            </summary>
+        </member>
+        <member name="F:ITSLib.Mvc.Helpers.ColumnType.Submit">
+            <summary>
+            Submit Button
+            </summary>
+        </member>
+        <member name="F:ITSLib.Mvc.Helpers.ColumnType.Dynamic">
+            <summary>
+            動態欄位，透過DynamicContent在View產生
+            </summary>
+        </member>
+        <member name="F:ITSLib.Mvc.Helpers.EditMode.EditInRow">
+            <summary>
+            當ColumnType為Edit時，點擊後將該Row的控制項接變為編輯模式
+            </summary>
+        </member>
+        <member name="F:ITSLib.Mvc.Helpers.EditMode.EditInNewAction">
+            <summary>
+            當ColumnType為Edit時，點擊後在新視窗(New Action)中開啟畫面
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.Helpers.ITSGridColumn.Total">
+            <summary>
+            是否於Footer新增一小計列
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.Helpers.ITSGridColumn.TotalStyle">
+            <summary>
+            小計列的Css Style Class
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.Helpers.ITSGridColumn.ColumnType">
+            <summary>
+            欄位類型
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.Helpers.ITSGridColumn.ID">
+            <summary>
+            指定Client ID
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.Helpers.ITSGridColumn.DataFormat">
+            <summary>
+            資料Format 格式(將透過String.Format轉換)
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.Helpers.ITSGridColumn.DateFormat">
+            <summary>
+            日期Format 格式(將透過String.Format轉換)
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.Helpers.ITSGridColumn.TimeFormat">
+            <summary>
+            時間Format 格式(將透過String.Format轉換)
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.Helpers.ITSGridColumn.ReadOnly">
+            <summary>
+            是否為唯讀
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.Helpers.ITSGridColumn.HTML5Support">
+            <summary>                                   
+            是否支援HTML5 (部分helper使用 for html type 使用)
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.Helpers.ITSGridColumn.htmlAttributes">
+            <summary>
+            Html Attribute
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.Helpers.ITSGridColumn.ActionName">
+            <summary>
+            Action Name(Action使用)
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.Helpers.ITSGridColumn.ControllerName">
+            <summary>
+            Controller Name(Action使用)
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.Helpers.ITSGridColumn.ShowText">
+            <summary>
+            固定顯示Text
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.Helpers.ITSGridColumn.ActionDataField">
+            <summary>
+            Action 傳遞參數綁定的欄位(Action/Edit使用)
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.Helpers.ITSGridColumn.ActionDataFields">
+            <summary>
+            傳遞RouteValue(Action/Edit使用)
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.Helpers.ITSGridColumn.EditMode">
+            <summary>
+            Edit模式(EditInRow/EditInNewAction)
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.Helpers.ITSGridColumn.Align">
+            <summary>
+            欄位靠中/右/左
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.Helpers.ITSGridColumn.SelectListSource">
+            <summary>
+            CheckBoxList/SelectList Source
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.Helpers.ITSGridColumn.SelectListEmptyOption">
+            <summary>
+            CheckBox預設空值的選項
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.Helpers.ITSGridColumn.Visible">
+            <summary>
+            該控件是否顯示
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.Helpers.ITSGridColumn.ReportVisible">
+            <summary>
+            產出報表時是否顯示
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.Helpers.ITSGridColumn.ReportFormat">
+            <summary>
+            產出報表Format
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.Helpers.ITSGridColumn.DynamicContent">
+            <summary>
+            Dynamic欄位使用，以Func顯示該欄html content
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.Helpers.ITSGridColumn.DynamicContentSelect">
+            <summary>
+            Dynamic欄位In Line Edit和In Line Add時使用，以Func顯示該欄html content，如為Null預設為DynamicContent的值
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.Helpers.ITSGridColumn.DynamicContentReport">
+            <summary>
+            Dynamic欄位使用，報表顯示文字
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.Helpers.ITSGridColumn.Width">
+            <summary>
+            設定欄位的寬度(px)
+            </summary>
+        </member>
+        <member name="M:ITSLib.Mvc.Helpers.ITSGridColumn.#ctor(System.String,ITSLib.Mvc.Helpers.ColumnType,System.String,System.Object)">
+            <summary>
+            一般Column,SelectAll
+            </summary>
+            <param name="columnName"></param>
+            <param name="columnType"></param>
+            <param name="Id"></param>
+            <param name="htmlAttributes"></param>
+        </member>
+        <member name="M:ITSLib.Mvc.Helpers.ITSGridColumn.#ctor(ITSLib.Mvc.Helpers.ColumnType,System.String,System.String,System.String,System.String,System.Func{System.Object,System.Boolean},System.Object)">
+            <summary>
+            ColumnType.Action(單一Key)
+            </summary>
+            <param name="columnType"></param>
+            <param name="showText"></param>
+            <param name="actionName"></param>
+            <param name="actionDataField"></param>
+            <param name="header"></param>
+            <param name="visible"></param>
+            <param name="htmlAttributes"></param>
+        </member>
+        <member name="M:ITSLib.Mvc.Helpers.ITSGridColumn.#ctor(ITSLib.Mvc.Helpers.ColumnType,System.String,System.String,System.String[],System.String,System.Func{System.Object,System.Boolean},System.Object)">
+            <summary>
+            ColumnType.Action(複合Key)
+            </summary>
+            <param name="columnType"></param>
+            <param name="showText"></param>
+            <param name="actionName"></param>
+            <param name="actionDataFields"></param>
+            <param name="header"></param>
+            <param name="visible"></param>
+            <param name="htmlAttributes"></param>
+        </member>
+        <member name="M:ITSLib.Mvc.Helpers.ITSGridColumn.#ctor(ITSLib.Mvc.Helpers.ColumnType,ITSLib.Mvc.Helpers.EditMode,System.String,System.String,System.String,System.Func{System.Object,System.Boolean},System.Object)">
+            <summary>
+            ColumnType.Edit
+            </summary>
+            <param name="columnType"></param>
+            <param name="editMode"></param>
+            <param name="actionName"></param>
+            <param name="actionDataField"></param>
+            <param name="header"></param>
+            <param name="visible"></param>
+            <param name="htmlAttributes"></param>
+        </member>
+        <member name="M:ITSLib.Mvc.Helpers.ITSGridColumn.#ctor(System.String,ITSLib.Mvc.Helpers.ColumnType,System.Collections.Generic.List{System.Web.Mvc.SelectListItem},System.Object)">
+            <summary>
+            ColumnType.SelectList
+            </summary>
+            <param name="columnName"></param>
+            <param name="columnType"></param>
+            <param name="selectListSource"></param>
+            <param name="htmlAttributes"></param>
+        </member>
+        <member name="M:ITSLib.Mvc.Helpers.ITSGridColumn.#ctor(ITSLib.Mvc.Helpers.ColumnType,System.Func{System.Object,System.String},System.String)">
+            <summary>
+            ColumnType.Dynamic
+            </summary>
+            <param name="columnType"></param>
+            <param name="dynamicContent"></param>
+            <param name="header"></param>
+        </member>
+        <member name="M:ITSLib.Mvc.Helpers.ITSGrid.RenderHtml(System.Collections.Generic.IEnumerable{System.Object},System.Collections.Generic.IEnumerable{ITSLib.Mvc.Helpers.ITSGridColumn},System.Int32,System.Collections.Generic.IEnumerable{System.String},System.Object)">
+            <summary>
+            提供新的方法，簡易呼叫Grid RenderHtml
+            呼叫原本底層Bind()與GetHtml()
+            </summary>
+            <param name="source">Grid DataSource</param>
+            <param name="columns">Grid欄位設定</param>
+            <returns>Render過後Grid Html</returns>
+        </member>
+        <member name="M:ITSLib.Mvc.Helpers.ITSGrid.GetHtml(System.Collections.Generic.IEnumerable{ITSLib.Mvc.Helpers.ITSGridColumn},System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Boolean,System.String,System.Collections.Generic.IEnumerable{System.String},System.Web.Helpers.WebGridPagerModes,System.Int32,System.Object,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="columns">Grid欄位設定</param>
+            <param name="tableStyle">Html Table Style</param>
+            <param name="headerStyle">Html Header Style</param>
+            <param name="footerStyle">Html Footer Style</param>
+            <param name="rowStyle">Html Row Style</param>
+            <param name="alternatingRowStyle">Html Alternative Style</param>
+            <param name="selectedRowStyle">Html SelectedRow Style</param>
+            <param name="caption">標題</param>
+            <param name="displayHeader">是否顯示Header</param>
+            <param name="fillEmptyRows">not used</param>
+            <param name="emptyRowCellValue">not used</param>
+            <param name="exclusions">not used</param>
+            <param name="mode">分頁顯示模式</param>
+            <param name="numericLinksCount">numberic分頁顯示幾頁</param>
+            <param name="htmlAttributes">Html Attribute</param>
+            <param name="totalRowStyle">Html 加總Row Style </param>
+            <returns></returns>
+        </member>
+        <member name="P:ITSLib.Mvc.ITSBaseController.CurrentUser">
+            <summary>
+            目前使用者
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.ITSBaseController.PageSize">
+            <summary>
+            Grid 每頁顯示筆數
+            </summary>
+        </member>
+        <member name="F:ITSLib.Mvc.ITSBaseController.DataSize">
+            <summary>
+            Grid資料總筆數-回傳給View做Grid Pager binding用
+            </summary>
+        </member>
+        <member name="F:ITSLib.Mvc.ITSBaseController.DataSize2">
+            <summary>
+            Grid資料總筆數-回傳給View做Grid Pager binding用(單頁多Grid使用)
+            </summary>
+        </member>
+        <member name="F:ITSLib.Mvc.ITSBaseController.DataSize3">
+            <summary>
+            Grid資料總筆數-回傳給View做Grid Pager binding用(單頁多Grid使用)
+            </summary>
+        </member>
+        <member name="F:ITSLib.Mvc.ITSBaseController.DataSize4">
+            <summary>
+            Grid資料總筆數-回傳給View做Grid Pager binding用(單頁多Grid使用)
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.ITSBaseController.ControllerID">
+            <summary>
+            目前ControllerID
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.ITSBaseController.ActionID">
+            <summary>
+            目前ActionID
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.ITSBaseController.QueryObject">
+            <summary>
+            為一可綁定之dynamic物件，為保留查詢條件使用，該物件為ITSGrdidData之Query 屬性物件，
+            僅在原Controller/Action與現在相同時才會返回保留之查詢條件
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.ITSBaseController.ModelIncludeFields">
+            <summary>
+            取得前端畫面中有回傳的欄位List
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.ITSBaseController.ModelKeyValues">
+            <summary>
+            取得前端畫面中有回傳的Key Values
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.BaseWebViewPage`1.CurrentUser">
+            <summary>
+            目前使用者
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.BaseWebViewPage`1.PageSize">
+            <summary>
+            Grid 每頁顯示筆數
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.BaseWebViewPage`1.DataSize">
+            <summary>
+            Grid資料總筆數-回傳給View做Grid Pager binding用
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.BaseWebViewPage`1.DataSize2">
+            <summary>
+            Grid資料總筆數-回傳給View做Grid Pager binding用(單頁多Grid使用)
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.BaseWebViewPage`1.DataSize3">
+            <summary>
+            Grid資料總筆數-回傳給View做Grid Pager binding用(單頁多Grid使用)
+            </summary>
+        </member>
+        <member name="P:ITSLib.Mvc.BaseWebViewPage`1.DataSize4">
+            <summary>
+            Grid資料總筆數-回傳給View做Grid Pager binding用(單頁多Grid使用)
+            </summary>
+        </member>
+        <member name="T:ITSLib.User.ITSUserLib">
+            <summary>
+            使用者登出/登入/密碼驗證/取得使用者資訊等方法
+            </summary>
+        </member>
+        <member name="M:ITSLib.User.ITSUserLib.CheckUserPassword(System.String,System.String)">
+            <summary>
+            確認使用者帳號密碼是否正確
+            </summary>
+            <param name="AccountID">使用者帳戶</param>
+            <param name="password">使用者密碼</param>
+            <returns>回傳密碼是否正確</returns>
+        </member>
+        <member name="M:ITSLib.User.ITSUserLib.GetUserInfo(System.Int32)">
+            <summary>
+            依使用者編號取得UserInfo
+            </summary>
+            <param name="UserID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ITSLib.User.ITSUserLib.GetUserInfo(System.String,System.Boolean)">
+            <summary>
+            依使用者帳號取得UserInfo
+            </summary>
+            <param name="AccountID"></param>
+            <param name="CaseSensitive"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ITSLib.User.ITSUserLib.Login(System.String,System.String,System.Boolean)">
+            <summary>
+            登入系統
+            </summary>
+            <param name="AccountID">使用者帳戶</param>
+            <param name="password">使用者密碼</param>
+            <returns></returns>
+        </member>
+        <member name="M:ITSLib.User.ITSUserLib.Logout(ITSLib.BaseObj.ITSUserInfo)">
+            <summary>
+            系統登出，將目前User Session清空
+            </summary>
+            <param name="userinfo"></param>
+        </member>
+    </members>
+</doc>

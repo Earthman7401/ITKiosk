@@ -1,0 +1,213 @@
+﻿<!--Body-->
+<script type="text/x-template" id="template-mainMenu-main">
+    <div id="main-div-block" style="background-color: white;position: relative;">
+		<div style="height: 100%;width: 100%;position: absolute;z-index: 0;background-image: url('images/banner.jpg');background-repeat: no-repeat;background-size: 100% 100%;opacity: 0.1;"></div>
+		<table cellpadding="0" cellspacing="0" style="height: 100%;width: 36%;background-color: rgba(0,0,0,0);position: absolute;z-index: 1;" border="0">
+			<tr>
+				<td>
+					<div style="height: 100%;overflow: hidden;position: relative;">
+						<div style="background-color: white;width: 150%;height: 150%;position: absolute;right: 15px;top: -25%;z-index: 2;border-radius: 50%;"></div>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<table style="width: 100%;height: 14.8148%;background-color: rgb(63,101,60);padding: 0 20px;position: absolute;top: 0;left: 0;z-index: 5;box-shadow: 3px 6px 10px #ccc;border-collapse: separate;">
+			<tr>
+				<td valign="middle" style="padding-left: 20px;width: 50%;color: white;">
+					<div style="float: left;height: 50%;"><img id="schoolLogo" /></div>
+					<div style="float: left;height: 50%;margin-left: 10px;font-weight: bold;font-family: 微軟正黑體;">
+						<div style="font-size: 3.1rem;letter-spacing: 2px;">{{paiInfo.name}}</div>
+						<div style="font-size: 1.2rem;letter-spacing: 13px;padding: 0 3px;">{{paiInfo.ename}}</div>
+					</div>
+				</td>
+				<td valign="middle" style="padding-right: 20px;font-size: 2rem;color: white;">
+					<div style="overflow: hidden;margin-bottom: 18px;">
+						<!--<div style="float: right;margin: 9px 20px;text-align: right;border-left: 2px solid white;height: 12px;"></div>
+						<div id="CO" style="float: right;text-align: right;">CO 4.5 --</div>
+						<div style="float: right;margin: 9px 20px;text-align: right;border-left: 2px solid white;height: 12px;"></div>
+						<div id="PM25" style="float: right;text-align: right;">PM 2.5 --</div>
+						<div style="float: right;margin: 9px 20px;text-align: right;border-left: 2px solid white;height: 12px;"></div>
+						<div id="temperature" style="float: right;text-align: right;">T --</div>-->
+						<div style="float: right;margin: 9px 20px;text-align: right;border-left: 2px solid white;height: 12px;"></div>
+						<div id="header-time" style="float: right;text-align: right;">--:--</div>
+						<div style="float: right;margin: 9px 20px;text-align: right;border-left: 2px solid white;height: 12px;"></div>
+						<div id="header-date" style="float: right;text-align: right;">----------</div>
+						<div style="float: right;margin: 9px 20px;text-align: right;border-left: 2px solid white;height: 12px;"></div>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<div style="width: calc(100% - 60px);height: 6%;top: 15.4%;left: 30px;position: absolute;z-index: 5;font-weight: bold;padding: 0 5px;">
+			<div id="main-broadcast-text" style="height: 100%;overflow: hidden;position: relative;"></div>
+		</div>
+		<div id="main-lesson-table" style="width: 19.2708%;height: 67.3703%;top: 21.5185%;left: 0;position: absolute;z-index: 5;box-shadow: 3px 3px 3px #CCC;">
+			<div style="background-color: rgb(227,123,12);height: 9.0909%;box-shadow: 1px 4px 7px #CCC;color: white;">
+				<table style="background-color: rgba(0,0,0,0);width: 100%;height: 100%;font-weight: bold;font-size: 2.5rem;"><tr><td align="center" valign="middle" id="roomName"></td></tr></table>
+			</div>
+			<div style="width: 20px;margin: 0 auto 25px;border-style: solid;border-width: 12px 10px 0 10px;border-color: rgb(227,123,12) transparent transparent transparent;"></div>
+			<div style="height: 17%;text-align: center;margin: 0 auto 20px;">
+				<img class="teacher-head" src="images/aa.png" style="height: 100%;border-radius: 50%;display: none;" />
+				<div class="teacher-no-head" style="height: 100%;border-radius: 50%;display: none;background-color: rgb(213,212,231);color: white;text-align: center;vertical-align: middle;font-size: 7rem;font-weight: bold;display: none;">?</div>
+			</div>
+			<div style="text-align: center;margin: 0 auto 12px;font-size: 1.9rem;font-weight: bold;" class="teacher-name"></div>
+			<div style="text-align: center;margin: 0 auto 9px;font-size: 1.6rem;" class="lesson-name"></div>
+			<div style="text-align: center;margin: 0 auto 9px;font-size: 1.6rem;" class="lesson-time"></div>
+			<div style="text-align: center;margin: 20px 0;"><button type="button" id="subject" class="btn btn-default">本週教室課表</button></div>
+		</div>
+		<div style="width: 28.9062%;height: 67.3703%;top: 21.5185%;left: 19.2708%;position: absolute;z-index: 4;">
+			<div id="main-abs-memo" style="text-align: center;margin: 45px auto 0;padding-bottom: 20px;font-size: 2rem;color: #777;letter-spacing: 2px;width: 70%;overflow: hidden;position: relative;display: none;">
+				<div style="float: left;"></div>
+				<div style="float: right;background-color: rgb(252,245,197);padding: 3px 12px 3px 15px;font-size: 1.4rem;border-radius: 10px;cursor: pointer;display: none;">詳細</div>
+				<div style="position: absolute;height: 33px;width: 22px;background-image: url('images/finger.png');top: 10px;right: 45px;background-repeat: no-repeat;background-size: 100%;display: none;"></div>
+			</div>
+			<div id="main-abs-downarrow" style="width: 20px;margin: 0 auto 20px;border-style: solid;border-width: 12px 10px 0 10px;border-color: #777 transparent transparent transparent;display: none;"></div>
+			<div id="main-abs-percentbar" style="border-radius: 10px;width: 70%;height: 20px;margin: 0 auto 30px;"></div>
+			<div id="main-lesson-stds" style="width: 70%;margin: 0 auto;overflow: auto;max-height: 69%;"></div>
+		</div>
+		<div style="width: 48.4375%;height: 67.3703%;top: 21.5185%;left: 48.1770%;position: absolute;z-index: 4;padding: 0 35px;">
+			<div id="media-block" style="height: 62.5%;border: 1px solid #ccc;box-shadow: 2px 3px 12px #999;background-color: white;border-radius: 3px;padding: 12px 7px;text-align: center;margin-bottom: 20px;">
+				<!--
+				<video style="max-width: 100%;max-height: 100%;" autoplay loop controls>
+					<source src="movie.mp4" type="video/mp4">
+					<source src="movie.ogg" type="video/ogg">
+					<track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
+					<track src="subtitles_no.vtt" kind="subtitles" srclang="no" label="Norwegian">
+					Your browser does not support the video tag.
+				</video>
+				-->
+				<img src="A029.jpg" style="max-width: 100%;max-height: 100%;" />
+			</div>
+			<div>
+				<!--
+				<div style="font-size: 2.3rem;font-weight: bold;margin-bottom: 10px;"><div style="float: left;border-left : 3px solid rgb(232,183,36);height: 20px;margin: 8px 0 4px -10px;"></div><span>聯絡事項</span></div>
+				<table style="font-size: 16px;background-color: rgba(0,0,0,0);line-height: 26px;width: 100%;">
+					<tr>
+						<td align="left">02/12 國文第二課作業</td>
+						<td align="left">02/12 國文第二課作業</td>
+					</tr>
+					<tr>
+						<td align="left">02/12 交班費</td>
+						<td align="left">02/12 交班費</td>
+					</tr>
+					<tr>
+						<td align="left">02/13 郊遊、戴帽子、手帕</td>
+						<td align="left">02/13 郊遊、戴帽子、手帕</td>
+					</tr>
+					<tr>
+						<td align="left">02/14 自然課考試</td>
+						<td align="left">02/14 自然課考試</td>
+					</tr>
+					<tr>
+						<td align="left">02/14 中午自強活動</td>
+						<td align="left">02/14 中午自強活動</td>
+					</tr>
+				</table>
+				-->
+				<div style="font-size: 2.3rem;font-weight: bold;margin-bottom: 10px;"><div style="float: left;border-left : 3px solid rgb(232,183,36);height: 20px;margin: 8px 0 4px -10px;"></div><span id="rightDownTitle">公告事項</span></div>
+				<!--<table id="announce" style="font-size: 16px;background-color: rgba(0,0,0,0);line-height: 26px;width: 100%;"></table>-->
+				<div id="announce" class="ineedscroll" style="font-size: 16px;line-height: 26px;max-height: 150px;"></div>
+				<div id="outin" class="ineedscroll" style="font-size: 16px;line-height: 26px;max-height: 150px;display: none;"></div>
+			</div>
+		</div>
+		<div style="width: 80.7291%;height: 10.1851%;bottom: 0;right: 0;position: absolute;z-index: 5;background-color: rgba(238,125,0,0.75);padding: 0 40px;">
+			<div style="float: left;height: 100%;padding: 10px;text-align: center;margin-right: 30px;" @click="goClassroom()">
+				<!--<div id="bottomLink1" style="background-image: url('images/main_01.png');background-repeat: no-repeat;background-size: 100% 100%;height: calc(100% - 23px);"></div>-->
+				<img id="bottomLink1" src="images/main_05.png" style="height: calc(100% - 23px);" />
+				<div style="text-align: center; color: white; font-size: 16px; font-weight: bold;height: 23px;">座位預約</div>
+			</div>
+			<div style="float: left;height: 100%;padding: 10px;text-align: center;margin-right: 30px;" @click="doRollcall()">
+				<img id="bottomLink2" src="images/main_01.png" style="height: calc(100% - 23px);" />
+				<div style="text-align: center; color: white; font-size: 16px; font-weight: bold;height: 23px;">教師點名</div>
+			</div>
+			<div style="float: left;height: 100%;padding: 10px;text-align: center;margin-right: 30px;" @click="doDraw()">
+				<img id="bottomLink2" src="images/random1.png" style="height: calc(100% - 23px);" />
+				<div style="text-align: center; color: white; font-size: 16px; font-weight: bold;height: 23px;">隨機抽籤</div>
+			</div>
+			<div style="float: left;height: 100%;padding: 10px;text-align: center;margin-right: 30px;" @click="doGroup()">
+				<img id="bottomLink2" src="images/random2.png" style="height: calc(100% - 23px);" />
+				<div style="text-align: center; color: white; font-size: 16px; font-weight: bold;height: 23px;">快速分組</div>
+			</div>
+			<div style="float: right;height: 100%;padding: 10px;">
+				<table style="background-color: rgba(0,0,0,0);height: 100%;"><tr><td valign="middle"><img src="images/logo.png" /></td></tr></table>
+			</div>
+			<div style="float: right;height: 100%;padding: 10px;text-align: center;margin-right: 30px;" @click="doUnlock()">
+				<!--<div id="bottomLink2" style="background-image: url('images/main_01.png');background-repeat: no-repeat;background-size: 100% 100%;height: calc(100% - 23px);"></div>-->
+				<img id="bottomLink9" src="images/main_02.png" style="height: calc(100% - 23px);" />
+				<div style="text-align: center; color: white; font-size: 16px; font-weight: bold;height: 23px;">解鎖</div>
+			</div>
+		</div>
+		<div class="modal fade" id="roomSubject" tabindex="-1" role="dialog" aria-labelledby="">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header borderless pb-0">
+						<div style="float: left;">本週課表</div>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<i class="glyphicon glyphicon-remove" aria-hidden="true"></i>
+						</button>
+					</div>
+					<div id="roomSubjectBody" class="upLoad01-modal modal-body"></div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="drawModal" tabindex="-1" role="dialog" aria-labelledby="">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header borderless pb-0">
+						<div style="float: left;">隨機抽籤</div>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<i class="glyphicon glyphicon-remove" aria-hidden="true"></i>
+						</button>
+					</div>
+					<div id="drawModelBody" class="upLoad01-modal modal-body">
+						<table style="width: 100%;">
+							<tr>
+								<td valign="top">
+									<table style="margin: 10px;background: rgba(0,0,0,0);">
+										<tr>
+											<td valign="middle"><button type="button" id="btnDraw1" class="btn btn-blue" style="margin-right: 22px;padding: 9px 12px;">抽一人</button></td>
+											<td valign="middle"><button type="button" id="btnDraw2" class="btn btn-blue" style="margin-right: 22px;padding: 9px 12px;">抽二人</button></td>
+											<td valign="middle"><button type="button" id="btnDraw3" class="btn btn-blue" style="margin-right: 22px;padding: 9px 12px;">抽三人</button></td>
+											<td>指定人數：</td>
+											<td><select id="txtDraw4" style="max-height: 100px;"></select></td>
+											<td valign="middle"><button type="button" id="btnDraw4" class="btn btn-warning" style="margin-left: 33px;padding: 9px 12px;">抽人</button></td>
+										</tr>
+									</table>
+									<div style="margin: 0 0 5px 10px;">上課學生：</div>
+									<div id="inLessonStds" style="margin: 0 10px 10px;background: #eee;border-radius: 5px;min-height: 50px;overflow: hidden;"></div>
+								</td>
+								<td valign="top" style="width: 220px">
+									<div id="unlucky" style="background: red;color: white;font-weight: bold;border-radius: 5px;margin: 10px;padding: 10px;text-align: center;font-size: 2rem;display: none;"></div>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="groupModal" tabindex="-1" role="dialog" aria-labelledby="">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header borderless pb-0">
+						<div style="float: left;">快速分組</div>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<i class="glyphicon glyphicon-remove" aria-hidden="true"></i>
+						</button>
+					</div>
+					<div id="groupModelBody" class="upLoad01-modal modal-body">
+						<table style="width: 100%;">
+							<tr>
+								<td valign="top">
+									<div style="margin: 10px;">
+										分為幾組：<select id="txtGroup" style="margin-right: 20px;"></select><button type="button" id="btnGroup" class="btn btn-warning" style="margin-right: 20px;padding: 3px 15px;">開始分組</button>
+									</div>
+									<div style="margin: 0 0 10px 10px;">分組結果：</div>
+									<div id="groupGroup" style="margin: 0 10px;padding: 10px;background: #eee;border-radius: 5px;min-height: 50px;"></div>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</script>

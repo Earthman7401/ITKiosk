@@ -1,0 +1,100 @@
+17:46:55.826 ================================================================
+17:46:55.827 #Airlink# ecr api version=[20160531-001]
+17:46:55.827 ----------------------------------------------------------------
+17:46:55.827 SET Serial Port   :[COM24]
+17:46:55.828 SET Timeout       :[65]
+17:46:55.828 SET Rate          :[19200]
+17:46:55.828 SET Mode          :[7,Even,One]
+17:46:55.828 SET Input File    :[in.dat]
+17:46:55.828 SET Output Fiel   :[out.dat]
+17:46:55.829 SET Retry         :[3]
+17:46:55.829 SET Data Length   :[300]
+17:46:55.829 SET RespCode Idx  :[79]
+17:46:55.829 ----------------------------------------------------------------
+17:46:55.830 ReadInFile(300)=[3104                             000000561000                                                                                            STOREID123                                                                                                                                                         ]
+17:46:55.889 SaveResponseData code=[ERR_RUNTIME]
+17:46:55.911 SaveResponseData(300)=[xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0001xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx]
+17:46:55.911 Exception：MessageSendRecv(Open SerialPort Fail)
+17:46:55.912 ================================================================
+17:46:55.912 Program done!
+17:46:55.912 ================================================================
+18:00:24.119 ================================================================
+18:00:24.120 #Airlink# ecr api version=[20160531-001]
+18:00:24.120 ----------------------------------------------------------------
+18:00:24.120 SET Serial Port   :[COM24]
+18:00:24.120 SET Timeout       :[65]
+18:00:24.120 SET Rate          :[19200]
+18:00:24.121 SET Mode          :[7,Even,One]
+18:00:24.121 SET Input File    :[in.dat]
+18:00:24.121 SET Output Fiel   :[out.dat]
+18:00:24.121 SET Retry         :[3]
+18:00:24.121 SET Data Length   :[300]
+18:00:24.121 SET RespCode Idx  :[79]
+18:00:24.122 ----------------------------------------------------------------
+18:00:24.123 ReadInFile(300)=[3101                             000000460000                                                                                            STOREID123                                                                                                                                                         ]
+18:00:24.155 SaveResponseData code=[ERR_RUNTIME]
+18:00:24.186 SaveResponseData(300)=[xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0001xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx]
+18:00:24.186 Exception：MessageSendRecv(Open SerialPort Fail)
+18:00:24.186 ================================================================
+18:00:24.186 Program done!
+18:00:24.186 ================================================================
+18:00:44.823 ================================================================
+18:00:44.823 #Airlink# ecr api version=[20160531-001]
+18:00:44.823 ----------------------------------------------------------------
+18:00:44.823 SET Serial Port   :[COM24]
+18:00:44.823 SET Timeout       :[65]
+18:00:44.823 SET Rate          :[19200]
+18:00:44.823 SET Mode          :[7,Even,One]
+18:00:44.823 SET Input File    :[in.dat]
+18:00:44.823 SET Output Fiel   :[out.dat]
+18:00:44.823 SET Retry         :[3]
+18:00:44.823 SET Data Length   :[300]
+18:00:44.823 SET RespCode Idx  :[79]
+18:00:44.823 ----------------------------------------------------------------
+18:00:44.839 ReadInFile(300)=[3101                             000000460000                                                                                            STOREID123                                                                                                                                                         ]
+18:00:44.870 SaveResponseData code=[ERR_RUNTIME]
+18:00:44.901 SaveResponseData(300)=[xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0001xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx]
+18:00:44.901 Exception：MessageSendRecv(Open SerialPort Fail)
+18:00:44.901 ================================================================
+18:00:44.901 Program done!
+18:00:44.901 ================================================================
+18:01:40.155 ================================================================
+18:01:40.155 #Airlink# ecr api version=[20160531-001]
+18:01:40.155 ----------------------------------------------------------------
+18:01:40.155 SET Serial Port   :[COM24]
+18:01:40.155 SET Timeout       :[65]
+18:01:40.155 SET Rate          :[19200]
+18:01:40.155 SET Mode          :[7,Even,One]
+18:01:40.155 SET Input File    :[in.dat]
+18:01:40.155 SET Output Fiel   :[out.dat]
+18:01:40.155 SET Retry         :[3]
+18:01:40.155 SET Data Length   :[300]
+18:01:40.155 SET RespCode Idx  :[79]
+18:01:40.155 ----------------------------------------------------------------
+18:01:40.155 ReadInFile(300)=[3104                             000000460000                                                                                            STOREID123                                                                                                                                                         ]
+18:01:40.195 SaveResponseData code=[ERR_RUNTIME]
+18:01:40.235 SaveResponseData(300)=[xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0001xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx]
+18:01:40.235 Exception：MessageSendRecv(Open SerialPort Fail)
+18:01:40.235 ================================================================
+18:01:40.235 Program done!
+18:01:40.235 ================================================================
+18:01:45.139 ================================================================
+18:01:45.139 #Airlink# ecr api version=[20160531-001]
+18:01:45.139 ----------------------------------------------------------------
+18:01:45.139 SET Serial Port   :[COM24]
+18:01:45.139 SET Timeout       :[65]
+18:01:45.139 SET Rate          :[19200]
+18:01:45.139 SET Mode          :[7,Even,One]
+18:01:45.139 SET Input File    :[in.dat]
+18:01:45.139 SET Output Fiel   :[out.dat]
+18:01:45.139 SET Retry         :[3]
+18:01:45.139 SET Data Length   :[300]
+18:01:45.139 SET RespCode Idx  :[79]
+18:01:45.139 ----------------------------------------------------------------
+18:01:45.139 ReadInFile(300)=[3101                             000000460000                                                                                            STOREID123                                                                                                                                                         ]
+18:01:45.165 SaveResponseData code=[ERR_RUNTIME]
+18:01:45.205 SaveResponseData(300)=[xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0001xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx]
+18:01:45.205 Exception：MessageSendRecv(Open SerialPort Fail)
+18:01:45.205 ================================================================
+18:01:45.205 Program done!
+18:01:45.205 ================================================================

@@ -1,0 +1,108 @@
+2023-03-24 19:19:58,228 [10] ERROR [MonitorModule.DeviceManager][GetDevice] 
+LOAD Device Error2 : System.IO.FileNotFoundException: Could not load file or assembly 'file:///C:\Users\96021\OneDrive\Desktop\ITKiosk\DeviceExternal\QRCoder.dll' or one of its dependencies. The system cannot find the file specified.
+File name: 'file:///C:\Users\96021\OneDrive\Desktop\ITKiosk\DeviceExternal\QRCoder.dll'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadFrom(String assemblyFile, Evidence securityEvidence, Byte[] hashValue, AssemblyHashAlgorithm hashAlgorithm, Boolean forIntrospection, Boolean suppressSecurityChecks, StackCrawlMark& stackMark)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at MonitorModule.DeviceManager.<>c__DisplayClass27_0.<GetDevice>b__0(String de) in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\MonitorModule\DeviceManager.cs:line 192
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at MonitorModule.DeviceManager.GetDevice(String devicName) in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\MonitorModule\DeviceManager.cs:line 186
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+ 
+2023-03-24 19:19:58,291 [10] ERROR [MonitorModule.DeviceManager][<InitDevice>b__2] 
+System.IO.FileNotFoundException: Could not load file or assembly 'file:///C:\Users\96021\OneDrive\Desktop\ITKiosk\DeviceExternal\QRCoder.dll' or one of its dependencies. The system cannot find the file specified.
+File name: 'file:///C:\Users\96021\OneDrive\Desktop\ITKiosk\DeviceExternal\QRCoder.dll'
+   at MonitorModule.DeviceManager.GetDevice(String devicName) in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\MonitorModule\DeviceManager.cs:line 232
+   at MonitorModule.DeviceManager.<>c__DisplayClass28_0.<InitDevice>b__2() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\MonitorModule\DeviceManager.cs:line 255
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+ 
+2023-03-24 19:19:58,307 [10] ERROR [MonitorModule.DeviceManager][GetDevice] 
+LOAD Device Error2 : System.IO.FileNotFoundException: Could not load file or assembly 'file:///C:\Users\96021\OneDrive\Desktop\ITKiosk\DeviceExternal\QRCoder.dll' or one of its dependencies. The system cannot find the file specified.
+File name: 'file:///C:\Users\96021\OneDrive\Desktop\ITKiosk\DeviceExternal\QRCoder.dll'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadFrom(String assemblyFile, Evidence securityEvidence, Byte[] hashValue, AssemblyHashAlgorithm hashAlgorithm, Boolean forIntrospection, Boolean suppressSecurityChecks, StackCrawlMark& stackMark)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at MonitorModule.DeviceManager.<>c__DisplayClass27_0.<GetDevice>b__0(String de) in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\MonitorModule\DeviceManager.cs:line 192
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at MonitorModule.DeviceManager.GetDevice(String devicName) in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\MonitorModule\DeviceManager.cs:line 186
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+ 
+2023-03-24 19:19:58,310 [11] ERROR [MonitorModule.DeviceManager][GetDevice] 
+LOAD Device Error2 : System.IO.FileNotFoundException: Could not load file or assembly 'file:///C:\Users\96021\OneDrive\Desktop\ITKiosk\DeviceExternal\AR_402MO2DI2.dll' or one of its dependencies. The system cannot find the file specified.
+File name: 'file:///C:\Users\96021\OneDrive\Desktop\ITKiosk\DeviceExternal\AR_402MO2DI2.dll'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadFrom(String assemblyFile, Evidence securityEvidence, Byte[] hashValue, AssemblyHashAlgorithm hashAlgorithm, Boolean forIntrospection, Boolean suppressSecurityChecks, StackCrawlMark& stackMark)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at MonitorModule.DeviceManager.GetDevice(String devicName) in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\MonitorModule\DeviceManager.cs:line 198
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+ 
+2023-03-24 19:19:58,323 [10] ERROR [MonitorModule.DeviceManager][<InitDevice>b__2] 
+System.IO.FileNotFoundException: Could not load file or assembly 'file:///C:\Users\96021\OneDrive\Desktop\ITKiosk\DeviceExternal\QRCoder.dll' or one of its dependencies. The system cannot find the file specified.
+File name: 'file:///C:\Users\96021\OneDrive\Desktop\ITKiosk\DeviceExternal\QRCoder.dll'
+   at MonitorModule.DeviceManager.GetDevice(String devicName) in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\MonitorModule\DeviceManager.cs:line 232
+   at MonitorModule.DeviceManager.<>c__DisplayClass28_0.<InitDevice>b__2() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\MonitorModule\DeviceManager.cs:line 255
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+ 
+2023-03-24 19:19:58,328 [11] ERROR [MonitorModule.DeviceManager][<InitDevice>b__2] 
+System.IO.FileNotFoundException: Could not load file or assembly 'file:///C:\Users\96021\OneDrive\Desktop\ITKiosk\DeviceExternal\AR_402MO2DI2.dll' or one of its dependencies. The system cannot find the file specified.
+File name: 'file:///C:\Users\96021\OneDrive\Desktop\ITKiosk\DeviceExternal\AR_402MO2DI2.dll'
+   at MonitorModule.DeviceManager.GetDevice(String devicName) in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\MonitorModule\DeviceManager.cs:line 232
+   at MonitorModule.DeviceManager.<>c__DisplayClass28_0.<InitDevice>b__2() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\MonitorModule\DeviceManager.cs:line 255
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+ 
+2023-03-24 19:19:58,332 [16] ERROR [MonitorModule.DeviceManager][GetDevice] 
+LOAD Device Error2 : System.IO.FileNotFoundException: Could not load file or assembly 'file:///C:\Users\96021\OneDrive\Desktop\ITKiosk\DeviceExternal\DoorCard.dll' or one of its dependencies. The system cannot find the file specified.
+File name: 'file:///C:\Users\96021\OneDrive\Desktop\ITKiosk\DeviceExternal\DoorCard.dll'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadFrom(String assemblyFile, Evidence securityEvidence, Byte[] hashValue, AssemblyHashAlgorithm hashAlgorithm, Boolean forIntrospection, Boolean suppressSecurityChecks, StackCrawlMark& stackMark)
+   at System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   at MonitorModule.DeviceManager.GetDevice(String devicName) in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\MonitorModule\DeviceManager.cs:line 198
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+ 
+2023-03-24 19:19:58,341 [16] ERROR [MonitorModule.DeviceManager][<InitDevice>b__2] 
+System.IO.FileNotFoundException: Could not load file or assembly 'file:///C:\Users\96021\OneDrive\Desktop\ITKiosk\DeviceExternal\DoorCard.dll' or one of its dependencies. The system cannot find the file specified.
+File name: 'file:///C:\Users\96021\OneDrive\Desktop\ITKiosk\DeviceExternal\DoorCard.dll'
+   at MonitorModule.DeviceManager.GetDevice(String devicName) in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\MonitorModule\DeviceManager.cs:line 232
+   at MonitorModule.DeviceManager.<>c__DisplayClass28_0.<InitDevice>b__2() in D:\OTHER\BONJAY\ITKiosk\KioskPlatform\MonitorModule\DeviceManager.cs:line 255
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+ 

@@ -1,0 +1,167 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Ionicons";
+  src: url("../assets/fonts/ionicons.woff2?v=3.0.0-alpha.3") format("woff2"), url("../assets/fonts/ionicons.woff?v=3.0.0-alpha.3") format("woff"), url("../assets/fonts/ionicons.ttf?v=3.0.0-alpha.3") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.ion-icon {
+  display: inline-block;
+  font-family: "Ionicons";
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-rendering: auto;
+  text-transform: none;
+  speak: none;
+}
+
+.ion-ios-partly-sunny-outline:before {
+    content: "\f1de";
+}
+.ion-icon::before {
+    display: inline-block;
+}
+
+img.opacity4 {
+	opacity: 0.4;
+}
+
+.fulljustify {
+  text-align: justify;
+}
+.fulljustify:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+
+#main-lesson-stds {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+#rollcall_seats {
+ -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+#classroom_seats {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.formErrorAutoMsg {
+  position: fixed;
+  text-align: center;
+  width: 500px;
+  left: calc(50% - 250px);
+  top: calc(50% - 20px);
+  border-radius: 15px;
+  background-color: rgba(185,164,80,0.6);
+  font-size: 5rem;
+  font-weight: bold;
+  padding: 10px;
+  z-index: 10;
+}
+
+.stds-not-coming {
+  position: absolute;
+  border: 1px solid red;
+  border-radius: 4px;
+  color: red;
+  padding: 0 3px;
+  top: 0;
+  right: 3px;
+  text-align: center;
+  font-size: 1.1rem;
+  opacity: 0.7;
+}
+
+#classroom_seats div.obstacle{
+	width: 100%;height: 100%;background: #ccc;
+}
+
+.form-controler {
+    height: 36px;
+    padding: 6px 12px;
+    font-size: 16px;
+    line-height: 1.4285;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+#room-weekend input[type="checkbox"] {
+	display: none;
+}
+#room-weekend input[type="checkbox"] + label {
+	display: inline-block;
+	background-color: #ccc;
+	color: white;
+	cursor: pointer;
+	padding: 3px 0;
+	text-align: center;
+	margin: 0 4px;
+	border-radius: 5px;
+	width: 70px;
+}
+#room-weekend input[type="checkbox"] + label > i {
+	display: none !important;
+}
+#room-weekend input[type="checkbox"]:checked + label {
+	background-color: #e36322;
+	color: #fff;
+}
+#room-weekend input[type="checkbox"]:checked + label > i {
+	display: inline-block !important;
+	position: absolute;
+	padding: 4px 0 0 5px;
+}
+.lessonSubj-cell {
+	text-align: center;
+	width: calc((100% - 125px) / 7);
+	display: inline-block;
+}
+
+.dotwords {
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+.rollcallbutton {
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  width: 85px;
+  margin-right: 25px;
+  padding: 5px 0;
+  text-align: center;
+}
+.rollcallbutton.rollcallfocus {
+  box-shadow: 1px 1px 7px 4px #ff7;
+  color: #ff7 !important;
+}
+
+.ineedscroll {
+  overflow: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.rc_stddiv.rc_std_selected {
+  background: rgba(50,200,200,0.14);
+}
+
+.rcmark {
+  position: absolute;
+  right: 6px;
+  bottom: 0;
+  font-size: 2.7rem;
+}

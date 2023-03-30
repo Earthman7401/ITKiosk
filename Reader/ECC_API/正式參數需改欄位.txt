@@ -1,0 +1,5 @@
+ComPort * 2
+TMLocationID
+LocationID
+ICER_IP
+ICER_Port

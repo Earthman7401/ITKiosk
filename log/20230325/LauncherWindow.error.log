@@ -1,0 +1,7 @@
+2023-03-25 08:03:38,080 [1] ERROR [KioskLauncher.LauncherWindow][InitKMSResigistryVerifyType] 
+System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 203.72.178.228:8080
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetResponse()
+   at KioskLauncher.Biz.RegistryKMSBiz.InitKMSResigistryVerifyType() 

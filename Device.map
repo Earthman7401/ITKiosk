@@ -1,0 +1,156 @@
+﻿[ 
+ //{
+   //歐光Scanner
+   // "TypeName": "Opt2DAPIScanner.Scanner",
+   // "Path": "DeviceExternal\\Opt2DAPIScanner.dll",
+    //"DeviceName": "Scanner",
+    //"DepenceyDLL": [ "DeviceExternal\\Opt2DAPI_CLRWrapper.dll" ]
+ //},
+ {
+   //OPOSPrint
+   "TypeName": "OPOSPrint.Thermal",
+   "Path": "DeviceExternal\\OPOSPrint.dll",
+    "DeviceName": "Thermal",
+   "DepenceyDLL": [ "DeviceExternal\\Microsoft.PointOfService.dll","DeviceExternal\\QRCoder.dll" ]
+ },
+ {
+   //中信卡機
+    "TypeName": "FinLibrary.MainClass",
+    "Path": "DeviceExternal\\FinLibrary.dll",
+    "DeviceName": "FIN",
+    "DepenceyDLL": [ "DeviceExternal\\Newtonsoft.Json.dll" ]
+ },
+ {
+   //controlBox
+    "TypeName": "KioSPEC.MainClass",
+    "Path": "DeviceExternal\\CB_Library.dll",
+    "DeviceName": "ControlBox",
+    "DepenceyDLL": [ "DeviceExternal\\ControlBoxLibrary.dll","DeviceExternal\\Tools.dll" ]
+ },
+ {
+   //護照機
+    "TypeName": "WFXLibrary.MainClass",
+    "Path": "DeviceExternal\\WFXLibrary.dll",
+    "DeviceName": "WFX",
+    "DepenceyDLL": ["DeviceExternal\\Tools.dll" ]
+ },
+ {
+   //icash2.0
+    "TypeName": "ICashLibrary.MainClass",
+    "Path": "DeviceExternal\\ICashLibrary.dll",
+    "DeviceName": "ICASHAPI",
+    "DepenceyDLL": ["DeviceExternal\\Tools.dll", "DeviceExternal\\Starksoft.Net.Ftp.dll", "DeviceExternal\\Starksoft.Net.Proxy.dll", "DeviceExternal\\Newtonsoft.Json.dll" ]
+ },
+ {
+   //現金模組
+    "TypeName": "ICTLibrary.MainClass",
+    "Path": "DeviceExternal\\ICTLibrary.dll",
+    "DeviceName": "CashBox",
+    "DepenceyDLL": ["DeviceExternal\\Tools.dll", "DeviceExternal\\PS3_C_SHARP.dll"]
+ },
+ {
+   //讀寫卡機EZ710
+    "TypeName": "EZ710Library.MainClass",
+    "Path": "DeviceExternal\\EZ710Library.dll",
+    "DeviceName": "EZ710BU",
+    "DepenceyDLL": ["DeviceExternal\\Tools.dll"]
+ },
+ {
+   //人體感測器
+    "TypeName": "HSensorLibrary.MainClass",
+    "Path": "DeviceExternal\\HSensorLibrary.dll",
+    "DeviceName": "HSENSOR",
+    "DepenceyDLL": []
+ },
+ {
+   //HoneywellScanner
+    "TypeName": "HoneywellScanLibrary.MainClass",
+    "Path": "DeviceExternal\\HoneywellScanLibrary.dll",
+    "DeviceName": "HONEYWELLSCANNER",
+    "DepenceyDLL": ["DeviceExternal\\HedcWrapper.dll"]
+ },
+ { 
+   //派卡機
+    "TypeName": "EWTKLibrary.MainClass",
+    "Path": "DeviceExternal\\EWTKLibrary.dll",
+    "DeviceName": "EWTKLIB",
+    "DepenceyDLL": []
+ },
+ {
+    //健保卡機
+    "TypeName": "EZM_Library.MainClass",
+    "Path": "DeviceExternal\\EZM_Library.dll",
+    "DeviceName": "EZM",
+    "DepenceyDLL": ["DeviceExternal\\Tools.dll", "DeviceExternal\\GS.Apdu.dll", "GS.HexLibrary.dll"]
+  },
+ {
+   //RFID
+    "TypeName": "RFIDLibrary.MainClass",
+    "Path": "DeviceExternal\\RFIDLibrary.dll",
+    "DeviceName": "RFID",
+    "DepenceyDLL": ["DeviceExternal\\Tools.dll", "DeviceExternal\\YRU150API.dll"]
+ },
+ //科汎卡機
+  {
+    "TypeName": "MIASLibrary.MainClass",
+    "Path": "DeviceExternal\\MIASLibrary.dll",
+    "DeviceName": "MIAS",
+    "DepenceyDLL": []
+ },
+ //2D Scanner Auto
+ {
+    "TypeName": "Scanner2DLibrary.MainClass",
+    "Path": "DeviceExternal\\Scanner2DLibrary.dll",
+    "DeviceName": "SCANNER2DAUTO",
+    "DepenceyDLL": ["DeviceExternal\\Tools.dll"]
+ },
+ //飛捷卡機
+ {
+    "TypeName": "MD150Library.MainClass",
+    "Path": "DeviceExternal\\MD150Library.dll",
+    "DeviceName": "MD150",
+    "DepenceyDLL": ["DeviceExternal\\Tools.dll"]
+ },
+ //3M 護照機
+ {
+    "TypeName": "MMMLibrary.MainClass",
+    "Path": "DeviceExternal\\MMMLibrary.dll",
+    "DeviceName": "MMM",
+    "DepenceyDLL": ["DeviceExternal\\Tools.dll"]
+ },
+ //WEBCAM
+ {
+    "TypeName": "SFCamDLL.MainClass",
+    "Path": "DeviceExternal\\SFCamDLL.dll",
+    "DeviceName": "WEBCAM",
+    "DepenceyDLL": ["DeviceExternal\\Tools.dll"]
+ },
+ //LINEPAY
+ {
+    "TypeName": "PayTools.LinePay",
+    "Path": "DeviceExternal\\PayTools.dll",
+    "DeviceName": "LINEPAY",
+    "DepenceyDLL": ["DeviceExternal\\Tools.dll", "DeviceExternal\\QRCoder.dll", "DeviceExternal\\System.Drawing.Common.dll"]
+ },
+ //Reader_P602PGM
+ {
+    "TypeName": "Reader_P602PGM.MainClass",
+    "Path": "DeviceExternal\\Reader_P602PGM.dll",
+    "DeviceName": "Reader_P602PGM",
+    "DepenceyDLL": ["DeviceExternal\\Tools.dll"]
+ },
+//AR_402MO2DI2
+ {
+    "TypeName": "AR_402MO2DI2.MainClass",
+    "Path": "DeviceExternal\\AR_402MO2DI2.dll",
+    "DeviceName": "AR_402MO2DI2",
+    "DepenceyDLL": ["DeviceExternal\\Tools.dll"]
+ },
+ //DoorCard
+ {
+    "TypeName": "DoorCard.MainClass",
+    "Path": "DeviceExternal\\DoorCard.dll",
+    "DeviceName": "DoorCard",
+    "DepenceyDLL": ["DeviceExternal\\Tools.dll"]
+ }
+]

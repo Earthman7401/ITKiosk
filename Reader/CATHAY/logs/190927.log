@@ -1,0 +1,20 @@
+09:40:01.548 ================================================================
+09:40:01.550 #Airlink# ecr api version=[20160531-001]
+09:40:01.550 ----------------------------------------------------------------
+09:40:01.550 SET Serial Port   :[COM40]
+09:40:01.550 SET Timeout       :[120]
+09:40:01.551 SET Rate          :[115200]
+09:40:01.551 SET Mode          :[8,None,One]
+09:40:01.551 SET Input File    :[in.dat]
+09:40:01.552 SET Output Fiel   :[out.dat]
+09:40:01.552 SET Retry         :[3]
+09:40:01.552 SET Data Length   :[600]
+09:40:01.552 SET RespCode Idx  :[79]
+09:40:01.553 ----------------------------------------------------------------
+09:40:01.554 ReadInFile(600)=[0103                           01000000013000                                                                          Bonjays Hotel                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ]
+09:40:01.628 SaveResponseData code=[ERR_RUNTIME]
+09:40:01.648 SaveResponseData(600)=[xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0001xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx]
+09:40:01.649 Exception：MessageSendRecv(Open SerialPort Fail)
+09:40:01.649 ================================================================
+09:40:01.649 Program done!
+09:40:01.650 ================================================================

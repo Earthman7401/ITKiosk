@@ -1,0 +1,93 @@
+﻿<!--Body-->
+<script type="text/x-template" id="template-rollcall-main">
+    <div id="rollcall-div-block" style="background-color: white;position: relative;">
+		<table style="width: 100%;height: 14.8148%;background-color: rgb(63,101,60);padding: 0 0 0 20px;position: absolute;top: 0;left: 0;z-index: 5;box-shadow: 3px 6px 10px #ccc;border-collapse: separate;">
+			<tr>
+				<td valign="middle" style="padding-left: 20px;color: white;">
+					<div style="float: left;height: 50%;"><img id="schoolLogo" /></div>
+					<div style="float: left;height: 50%;margin-left: 10px;font-weight: bold;font-family: 微軟正黑體;">
+						<div style="font-size: 3.1rem;letter-spacing: 2px;">{{paiInfo.name}}</div>
+						<div style="font-size: 1.2rem;letter-spacing: 13px;padding: 0 3px;">{{paiInfo.ename}}</div>
+					</div>
+				</td>
+				<td valign="middle" style="font-size: 4rem;color: white;background-color: rgb(74,122,50);text-align: center;width: 240px;font-weight: bold;">教師點名</td>
+			</tr>
+		</table>
+		<div style="width: 100%;height: 12.5%;top: 14.8148%;position: absolute;z-index: 4;background-color: #EEE;">
+			<div style="float: left;height: 100%;padding: 10px 50px;">
+				<table style="height: 100%;background-color: rgba(0,0,0,0);">
+					<tr>
+						<td align="right">點名日期：</td>
+						<td align="left" id="rcdt"></td>
+						<td align="left" valign="bottom" rowspan="2">
+							<div id="latemark" class="rollcallbutton" style="background-color: #882;float: left;" @click="latemark()">遲到</div>
+							<div id="absmark" class="rollcallbutton" style="background-color: #c33;float: left;" @click="absmark()">曠課</div>
+							<div id="nomark" class="rollcallbutton" style="background-color: #aaa;float: left;" @click="nomark()">清除</div>
+						</td>
+					</tr>
+					<tr>
+						<td align="right">點名節次：</td>
+						<td align="left"><select id="rclist" style="margin-right: 25px;min-width: 275px;"></select></td>
+					</tr>
+					<tr>
+						<td align="right"></td>
+						<td align="left"><div id="rollcall_step1" style="color: red;">請選擇點名節次</div></td>
+						<td align="left"><div id="rollcall_step2" style="color: red;">請選擇缺曠類別</div></td>
+					</tr>
+				</table>
+			</div>
+			<!--
+			<div style="float: left;height: 100%;">
+				<table style="height: 100%;background-color: rgba(0,0,0,0);"><tr><td valign="middle">
+					<div style="border-radius: 4px;background: #444;color: white;font-weight: bold;width: 115px;margin-right: 25px;padding: 5px 0;text-align: center;" @click="resetRcstd()">重新選擇</div>
+				</td></tr></table>
+			</div>
+			-->
+			<div style="float: left;height: 100%;">
+				<table style="height: 100%;background-color: rgba(0,0,0,0);font-weight: bold;"><tr><td valign="middle">
+					<span id="rcStdCount" style="margin-right: 15px;">總人數：0</span>
+					<span id="rcStdLateCount" style="margin-right: 15px;">遲到人數：0</span>
+					<span id="rcStdAbsCount" style="margin-right: 15px;">曠課人數：0</span>
+				</td></tr></table>
+			</div>
+		</div>
+		<div style="width: 100%;height: 65.6852%;top: 27.3148%;position: absolute;z-index: 4;background-color: #F8F8F8;">
+			<table id="rollcall_tb" style="margin: 20px 100px;width: calc(100% - 200px);height: calc(100% - 60px);background-color: rgba(0,0,0,0);">
+				<tr>
+					<td>
+						<div id="rollcall_msg" style="margin-bottom: 10px;color: red;height: 25px;"></div>
+					</td>
+				</tr>
+				<tr>
+					<td><div id="rollcall_seats" style="overflow: auto;"></div></td>
+				</tr>
+			</table>
+		</div>
+		<div @click="goHome()" style="width: 88px;height: 88px;bottom: 8px;left: 20px;position: absolute;z-index: 5;background-color: rgb(227,123,12);border-radius: 50%;color: white;text-align: center;font-size: 2rem;padding: 11px;font-weight: bold;">
+			<i class="fa fa-reply" aria-hidden="true" style="font-size: 3.5rem;"></i>
+			<div>返回</div>
+		</div>
+		<div style="width: 100%;height: 7%;bottom: 0;right: 0;position: absolute;z-index: 4;">
+			<table style="width: 100%;height: 100%;">
+				<tr>
+					<td style="background-color: rgb(240,150,12);width: 60%;text-align: center;">&nbsp;</td>
+					<td style="background-color: rgb(88,88,200);width: 20%;text-align: center;color: white;font-weight: bold;" @click="confirmArrived()">確認全到</td>
+					<td style="background-color: rgb(211,26,26);width: 20%;text-align: center;color: white;font-weight: bold;" @click="confirmRollCall()">確認點名</td>
+				</tr>
+			</table>
+		</div>
+		<div class="modal fade" id="resRecModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header borderless pb-0">
+						<div style="float: left;">確認點名</div>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<i class="glyphicon glyphicon-remove" aria-hidden="true"></i>
+						</button>
+					</div>
+					<div id="resRecBody" class="upLoad01-modal modal-body" style="line-height: 30px;"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</script>

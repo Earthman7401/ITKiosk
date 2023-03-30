@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MonitorModuleLib</name>
+    </assembly>
+    <members>
+        <member name="F:MonitorModuleLib.Enum.ReponseStatus.UnInit">
+            <summary>
+            未初始化
+            </summary>
+        </member>
+        <member name="F:MonitorModuleLib.Enum.ReponseStatus.Ready">
+            <summary>
+            已就緒
+            </summary>
+        </member>
+        <member name="F:MonitorModuleLib.Enum.ReponseStatus.Busy">
+            <summary>
+            忙碌中
+            </summary>
+        </member>
+        <member name="P:MonitorModuleLib.IDeviceComponent.Alert">
+            <summary>
+            發送警告訊息
+            </summary>
+        </member>
+        <member name="M:MonitorModuleLib.IDeviceComponent.CreateInstance">
+            <summary>
+            建立Device的驅動實體
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MonitorModuleLib.IDeviceComponent.CreateInstance(System.Action{System.String})">
+            <summary>
+            建立Device的驅動實體
+            </summary>
+            <param name="statusChangeCallback">狀態變更時的事件回呼</param>
+            <returns></returns>
+        </member>
+        <member name="M:MonitorModuleLib.IDeviceComponent.SendAction(System.String)">
+            <summary>
+            接收發送(有回覆)
+            </summary>
+            <param name="commond">Json字串</param>
+            <returns>Json字串</returns>
+        </member>
+        <member name="M:MonitorModuleLib.IDeviceComponent.PostAction(System.String)">
+            <summary>
+            接收發送(無回覆)
+            </summary>
+            <param name="commond">Json字串</param>
+        </member>
+        <member name="M:MonitorModuleLib.IDeviceComponent.PostActionWithCallback(System.String,System.Action{System.String})">
+            <summary>
+            接收發送(無回覆，但是有回呼)
+            </summary>
+            <param name="commond">Json字串</param>
+            <param name="reponse">Json字串</param>
+        </member>
+        <member name="P:MonitorModuleLib.IDeviceComponent.Status">
+            <summary>
+            裝置狀態
+            </summary>
+        </member>
+        <member name="P:MonitorModuleLib.IDeviceComponent.DeviceInfo">
+            <summary>
+            目前裝置狀態
+            </summary>
+        </member>
+        <member name="P:MonitorModuleLib.LogHelper.LogPath">
+            <summary>
+            當前執行目錄/log/日期(yyyyMMdd)
+            </summary>
+        </member>
+        <member name="M:MonitorModuleLib.LogHelper.LogInfo(System.Type,System.String)">
+            <summary>
+            統一LOG位置
+            </summary>
+            <param name="type">要寫log的物件型別</param>
+            <param name="info">要寫log的資訊</param>
+        </member>
+        <member name="M:MonitorModuleLib.LogHelper.LogError(System.Type,System.Exception,System.Boolean)">
+            <summary>
+            記錄錯誤訊息
+            </summary>
+            <param name="type">要寫log的物件型別</param>
+            <param name="err">要寫log的錯誤</param>
+            <param name="onlyErr">是否只記錄到錯誤log中</param>
+        </member>
+    </members>
+</doc>

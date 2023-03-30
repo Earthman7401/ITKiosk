@@ -1,0 +1,8 @@
+﻿Module:
+Module --[Action] --[ModuleName]
+Action StartMonitor,StopMonitor,Reboot,Startup,
+ModuleName 
+	kioskCommand=CommandModule
+	kioskClient=UI(in Main) or Main
+	kioskLauncher=KioskLauncher
+

@@ -1,0 +1,211 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SignalRLib</name>
+    </assembly>
+    <members>
+        <member name="T:SignalRLib.SiganlRResult">
+            <summary>
+            Middleware 處理後回拋結果的資料格式
+            </summary>
+        </member>
+        <member name="P:SignalRLib.SiganlRResult.IsSuccess">
+            <summary>
+            遠端處理結果狀態
+            </summary>
+        </member>
+        <member name="P:SignalRLib.SiganlRResult.Exception">
+            <summary>
+            遠端處理時發生的錯誤
+            </summary>
+        </member>
+        <member name="P:SignalRLib.SiganlRResult.Result">
+            <summary>
+            遠端處理結果(Json String)
+            </summary>
+        </member>
+        <member name="P:SignalRLib.SiganlRResult.KioskGroup">
+            <summary>
+            KIOSK 群組
+            </summary>
+        </member>
+        <member name="P:SignalRLib.SiganlRResult.ExpireDate">
+            <summary>
+            過期日
+            </summary>
+        </member>
+        <member name="T:SignalRLib.SignalRClient">
+            <summary>
+            SignalR的用戶端專用類別
+            </summary>
+        </member>
+        <member name="F:SignalRLib.SignalRClient.Logger">
+            <summary>
+            Log4Net的實體
+            </summary>
+        </member>
+        <member name="F:SignalRLib.SignalRClient.ServerUrl">
+            <summary>
+            遠端主機URL
+            </summary>
+        </member>
+        <member name="P:SignalRLib.SignalRClient.Connection">
+            <summary>
+            HUB 連線物件
+            </summary>
+        </member>
+        <member name="P:SignalRLib.SignalRClient.HubProxy">
+            <summary>
+            SiganlR Hub 代理
+            </summary>
+        </member>
+        <member name="P:SignalRLib.SignalRClient.State">
+            <summary>
+            連線狀態
+            </summary>
+        </member>
+        <member name="P:SignalRLib.SignalRClient._ClientPushCommand">
+            <summary>
+            接收遠端命令時，所對應的動作委派
+            </summary>
+        </member>
+        <member name="P:SignalRLib.SignalRClient.PushCommand">
+            <summary>
+            接收遠端命令時，所對應的動作委派
+            </summary>
+        </member>
+        <member name="P:SignalRLib.SignalRClient.Error">
+            <summary>
+            發生錯誤的時動作委派
+            </summary>
+        </member>
+        <member name="P:SignalRLib.SignalRClient.DeviceName">
+            <summary>
+            機台名稱
+            </summary>
+        </member>
+        <member name="P:SignalRLib.SignalRClient.EncryptDeviceName">
+            <summary>
+            加密後的機台名稱
+            </summary>
+        </member>
+        <member name="P:SignalRLib.SignalRClient.MacAddr">
+            <summary>
+            機台Mac Address
+            </summary>
+        </member>
+        <member name="P:SignalRLib.SignalRClient.EncryptMacAddr">
+            <summary>
+            加密後的機台Mac Address
+            </summary>
+        </member>
+        <member name="P:SignalRLib.SignalRClient.KioskID">
+            <summary>
+            kiosk編號
+            </summary>
+        </member>
+        <member name="P:SignalRLib.SignalRClient.EncryptKioskID">
+            <summary>
+            加密後的 KioskID
+            </summary>
+        </member>
+        <member name="P:SignalRLib.SignalRClient.KioskGroup">
+            <summary>
+            kiosk群組
+            </summary>
+        </member>
+        <member name="P:SignalRLib.SignalRClient.KioskExpireDate">
+            <summary>
+            kiosk過期日
+            </summary>
+        </member>
+        <member name="F:SignalRLib.SignalRClient._IsSign">
+            <summary>
+            已登入
+            </summary>
+        </member>
+        <member name="P:SignalRLib.SignalRClient.IsSign">
+            <summary>
+            已登入
+            </summary>
+        </member>
+        <member name="M:SignalRLib.SignalRClient.#ctor(System.String)">
+            <summary>
+            建構式
+            </summary>
+            <param name="serverUrl">遠端主機 Url</param>
+        </member>
+        <member name="M:SignalRLib.SignalRClient.Connect">
+            <summary>
+            連接遠端主機
+            </summary>
+        </member>
+        <member name="M:SignalRLib.SignalRClient.InitDeviceInfo">
+            <summary>
+            1.Set this.Device from MachineName
+            2.Set MacAddr from PhysicalAddress(MAC)
+            3.Set KioskId from Register
+            4.Set Kiosk Group from Register
+            </summary>
+        </member>
+        <member name="M:SignalRLib.SignalRClient.ClientPushCommand(DataLib.DataModel.ScheduleJobDataModel)">
+            <summary>
+            接收遠端主機命令
+            </summary>
+            <param name="job"></param>
+        </member>
+        <member name="M:SignalRLib.SignalRClient.Connection_StateChanged(Microsoft.AspNet.SignalR.Client.StateChange)">
+            <summary>
+            連線時狀態切換觸發的動作
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:SignalRLib.SignalRClient.ReConnect">
+            <summary>
+            執行重新連線
+            </summary>
+        </member>
+        <member name="M:SignalRLib.SignalRClient.Start">
+            <summary>
+            啟動
+            </summary>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:SignalRLib.SignalRClient.SetRegsiter" -->
+        <member name="M:SignalRLib.SignalRClient.ClientSingOn">
+            <summary>
+            登入遠端主機
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SignalRLib.SignalRClient.DisConnected">
+            <summary>
+            與遠端主機斷線時執行的方法
+            </summary>
+        </member>
+        <member name="M:SignalRLib.SignalRClient.Post(DataLib.DataModel.ModuleRequestDataModel)">
+            <summary>
+            發送訊息到遠端主機(不等待回應)
+            </summary>
+            <param name="command">ModuleRequestDataModel</param>
+        </member>
+        <member name="M:SignalRLib.SignalRClient.Send(DataLib.DataModel.ModuleRequestDataModel)">
+            <summary>
+            發送訊息到遠端主機(等待回應)
+            </summary>
+            <param name="command">ModuleRequestDataModel</param>
+            <returns>SiganlRResult</returns>
+        </member>
+        <member name="M:SignalRLib.SignalRClient.LogUserBehavior(System.String)">
+            <summary>
+            Json String
+            </summary>
+            <param name="log"></param>
+        </member>
+        <member name="M:SignalRLib.SignalRClient.Heartbeat">
+            <summary>
+            發送Heartbeat訊息
+            </summary>
+        </member>
+    </members>
+</doc>
